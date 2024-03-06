@@ -1,0 +1,41 @@
+
+.nav-links {
+  /* position: fixed; */
+  margin: 0;
+  margin-left: -3%;
+  z-index: 999;
+  width: 100%;
+  padding: 0 30%;
+}
+
+.nav-links ul{
+  color: white;
+  border-radius: 25px;
+}
+
+.nav-links li{
+  width: max-content;
+  padding: 4px 10px;
+  border-radius: 25px;
+  /* color: aqua; */
+}
+
+.nav-links li:first-child{
+  padding: 7px 10px;
+}
+
+.nav-links li.active{
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+.footer hr{
+  width: 100%;
+}
+
+.footer-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

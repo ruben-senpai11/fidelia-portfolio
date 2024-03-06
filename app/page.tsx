@@ -15,6 +15,9 @@ import Argument from "./components/argument";
 import Principle from "./components/principle";
 import Budget from "./components/budget";
 
+import Header from "./navigation/header" 
+import Footer from "./navigation/footer"
+
 export default function Page() {
 
   const interests:string[] = ["Web-design", "Web-development", "Branding", "Marketing", "Other"];
@@ -23,8 +26,9 @@ export default function Page() {
 
   return (
     <>
+      <Header />
       <main className="flex min-h-screen flex-col items-center justify-between p-16">
-        <section className="bg-colored">
+        <section id="home" className="bg-colored">
           <div className="px-[20%] py-[150px] flex flex-col justify-center items-center gap-8">
             <h1 className="text-[16px]">WHITE DEVS AGENCY</h1>
             <h2 className="text-[48px] text-center">The agency designed to make your business scale +50% within 6 months</h2>
@@ -35,7 +39,7 @@ export default function Page() {
             <button className="btn  cta">Get to know us</button>
           </div>
         </section>
-        <section className="flex flex-col gap-2 py-[150px]">
+        <section id="services" className="flex flex-col gap-2 py-[150px]">
           {/* <h2 className="text-[48px] text-start">Services</h2> */}
           <p className="section-label flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p>
           <div className="flex justify-between min-w-100 gap-32">
@@ -87,7 +91,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-centr gap-16 py-[150px]">
+        <section id="works" className="flex flex-col items-centr gap-16 py-[150px]">
           {/* <h2 className="text-[48px] text-center">Our works</h2> */}
           <p className="section-label flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">Our works</span></p>
           <div className="flex gap-24">
@@ -105,7 +109,7 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="flex flex-col items-center p-[50px] ">
+        <section id="book-journey" className="flex flex-col items-center p-[50px] ">
           <div className="dream-container flex flex-col border-solid gap-24 py-[100px] ">
             <div className="flex justify-center px-[24%] ">
               <h3 className="text-[48px] capitalize text-center "> Unlock 30 Minutes to dream together</h3>
@@ -120,7 +124,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-2 py-[150px]">
+        <section id="about-us" className="flex flex-col gap-2 py-[150px]">
           {/* <h2 className="text-[48px] text-center">Why choose us?</h2> */}
           <p className="section-label flex gap-4 items-center"><span className="s-number">03</span><span className="separator"></span><span className="s-label uppercase">Why Choose us</span></p>
           <div className="flex justify-between min-w-100 gap-32">
@@ -144,7 +148,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col gap-20 py-[150px]">
+        <section id="principles" className="flex flex-col gap-20 py-[150px]">
           <h2 className="text-[48px] text-center">Our principles</h2>
           <div className="flex justify-between ">
             <Principle image={transparency} imageAlt="Transparency" label="Transparency" description="We keep it real and transparent, no smoke and mirrors." />
@@ -152,10 +156,14 @@ export default function Page() {
             <Principle image={excellence} imageAlt="Excellence" label="Excellence" description="We're cool, but we're seriopus about delivering top⁻notch quality" />
           </div>
         </section>
-        <section className="flex flex-col items-centr gap-16 py-[150px]">
-
+      </main>
+        <section id="" className="flex flex-col gap-16 py-[100px] w-[100%] overflow-hidden">
+          <p className="slipping-text text-[62px] text-nowrap whitespace-nowrap font-medium  "> Ecomerce - SaaS - Business2Business - Website Development </p>
+          <p className="slipping-text text-[62px] text-nowrap whitespace-nowrap font-medium  "> Busniness2Consumers - CMS - No-code - Responsive </p>
+          <p className=""></p>
         </section>
-        <section className="marquee flex gap-2 py-[50px]">
+      <main className="flex min-h-screen flex-col items-center justify-between p-16">
+        <section id="contact" className="flex gap-2 py-[50px]">
           <div className="flex flex-col w-[50%] gap-6 ">
           {/* <p className="section-label flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[32px]">Let's connect</h2>
@@ -185,6 +193,7 @@ export default function Page() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   )
 }
