@@ -14,7 +14,7 @@ interface Props {
 
 export default function Service({ label, description, service1, service2, service3, service4, service5, service6 }: Props) {
 
-  const [collapsed, setCollapsed] = useState(true)
+  const [collapsed, setCollapsed] = useState(false)
 
   const accordionToggle = () => {
     if (collapsed === false) {
@@ -26,7 +26,7 @@ export default function Service({ label, description, service1, service2, servic
 
   return (
     <>
-      <div className="service-accordion flex flex-col gap-6 cursor-pointer" onClick={accordionToggle}>
+      <div className="service-accordion flex flex-col cursor-pointer" onClick={accordionToggle}>
         <div className="title flex justify-between items-center">
           <div className="flex items-center gap-8">
             <svg className={label === "Identity & Branding"? "d-block" : "d-none"} width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,11 +50,11 @@ export default function Service({ label, description, service1, service2, servic
             <h5 className="text-2xl">{label}</h5>
           </div>
           <div className="flex flex-col justify-center items-cente gap-0 p-0 w-[14px] h-[20px] relative">
-            <div className={collapsed === false  ? "height-0 " : "plus"}></div>
+            <div className={collapsed === true  ? "height-0 " : "plus"}></div>
             <div className="minus"></div>
           </div>
         </div>
-        <div className={collapsed === true ? "d-none " : "service-content flex flex-col gap-6"} >
+        <div className={ "service-content flex flex-col gap-4 " + (collapsed === true ? "service-deployed " : "")} >
           <h6 >{description} </h6>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col pl-6 gap-2">
@@ -71,7 +71,7 @@ export default function Service({ label, description, service1, service2, servic
             </div>
           </div>
         </div>
-        <hr />
+        <hr className="mt-6" />
       </div>
     </>
   )

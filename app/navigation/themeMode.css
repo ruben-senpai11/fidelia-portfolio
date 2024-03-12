@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 7px;
+  z-index: 99999;
 }
 .theme-switch {
   position: relative;

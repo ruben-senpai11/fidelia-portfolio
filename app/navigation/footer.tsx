@@ -5,27 +5,27 @@ export default function Footer() {
     <>
       <div className="footer flex flex-col justify-between items-start px-16 py-8  gap-16">
         <hr />
-        <div className="flex w-[100%]">
+        <div className="footer-grid flex w-[100%]">
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5">
-              <div className="logo3">
-                <p className="text-[24px] "> <span className="font-bold text-[32px] ">W</span>hite  <span className="text-[28px] ">d</span>evs</p>
+              <div className="logo ">
+                <p className="text-[24px] duppercase "> <span className="font-bold text-[32px] ">W</span>hite <span className="font-bold text-[28px] ">d</span>evs </p>
               </div>
               <h5 className="w-[55%]">We are the agency designed to scale who srongly believe in the power of improvment</h5>
             </div>
-            <div className="flex copywright ">
-              <p className="">2024 All Rights Reserved</p>
+            <div className="flex copywright desktop">
+              <p className="">© 2024 All Rights Reserved</p>
             </div>
           </div>
-          <div className="flex justify-between gap-8 w-[50%] ">
-            <div className="flex flex-col gap-8">
+          <div className="footer-right flex justify-between gap-8 w-[50%] ">
+            <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">Find us here</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="">contact@white-devs.com</a>
                 <a href="">00 (229) 964 047 57</a>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">FOLLOW US</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="">Whatsapp</a>
@@ -34,7 +34,7 @@ export default function Footer() {
                 <a href="">X</a>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">Menu</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="">Home</a>
@@ -46,6 +46,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex copywright mobile">
+          <p className="">© 2024 All Rights Reserved</p>
         </div>
       </div>
     </>
