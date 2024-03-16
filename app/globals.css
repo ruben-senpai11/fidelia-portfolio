@@ -34,9 +34,12 @@
   src: url('../public/fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Open Sans";
+  font-family: "Open sans";
   color: var(--foreground-rgb);
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
   overflow-x: hidden;
@@ -52,6 +55,10 @@ body {
 section {
   width: 100%;
 
+}
+
+h1, h2{
+  font-family: "Playfair"; 
 }
 
 .separator {
@@ -94,6 +101,7 @@ hr {
   max-height: 0;
   overflow: hidden;
   transition: all .5s ease-in-out ;
+  transition: margin all .5s ease-in-out ;
 }
 
 .service-content.service-deployed{
@@ -143,16 +151,44 @@ hr {
 }
 
 .dream-container {
+  position: relative;
   border: 1px solid var(--foreground-rgb);
   border-radius: 2.344vw;
+  background-position: 100% 0;
+  width: 100%;
 }
+
+.dream-container:before,
+.dream-container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  border-radius: 2.344vw;
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.dream-container:before {
+  background-image: url('../public/svg/dream-wave.svg'); 
+  opacity: 1;
+}
+
+.dream-container:after {
+  background-image: url('../public/svg/dream-wave2.svg'); 
+  opacity: .6;
+}
+
 
 .principle {
   padding: 15px;
   width: 250px;
   border-radius: 10px;
   box-shadow: 0 0 2px var(--foreground-rgb);
-  background: blur(8px);
+  backdrop-filter: blur(14px);
 }
 
 .principle-img,
@@ -163,9 +199,22 @@ hr {
   border-radius: 10px;
 }
 
+.marquee1, .marquee2{
+  font-family: "Lato";
+}
+.hyphen{
+  margin-left: 25px;
+  width: 20px;
+  height: 5px;
+  background-color: var(--foreground-rgb);
+  border: 1px solid var(--foreground-rgb);
+}
+
 .s-label {
-  /* font-weight: 500; */
-  font-size: 20px;
+  font-family: "Playfair";
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  font-size: 22px;
 }
 
 .contact-container {
@@ -178,12 +227,16 @@ hr {
   cursor: pointer;
 }
 
-.budget {
+.budgetCurrency {
   border: none;
   padding: 0;
   margin: 0;
 }
-
+.clientBudget, .clientInterest{
+  color: var(--background-end-rgb);
+  background-color: var(--foreground-rgb);
+  border: 1px solid var(--foreground-rgb);
+}
 
 input {
   width: 50%;
@@ -219,7 +272,8 @@ main{
 
 
 .btn.cta {
-  padding: 14px  20px;
+  padding: 16px 12px;
+  font-family: "Open sans";
   position: relative;
   overflow: hidden;
   position: relative;
@@ -227,6 +281,9 @@ main{
   border: 1px solid var(--foreground-rgb);
   background-color: transparent;
   transition: background-color 0.4s ease; 
+}
+.learn-cta{
+  margin: 40px 0;
 }
 
 .cta-text {
@@ -299,21 +356,28 @@ main{
     max-width: 100%;
   }
 
-  .header {
-    background-color: #ffffff55;
+  .principle1{
+    order: 1;
   }
-
+  .principle2{
+    order: 3;
+  }
+  .principle3{
+    order: 2;
+  }
 }
 
 @media screen and (max-width: 767px){
   main{
-    padding: 0 30px   ;
+    padding: 0 20px   ;
   }
 
   .introduction{
-    padding: 200px 20px;
+    padding: 200px 10px;
   }
-
+  .introduction p{
+    padding: 0 20%;
+  }
   .projects{
     flex-direction: column;
     gap: 4rem;
@@ -333,5 +397,38 @@ main{
     width: 100%;
     max-width: 100%;
   }
+  .service-row{
+    width: 100%;
+  }
+  .services li {
+    width: 48%;
+  }
+
+  #book-journey{
+    padding: 10px;
+  }
+  .dream-container{
+    padding: 5%;
+    padding-bottom: 10%;
+  }
+  .dream-part1{
+    padding: 0;
+  }
+  .dream-part2{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .dream-part2 p{
+    text-align: center;
+  }
+  .dream-part2 div{
+    width: 100%;
+  }
+
+  .arguments-col{
+    gap: 30px;
+  }
+
   
 }

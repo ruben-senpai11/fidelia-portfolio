@@ -58,13 +58,15 @@ export default function Service({ label, description, service1, service2, servic
           <h6 >{description} </h6>
           <div className="flex flex-col gap-4">
             <div className="flex flex-col pl-6 gap-2">
-              <ul className="flex justify-between">
+              <ul className="flex justify-between service-row ">
                 <li>{service1} </li>
                 <li>{service2} </li>
-                <li>{service3} </li>
               </ul>
-              <ul className="flex justify-between">
+              <ul className="flex justify-between service-row">
+                <li>{service3} </li>
                 <li>{service4} </li>
+              </ul>
+              <ul className="flex justify-between service-row">
                 <li>{service5} </li>
                 <li>{service6} </li>
               </ul>
