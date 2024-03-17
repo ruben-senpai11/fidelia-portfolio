@@ -13,10 +13,10 @@ export default function BookJourney() {
 
     const timeline = gsap.timeline();
     timeline
+      .from(".dream-container", { borderLeft: "#2222ff" })
       .from(".dream-container", { borderTop: "#2222ff" })
       .from(".dream-container", { borderRight: "#2222ff" })
       .from(".dream-container", { borderBottom: "#2222ff" })
-      .from(".dream-container", { borderLeft: "#2222ff" })
       .from(".dream-container", { borderColor: "#2222ff" })
       .from(".btn.cta", { opacity: 0 })
       .from(".dream-container", { scale: 1 })

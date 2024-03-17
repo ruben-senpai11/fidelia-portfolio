@@ -39,6 +39,29 @@
   background-color: #f8fafc;
 }
 
+
+.language-selector{
+  padding: 2px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addtional-language{
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.flag {
+  width: 25px;
+  height: 15px;
+  object-fit: cover;
+}
+
 .menu-icons {
   display: none;
 }
@@ -61,6 +84,10 @@
 
 section {
   overflow: hidden;
+}
+
+.d-none {
+  display: none;
 }
 
 @media screen and (max-width: 999px) {

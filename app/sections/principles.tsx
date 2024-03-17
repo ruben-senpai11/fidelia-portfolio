@@ -65,7 +65,7 @@ export default function Principles() {
 
   return (
     <>
-      <section ref={principles} className="px-[50px] py-[150px]">
+      <section ref={principles} className="px-[50px] py-[150px] max-w-[2000px] ">
         <div className="principles box-border flex flex-col gap-20 h-[100vh] ">
             <h2 className="text-[48px] text-center">Our principles</h2>
           <div className={(width>767 ? "w-[100%] " : "gap-[4px] ") + "flex justify-between relative pb-2"}  >

@@ -1,6 +1,5 @@
 import Service from "./components/service";
 import OurWorks from "./sections/works"
-
 import Header from "./navigation/header"
 import Footer from "./navigation/footer"
 
@@ -24,7 +23,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between ">
+      <main className="flex flex-col items-center justify-between ">
         <section className="">
           <div className="introduction px-[20%] py-[150px] flex flex-col justify-center items-center gap-8">
             <h1 className="text-[18px]">WHITE DEVS AGENCY</h1>
@@ -147,9 +146,9 @@ export default function Page() {
 
       </main>
 
-      <Marquee marquee1Content={["Ecomerce", "SaaS", "Business2Business", "Website Development"]} marquee2Content={["Busniness2Consumers", "CMS", "No-code", "Responsive"]} />
+      <Marquee marquee1Content={["Ecomerce", "SaaS", "Business2Business", "Website Development", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS", "Business2Business", "Website Development"]} />
 
-      <main className="flex min-h-screen flex-col items-center justify-between ">
+      <main className="flex flex-col items-center justify-between ">
         <section id="contact" className="sides-section flex gap-2 py-[50px]">
           <div className="left-side flex flex-col w-[50%] gap-6 ">
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}

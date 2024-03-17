@@ -57,7 +57,7 @@ export default function Works() {
             <Project label="FAR IN GAMES Tournament" image={playStation} imageAlt="playstation" year="2022" skills={["Concept", "Creative Direction", "Design", "Development"]} />
             <Project label="LEMÖNPLET Refonte" image={lemonplet} imageAlt="Lemonplet" year="2023" skills={["Integration", "UIX", "Development"]} />
           </div>
-          <div className={ width>999 ? "project-col2 transform translate-y-[200px] " : " flex flex-col gap-16" } >
+          <div className={ (width>999 ? "project-col2 transform translate-y-[200px] " : "") + "project-col flex flex-col gap-16" } >
             <Project label="Bunny Management" image={rabbit} imageAlt="Rabbit of Future" year="2023" skills={["Saas", "Concept", "Design", "Development"]} />
             <Project label="Bandage E-commerce" image={bandage} imageAlt="Bandage E-commerce" year="2024" skills={["Integration", "Concept", "Creative Direction", "Design", "Development"]} />
           </div>

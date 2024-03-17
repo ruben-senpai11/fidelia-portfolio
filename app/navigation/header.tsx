@@ -106,7 +106,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="nav-theme flex items-center gap-6">
-          <Language />
+          {/* <Language /> */}
           <ThemeMode />
         </div>
         <div className={(mobileNav === true ? "opened " : "") + "menu-icons relative"} onClick={toogleMenu}>

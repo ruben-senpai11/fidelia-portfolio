@@ -61,6 +61,10 @@ h1, h2{
   font-family: "Playfair"; 
 }
 
+.language-selector, .language-selector{
+  box-shadow: 0 0 2px var(--foreground-rgb);
+  /* border: .5px solid var(--foreground-rgb); */
+}
 .separator {
   width: 40px;
   height: 1px;
@@ -262,7 +266,6 @@ li {
 
 .d-none {
   display: none;
-  transition: all 0.5s ease-in-out;
 }
 
 
@@ -408,7 +411,7 @@ main{
     padding: 10px;
   }
   .dream-container{
-    padding: 5%;
+  padding: 5%;
     padding-bottom: 10%;
   }
   .dream-part1{
