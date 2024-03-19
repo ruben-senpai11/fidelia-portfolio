@@ -1,14 +1,15 @@
 import Service from "./components/service";
-import OurWorks from "./sections/works"
-import Header from "./navigation/header"
+import dynamic from 'next/dynamic';
+
+const Header = dynamic(() => import('./navigation/header'), { ssr: false });
+const OurWorks = dynamic(() => import('./sections/works'), { ssr: false });
+const Principles = dynamic(() => import('./sections/principles'), { ssr: false });
+
 import Footer from "./navigation/footer"
 
 import Argument from "./components/argument";
-import Budget from "./components/budget";
-import Principles from "./sections/principles";
 import BookJourney from "./sections/bookJourney";
 import Marquee from "./sections/marquee";
-import Interest from "./components/interest";
 import ContactForm from "./components/contact";
 
 

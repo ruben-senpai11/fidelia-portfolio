@@ -59,6 +59,7 @@ export default function Header() {
   }
 
   //Retrieve device's width
+  
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
