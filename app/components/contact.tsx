@@ -51,8 +51,8 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
     }
   };
 
-  const escapedString1 = "Let &#39 s connect"
-  const escapedString2 = "NOW IT &#39 S TIME TO TELL THE WHOLE WORLD ABOUT YOUR BUSINESS"
+  const escapedString1 = "Let&#39s connect"
+  const escapedString2 = "NOW IT&#39S TIME TO TELL THE WHOLE WORLD ABOUT YOUR BUSINESS"
 
 
   return (
@@ -61,8 +61,8 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
         <section id="contact" className="sides-section flex gap-2 py-[50px]">
           <div className="left-side flex flex-col w-[50%] gap-6 ">
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
-            <h2 className="text-[48px] ">Let's connect</h2>
-            <p className="uppercase w-[50%] text-[20px] ">NOW IT'S TIME TO TELL THE WHOLE WORLD ABOUT YOUR BUSINESS</p>
+            <h2 className="text-[48px] " dangerouslySetInnerHTML={{ __html: escapedString1 }} ></h2>
+            <p className="uppercase w-[50%] text-[20px] " dangerouslySetInnerHTML={{ __html: escapedString2 }}></p>
             <a href="mailto:albanhonfovou@gmail.com">
               <button className="btn cta w-max">
                 <span className="cta-text">Send a mail instead</span>
