@@ -1,3 +1,4 @@
+import Logo from "../components/logo";
 
 
 export default function Footer() {
@@ -7,10 +8,8 @@ export default function Footer() {
         <hr />
         <div className="footer-grid flex w-[100%]">
           <div className="footer-left w-[50%] h-[100%] ">
-            <div className="flex flex-col gap-5">
-              <div className="logo ">
-                <p className="text-[24px] duppercase "> <span className="font-bold text-[32px] ">W</span>hite <span className="font-bold text-[28px] ">d</span>evs </p>
-              </div>
+            <div className="flex flex-col gap-5 items-start ">
+              <Logo/>
               <h5 className="w-[55%]">We are the agency designed to scale who srongly believe in the power of improvment</h5>
             </div>
             <div className="flex copywright desktop">
@@ -28,20 +27,20 @@ export default function Footer() {
             <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">FOLLOW US</h4>
               <div className="flex flex-col gap-2 ">
-                <a href="">Whatsapp</a>
-                <a href="">Facebook</a>
-                <a href="">Linkedin</a>
-                <a href="">X</a>
+                <a href="https://wa.me/+22996404757">Whatsapp</a>
+                <a href="https://www.facebook.com/alban.honfovou/">Facebook</a>
+                <a href="https://www.linkedin.com/in/alban-honfovou/">Linkedin</a>
+                {/* <a href="">X</a> */}
               </div>
             </div>
             <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">Menu</h4>
               <div className="flex flex-col gap-2 ">
-                <a href="">Home</a>
-                <a href="">Services</a>
-                <a href="">Works</a>
-                <a href="">About us</a>
-                <a href="">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#works">Works</a>
+                <a href="#about-us">About us</a>
+                {/* <a href="#contact">Contact</a> */}
                 <a href=""></a>
               </div>
             </div>

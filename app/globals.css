@@ -63,7 +63,9 @@ h1, h2{
 
 .language-selector, .language-selector{
   box-shadow: 0 0 2px var(--foreground-rgb);
-  /* border: .5px solid var(--foreground-rgb); */
+}
+.l-hider{
+  background-color: var(--background-start-rgb);
 }
 .separator {
   width: 40px;

@@ -9,6 +9,7 @@ import Principles from "./sections/principles";
 import BookJourney from "./sections/bookJourney";
 import Marquee from "./sections/marquee";
 import Interest from "./components/interest";
+import ContactForm from "./components/contact";
 
 
 
@@ -16,9 +17,7 @@ export default function Page() {
 
   const interests: string[] = ["Web-design", "Web-development", "Branding", "Marketing", "Other"];
   const budgetEUR: string[] = ["<5K", "5-10K", "10-20K", ">20K", "I don't know yet"];
-
   const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "I don't know yet"]
-
 
   return (
     <>
@@ -147,42 +146,9 @@ export default function Page() {
       </main>
 
       <Marquee marquee1Content={["Ecomerce", "SaaS", "Business2Business", "Website Development", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS", "Business2Business", "Website Development"]} />
-
-      <main className="flex flex-col items-center justify-between ">
-        <section id="contact" className="sides-section flex gap-2 py-[50px]">
-          <div className="left-side flex flex-col w-[50%] gap-6 ">
-            {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
-            <h2 className="text-[48px] ">Let's connect</h2>
-            <p className="uppercase w-[50%] text-[20px] ">NOW IT'S TIME TO TELL THE WHOLE WORLD ABOUT YOUR BUSINESS</p>
-            <a href="mailto:albanhonfovou@gmail.com">
-              <button className="btn cta w-max">
-                <span className="cta-text">Send a mail instead</span>
-                <span className="cta-transition"></span>
-              </button>
-            </a>
-          </div>
-          <div className="right-side py-4 w-[50%]  ">
-            <div className="contact-container flex flex-col gap-16 p-6 ">
-              <div className="flex flex-col gap-6">
-                <h3 className="uppercase ">Contact info*</h3>
-                <div className="flex gap-4">
-                  <input type="text" placeholder="YOUR NAME*" />
-                  <input type="e-mail" placeholder="YOUR E-MAIL*" />
-                </div>
-              </div>
-              <div className="flex flex-col gap-6">
-                <h3 className="uppercase ">You are interested in*</h3>
-                <Interest interestsList={interests} />
-              </div>
-              <Budget budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
-              <button className="btn cta w-max">
-                <span className="cta-text">Start a journey</span>
-                <span className="cta-bottom-transition"></span>
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
+      
+      <ContactForm interests={interests} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
+      
       <Footer />
     </>
   )

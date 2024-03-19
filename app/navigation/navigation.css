@@ -1,6 +1,21 @@
 .logo {
-  /* z-index: 99999; */
   font-family: "Playfair";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.logo svg{
+  width: 34px;
+  height: 34px;
+}
+
+.l-hider{
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  width: 10px;
+  height: 12px;
 }
 
 .nav-links {

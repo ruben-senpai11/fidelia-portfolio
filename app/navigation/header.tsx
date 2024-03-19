@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import "./navigation.css"
 import ThemeMode from "./themeMode"
 import Language from "../components/language"
+import Logo from "../components/logo"
 
 
 export default function Header() {
@@ -38,7 +39,7 @@ export default function Header() {
       setmobileNav(false)
     }
   }
-  function setNavFalse () {
+  function setNavFalse() {
     setmobileNav(false)
     window.scrollTo({
       behavior: 'smooth'
@@ -58,7 +59,7 @@ export default function Header() {
   }
 
   //Retrieve device's width
-  const [width, setWidth] = useState(window.innerWidth); 
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,11 +75,9 @@ export default function Header() {
   return (
     <>
       <nav id="home" className={(isScrolled ? "py-2" : "py-8") + " header flex justify-between items-center px-16 "}  >
-        <div className="logo">
-          <p className="text-[24px] duppercase "> <span className="font-bold text-[32px] ">W</span>hite <span className="font-bold text-[28px] ">d</span>evs </p>
-        </div>
+        <Logo />
         <div className={(mobileNav == true ? 'mobile-menu ' : '') + "nav-links items-center justify-center relative "}>
-          <ul className={(width>1000 && isScrolled ? "opacity-25 hover:opacity-100 " : "opacity-100 ") + "flex items-center justify-between gap-6 max-w-100 bg-zinc-700 px-6 py-[7px] transition-all "}>
+          <ul className={(width > 1000 && isScrolled ? "opacity-25 hover:opacity-100 " : "opacity-100 ") + "flex items-center justify-between gap-6 max-w-100 bg-zinc-700 px-6 py-[7px] transition-all "}>
             <li onClick={() => smoothScrollTo('home')} className={(isScrolled ? "hover:text-slate-500  " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
               <a className="desktop">
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +87,7 @@ export default function Header() {
               <a className="mobile" >Home</a>
             </li>
             <li onClick={() => smoothScrollTo('services')} className={(isScrolled ? "hover:text-slate-700 " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
-              <a  className="">Services
+              <a className="">Services
               </a>
             </li>
             <li onClick={() => smoothScrollTo('works')} className={(isScrolled ? "hover:text-slate-700 " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
@@ -96,7 +95,7 @@ export default function Header() {
               </a>
             </li>
             <li onClick={() => smoothScrollTo('about-us')} className={(isScrolled ? "hover:text-slate-700 " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
-              <a  className="">About
+              <a className="">About
               </a>
             </li>
             <li onClick={() => smoothScrollTo('contact')} className={(isScrolled ? "hover:text-slate-700 " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
