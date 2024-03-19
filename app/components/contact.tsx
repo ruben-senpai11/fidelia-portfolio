@@ -51,6 +51,9 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
     }
   };
 
+  const escapedString1 = "Let &#39 s connect"
+  const escapedString2 = "NOW IT &#39 S TIME TO TELL THE WHOLE WORLD ABOUT YOUR BUSINESS"
+
 
   return (
     <>
