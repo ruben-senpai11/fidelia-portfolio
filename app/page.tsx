@@ -33,9 +33,9 @@ export default function Page() {
       <Header />
       <main className="flex flex-col items-center justify-between ">
         <section className="">
-          <div className="introduction px-[10%] py-[0px] h-[90vh] flex flex-col justify-center items-center gap-8">
-            <h1 className="text-[18px]">WHITE DEVS AGENCY</h1>
-            <h2 className="t text-center">The agency designed to scale your business +50% within 6 months</h2>
+          <div className="introduction px-[20%] py-[0px] h-[90vh] flex flex-col justify-center items-center gap-8">
+            <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
+            <h2 className="text-[48px] text-center">The agency designed to scale your business +50% within 6 months</h2>
           </div>
           <div className="introduction px-[20%] py-[150px] h-[90vh] flex flex-col justify-center items-center gap-6">
             <h2 className="text-[48px] text-center leading-snug">We are a ministry of designers & developers, who may not be genies, but grant wishes too</h2>
