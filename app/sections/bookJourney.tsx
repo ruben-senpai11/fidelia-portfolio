@@ -23,7 +23,7 @@ export default function BookJourney() {
     ScrollTrigger.create({
       animation: timeline,
       trigger: ".dream-container",
-      start: "top 20%",
+      start: "top 15%",
       end: "+=2000",
       scrub: true,
       pin: true,
@@ -36,14 +36,14 @@ export default function BookJourney() {
 
   return (
     <>
-      <section ref={dreamContainer} id="book-journey" className="flex flex-col items-center px-[50px] py-[100px] ">
-        <div className="dream-container flex flex-col border-solid gap-24 py-[100px] scale-125 ">
+      <section ref={dreamContainer} id="book-journey" className="flex flex-col items-center px-[70px] py-[100px] ">
+        <div className="dream-container flex flex-col justify-between border-solid gap-24 py-[100px] ">
           <div className="flex justify-center px-[24%] dream-part1">
-            <h3 className="text-[48px] capitalize text-center "> Unlock 30 Minutes to dream together</h3>
+            <h2 className="text-[48px] capitalize text-center "> Unlock 30 Minutes to dream together</h2>
           </div>
           <div className="flex justify-center dream-part2">
             <div className="flex justify-center w-[50%] ">
-              <p>Join us for a 30-minute conversation where we can explore your ideas, collaborate on possibilities, and shape your vision into reality.</p>
+              <p className="text-[20px]] " >Join us for a 30-minute conversation where we can explore your ideas, collaborate on possibilities, and shape your vision into reality.</p>
             </div>
             <div className="flex justify-center items-center w-[30%] ">
               <a href="#contact">

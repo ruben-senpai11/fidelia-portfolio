@@ -60,6 +60,9 @@ section {
 h1, h2{
   font-family: "Playfair"; 
 }
+h2{
+  font-size: 4vw;
+}
 
 .language-selector, .language-selector{
   box-shadow: 0 0 2px var(--foreground-rgb);
@@ -162,6 +165,7 @@ hr {
   border-radius: 2.344vw;
   background-position: 100% 0;
   width: 100%;
+  min-height: 78vh;
 }
 
 .dream-container:before,
@@ -175,17 +179,21 @@ hr {
   z-index: -1; 
   border-radius: 2.344vw;
   background-repeat: no-repeat; 
-  background-size: cover;
+  background-size: auto;
 }
 
 .dream-container:before {
   background-image: url('../public/svg/dream-wave.svg'); 
+  background-position-y: top;
+  background-position-x: right;
   opacity: 1;
 }
 
 .dream-container:after {
   background-image: url('../public/svg/dream-wave2.svg'); 
-  opacity: .6;
+  background-position-x: left;
+  background-position-y: bottom;
+  opacity: 1;
 }
 
 
@@ -413,7 +421,7 @@ main{
     padding: 10px;
   }
   .dream-container{
-  padding: 5%;
+    padding: 5%;
     padding-bottom: 10%;
   }
   .dream-part1{

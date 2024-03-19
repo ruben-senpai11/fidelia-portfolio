@@ -6,7 +6,7 @@ import "./themeMode.css"
 function ThemeMode(){
   
   const [themeMode, setThemeMode] = useState(
-    localStorage.getItem("theme") as string || "light"
+    localStorage.getItem("theme") as string || "dark"
   );
 
   const handleToggle = ()=>{  
