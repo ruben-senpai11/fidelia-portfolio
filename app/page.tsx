@@ -155,7 +155,7 @@ export default function Page() {
 
       </main>
 
-      <Marquee marquee1Content={["Ecomerce", "SaaS", "Business2Business", "Website Development", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS", "Business2Business", "Website Development"]} />
+      <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Web Development", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive", "Ecomerce", "SaaS", "Business2Business", "Website Development"]} />
       
       <ContactForm interests={interests} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
       

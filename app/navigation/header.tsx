@@ -107,7 +107,7 @@ export default function Header() {
     <>
       <nav id="home" className={(isScrolled ? "py-2" : "py-8") + " header flex justify-between items-center px-16 "}  >
         <Logo />
-        <div className={(mobileNav == true ? 'mobile-menu ' : '') + "flex items-center gap-4 "}>
+        <div className={(mobileNav == true ? 'mobile-menu ' : 'desktop-menu ') + "flex items-center gap-4 "}>
           <div className="nav-links items-center justify-center relative ">
             <ul className={(width > 1000 && isScrolled ? "opacity-25 hover:opacity-100 " : "opacity-100 ") + "flex items-center justify-between gap-6 max-w-100 bg-zinc-700 px-6 py-[7px] transition-all "}>
               <li onClick={() => smoothScrollTo('home')} className={ (activeLink === 'home' ? 'active ' : '') + (isScrolled ? "hover:text-slate-500  " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>

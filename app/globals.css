@@ -65,7 +65,9 @@ h2 {
 h2 {
   font-size: 48px;
 }
-
+.nav-links li {
+color: #f8faf9;
+}
 .language-selector,
 .language-selector {
   box-shadow: 0 0 2px var(--foreground-rgb);
@@ -357,7 +359,7 @@ main {
 
   .nav-links ul {
     color: var(--foreground-rgb);
-    background-color: var(--background-end-rgb);
+    background-color: var(--menu-background-rgb);
     /* background-color: unset; */
   }
 
@@ -374,8 +376,11 @@ main {
     font-size: 24px;
   }
 
-  .text-\[24x\] {
+  .text-\[24px\] {
     font-size: 20px;
+  }
+  .text-\[20px\] {
+    font-size: 18px;
   }
 
   .introduction {
@@ -384,10 +389,16 @@ main {
   .gap-16{
     gap: 2.5rem;
   }
+  .gap-8{
+    gap: 1.5rem;
+  }
   .gap-6{
     gap: 1rem;
   }
-
+  hr.mt-6{
+    margin-top: .7rem;
+  }
+  
   .learn-cta{
     margin: 20px 0;
   }
