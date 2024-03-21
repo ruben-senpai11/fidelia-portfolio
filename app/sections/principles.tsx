@@ -53,7 +53,7 @@ export default function Principles() {
     ScrollTrigger.create({
       animation: timeline,
       trigger: ".principles",
-      start: scrollStart,
+      start: "top",
       end: "+=3500",
       scrub: true,
       pin: true,
@@ -69,9 +69,9 @@ export default function Principles() {
         <div className="principles box-border flex flex-col gap-20 h-[100vh] ">
             <h2 className="text-[48px] text-center">Our principles</h2>
           <div className={(width>767 ? "w-[100%] " : "gap-[4px] ") + "flex justify-between relative pb-2"}  >
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[100] mt-0 scale-1.2 ") + "principle1 " } image={transparency} imageAlt="Transparency" label="Transparency" description="We keep it real and transparent, no smoke and mirrors." />
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[300] mt-4 scale-1.1 ") + "principle2 " } image={excellence} imageAlt="Excellence" label="Excellence" description="We're cool, but we're seriopus about delivering top⁻notch quality" />
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 scale-1 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Team Spirit" description="We're all in this together, fostering collaboration and unity." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[100] mt-0 ") + "principle1 " } image={transparency} imageAlt="Transparency" label="Transparency" description="We keep it real and transparent, no smoke and mirrors." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[300] mt-4 ") + "principle2 " } image={excellence} imageAlt="Excellence" label="Excellence" description="We're cool, but we're seriopus about delivering top⁻notch quality" />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Team Spirit" description="We're all in this together, fostering collaboration and unity." />
           </div>
         </div>
       </section>

@@ -6,18 +6,19 @@ const Header = dynamic(() => import('./navigation/header'), { ssr: false });
 const OurWorks = dynamic(() => import('./sections/works'), { ssr: false });
 const Principles = dynamic(() => import('./sections/principles'), { ssr: false });
 const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: false });
+const Marquee = dynamic(() => import('./sections/marquee'), { ssr: false });
 
 /*
 import Header from "./navigation/header";
 import OurWorks from "./sections/works";
 import Principles from "./sections/principles";
 import BookJourney from "./sections/bookJourney";
+import Marquee from "./sections/marquee";
 */
 
 import Footer from "./navigation/footer"
 
 import Argument from "./components/argument";
-import Marquee from "./sections/marquee";
 import ContactForm from "./components/contact";
 
 
@@ -32,13 +33,13 @@ export default function Page() {
     <>
       <Header />
       <main className="flex flex-col items-center justify-between ">
-        <section className="">
-          <div className="introduction px-[20%] py-[0px] h-[90vh] flex flex-col justify-center items-center gap-8">
+        <section id="home" className="">
+          <div className="introduction px-[20%] py-[150px] h-[90vh] flex flex-col justify-center items-center gap-8">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
-            <h2 className="text-[48px] text-center">The agency designed to scale your business +50% within 6 months</h2>
+            <h2 className=" text-center">The agency designed to scale your business +50% within 6 months</h2>
           </div>
           <div className="introduction px-[20%] py-[150px] h-[90vh] flex flex-col justify-center items-center gap-6">
-            <h2 className="text-[48px] text-center leading-snug">We are a ministry of designers & developers, who may not be genies, but grant wishes too</h2>
+            <h2 className=" text-center leading-snug">We are a ministry of designers & developers, who may not be genies, but grant wishes too</h2>
             <p className="text-center pt-0 text-[12px] px-[25%]">By connecting deep analysis, strong technical skills and design background with clear communication & responsiveness we’re creating unique projects with a pinch of good vibes</p>
             <a href="#about-us">
               <button className="btn cta">
@@ -49,7 +50,7 @@ export default function Page() {
           </div>
         </section>
         <section id="services" className="flex flex-col gap-2 py-[150px]">
-          <h2 className="text-[48px] text-start">Services</h2>
+          <h2 className=" text-start">Services</h2>
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p> */}
           <div className="flex justify-between min-w-100 gap-32 sides-section">
             <div className="left-side py-0 w-[50%] flex flex-col gap-6">
@@ -116,7 +117,7 @@ export default function Page() {
         <BookJourney />
 
         <section id="about-us" className="flex flex-col gap-2 py-[150px]">
-          <h2 className="text-[48px] text-center pb-4">Why choose us?</h2>
+          <h2 className=" text-center pb-4">Why choose us?</h2>
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">03</span><span className="separator"></span><span className="s-label uppercase">Why Choose us</span></p> */}
           <div className="sides-section flex justify-between min-w-100 gap-32">
             <div className="left-side py-0 w-[50%] flex flex-col gap-6">

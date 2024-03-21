@@ -58,10 +58,10 @@ export default function Marquee({ marquee1Content, marquee2Content }: Props) {
 
   return (
     <>
-      <section id="marquee-section" className="flex flex-col gap-16 py-[100px] w-[100%] overflow-hidden">
+      <section id="marquee" className="flex flex-col gap-16 py-[100px] w-[100%] overflow-hidden">
         <div className="marquee1 flex flex-nowrap gap-8 ">
           {marquee1Content.map((item, index) => (
-            <span className="text-[62px] text-nowrap whitespace-nowrap flex items-center " key={index} >
+            <span className="marquee text-nowrap whitespace-nowrap flex items-center " key={index} >
               {item}
               {index < marquee1Content.length - 1 && <span className="hyphen"></span>}
             </span>
@@ -69,7 +69,7 @@ export default function Marquee({ marquee1Content, marquee2Content }: Props) {
         </div>
         <div className="marquee2 flex flex-nowrap gap-8 ml-[-200px] ">
           {marquee2Content.map((item, index) => (
-            <span className="text-[62px] text-nowrap whitespace-nowrap flex items-center" key={index} >
+            <span className="marquee text-nowrap whitespace-nowrap flex items-center" key={index} >
               {item}
               {index < marquee2Content.length - 1 && <span className="hyphen"></span>}
             </span>

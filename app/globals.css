@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: #000000 ;
-  --background-start-rgb: #f8faf9 ;
+  --foreground-rgb: #000000;
+  --background-start-rgb: #f8faf9;
   --background-end-rgb: #FFFFFF;
 }
 
-[ data-theme = "dark" ] {
-  --foreground-rgb: #f8faf9 ;
-  --background-start-rgb: #222222 ;
+[ data-theme="dark"] {
+  --foreground-rgb: #f8faf9;
+  --background-start-rgb: #222222;
   --background-end-rgb: #000000;
 }
 
@@ -57,19 +57,29 @@ section {
 
 }
 
-h1, h2{
-  font-family: "Playfair"; 
-}
-h2{
-  /* font-size: 4vw; */
+h1,
+h2 {
+  font-family: "Playfair";
 }
 
-.language-selector, .language-selector{
+h2 {
+  font-size: 48px;
+}
+
+.language-selector,
+.language-selector {
   box-shadow: 0 0 2px var(--foreground-rgb);
 }
-.l-hider{
-  background-color: var(--background-start-rgb);
+
+.menu-icons {
+  background-color: var(--foreground-rgb);
 }
+
+.burger {
+  color: var(--background-end-rgb);
+  /* color: var(--foreground-rgb); */
+}
+
 .separator {
   width: 40px;
   height: 1px;
@@ -109,11 +119,11 @@ hr {
   height: 0px;
   max-height: 0;
   overflow: hidden;
-  transition: all .5s ease-in-out ;
-  transition: margin all .5s ease-in-out ;
+  transition: all .5s ease-in-out;
+  transition: margin all .5s ease-in-out;
 }
 
-.service-content.service-deployed{
+.service-content.service-deployed {
   margin: 1.5rem 0;
   height: 100%;
   max-height: 100%;
@@ -176,21 +186,21 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; 
+  z-index: -1;
   border-radius: 2.344vw;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: auto;
 }
 
 .dream-container:before {
-  background-image: url('../public/svg/dream-wave.svg'); 
+  background-image: url('../public/svg/dream-wave.svg');
   background-position-y: top;
   background-position-x: right;
   opacity: 1;
 }
 
 .dream-container:after {
-  background-image: url('../public/svg/dream-wave2.svg'); 
+  background-image: url('../public/svg/dream-wave2.svg');
   background-position-x: left;
   background-position-y: bottom;
   opacity: 1;
@@ -213,16 +223,11 @@ hr {
   border-radius: 10px;
 }
 
-.marquee1, .marquee2{
+.marquee {
+  font-size: 68px;
   font-family: "Lato";
 }
-.hyphen{
-  margin-left: 25px;
-  width: 20px;
-  height: 5px;
-  background-color: var(--foreground-rgb);
-  border: 1px solid var(--foreground-rgb);
-}
+
 
 .s-label {
   font-family: "Playfair";
@@ -246,20 +251,22 @@ hr {
   padding: 0;
   margin: 0;
 }
-.clientBudget, .clientInterest{
+
+.clientBudget,
+.clientInterest {
   color: var(--background-end-rgb);
   background-color: var(--foreground-rgb);
   border: 1px solid var(--foreground-rgb);
 }
 
-input {
+.contact-infos input {
   width: 50%;
   padding: 5px 15px;
   border: 1px solid var(--foreground-rgb);
   border-radius: .7vw;
 }
 
-input::placeholder {
+.contact-infos input::placeholder {
   font-size: 14px;
   color: var(--foreground-rgb);
 }
@@ -279,7 +286,7 @@ li {
 }
 
 
-main{
+main {
   padding: 0 64px;
 }
 
@@ -293,9 +300,10 @@ main{
   color: var(--foreground-rgb);
   border: 1px solid var(--foreground-rgb);
   background-color: transparent;
-  transition: background-color 0.4s ease; 
+  transition: background-color 0.4s ease;
 }
-.learn-cta{
+
+.learn-cta {
   margin: 40px 0;
 }
 
@@ -310,7 +318,8 @@ main{
   z-index: 2;
 }
 
-.cta-transition, .cta-bottom-transition {
+.cta-transition,
+.cta-bottom-transition {
   position: absolute;
   top: 0;
   left: -100%;
@@ -321,12 +330,13 @@ main{
   z-index: 1;
 }
 
-.cta-bottom-transition{
+.cta-bottom-transition {
   left: 0;
   /* bottom: 100%; */
   height: 0;
   transition: all 0.5s ease;
 }
+
 .btn.cta:hover .cta-bottom-transition {
   bottom: 0;
   height: 100%;
@@ -343,105 +353,184 @@ main{
 
 
 
-@media screen and (max-width: 999px){
-    
-  main{
-    padding: 0 40px   ;
+@media screen and (max-width: 999px) {
+
+  .nav-links ul {
+    color: var(--foreground-rgb);
+    background-color: var(--background-end-rgb);
+    /* background-color: unset; */
   }
 
-  .introduction{
-    padding: 200px 100px;
+  main {
+    padding: 0 40px;
+    font-size: 15px;
   }
 
-  .sides-section{
+  h2 {
+    font-size: 40px;
+  }
+
+  .text-\[32px\] {
+    font-size: 24px;
+  }
+
+  .text-\[24x\] {
+    font-size: 20px;
+  }
+
+  .introduction {
+    padding: 350px 100px;
+  }
+  .gap-16{
+    gap: 2.5rem;
+  }
+  .gap-6{
+    gap: 1rem;
+  }
+
+  .learn-cta{
+    margin: 20px 0;
+  }
+
+  .py-\[150px\]{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .sides-section {
     flex-direction: column;
   }
-  .left-side, .right-side{
+
+  .left-side,
+  .right-side {
     width: 100%;
   }
 
-  .projects{
+  .projects {
     flex-direction: column;
     gap: 4rem;
   }
-  .project-col{
+
+  .project-col {
     width: 100%;
     max-width: 100%;
   }
 
-  .principle1{
+  .principle {
+    width: 280px;
+  }
+
+  .principle1 {
     order: 1;
   }
-  .principle2{
+
+  .principle2 {
     order: 3;
   }
-  .principle3{
+
+  .principle3 {
     order: 2;
   }
 }
 
-@media screen and (max-width: 767px){
-  main{
-    padding: 0 20px   ;
+@media screen and (max-width: 767px) {
+  main {
+    padding: 0 20px;
   }
 
-  .introduction{
-    padding: 200px 10px;
+  .introduction {
+    padding: 320px 10px;
   }
-  .introduction p{
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .introduction p {
     padding: 0 20%;
   }
-  .projects{
+
+  .projects {
     flex-direction: column;
     gap: 4rem;
   }
-  .project-col{
+
+  .project-col {
     width: 100%;
     max-width: 100%;
   }
 
-  .sides-section{
+  .sides-section {
     gap: 24px;
   }
-  .arguments-col{
+
+  .arguments-col {
     flex-direction: column;
   }
-  .argument{
+
+  .argument {
     width: 100%;
     max-width: 100%;
+    gap: 1rem;
   }
-  .service-row{
+
+  .arg-content {
+    gap: .2rem;
+  }
+
+  .service-row {
     width: 100%;
   }
+
   .services li {
     width: 48%;
   }
 
-  #book-journey{
+  #book-journey {
     padding: 10px;
   }
-  .dream-container{
+
+  .dream-container {
     padding: 5%;
     padding-bottom: 10%;
   }
-  .dream-part1{
+
+  .dream-part1 {
     padding: 0;
   }
-  .dream-part2{
+
+  .dream-part2 {
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
-  .dream-part2 p{
+
+  .dream-part2 p {
     text-align: center;
   }
-  .dream-part2 div{
+
+  .dream-part2 div {
     width: 100%;
   }
 
-  .arguments-col{
+  .arguments-col {
     gap: 30px;
   }
 
+  .marquee {
+    font-size: 48px;
+  }
+
+  .contact-container{
+    padding: 1rem;
+  }
+  .contact-infos {
+    flex-direction: column;
+  }
   
+  .contact-infos input {
+    width: 100%;
+  }
+
+  .contact-infos input::placeholder {}
 }

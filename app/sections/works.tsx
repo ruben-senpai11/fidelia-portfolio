@@ -41,7 +41,7 @@ export default function Works() {
         trigger: '.project-col2',
         toggleActions: "restart pause reverse pause",
         start: 'top bottom',
-        end: 'top top',
+        end: 'center center',
         scrub: true,
       }
     });
@@ -52,7 +52,7 @@ export default function Works() {
       <section ref={container} id="works" className="flex flex-col items-centr gap-20 py-[150px]">
         <h2 className="text-[48px] text-center">Our works</h2>
         {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">Our works</span></p> */}
-        <div className="projects flex gap-24">
+        <div className="projects border-solid flex gap-24">
           <div className="project-col flex flex-col gap-16">
             <Project label="FAR IN GAMES Tournament" image={playStation} imageAlt="playstation" year="2022" skills={["Concept", "Creative Direction", "Design", "Development"]} />
             <Project label="LEMÖNPLET Refonte" image={lemonplet} imageAlt="Lemonplet" year="2023" skills={["Integration", "UIX", "Development"]} />

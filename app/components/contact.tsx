@@ -74,7 +74,7 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
             <div className="contact-container flex flex-col gap-16 p-6 ">
               <div className="flex flex-col gap-6">
                 <h3 className="uppercase ">Contact info*</h3>
-                <div className="flex gap-4">
+                <div className="contact-infos flex gap-4">
                   <input type="text" placeholder="YOUR NAME*" />
                   <input type="e-mail" placeholder="YOUR E-MAIL*" />
                 </div>

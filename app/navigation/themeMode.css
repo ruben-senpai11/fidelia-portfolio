@@ -11,7 +11,7 @@
   position: relative;
   display: inline-block;
   width: 36px;
-  height: 20px;
+  height: 18px;
 }
 
 .theme-switch input { 
@@ -35,9 +35,9 @@
 .theme-slider:before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
-  bottom: 2.5px;
+  height: 12px;
+  width: 12px;
+  bottom: 2px;
   left: 3px;
   background-color: black;
   -webkit-transition: .4s;
@@ -76,4 +76,10 @@ input:focus + .theme-slider {
 
 .current-theme{
   text-transform: capitalize;
+}
+
+@media screen and (max-width: 765px){
+  .theme{
+    gap: 5px;
+  }
 }

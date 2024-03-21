@@ -6,18 +6,26 @@
   gap: 7px;
 }
 .logo svg{
-  /* width: 180px; */
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
 }
-
+.logo p{
+  font-size: 22px;
+}
+.logo .font-bold:first-of-type{
+ font-size: 30px; 
+}
+.logo .font-bold:last-child{
+ font-size: 24px; 
+}
+/* 
 .l-hider{
   position: absolute;
   top: 10px;
   left: 24px;
   width: 10px;
   height: 12px;
-}
+} */
 
 .nav-links {
   position: fixed;
@@ -32,7 +40,6 @@
 }
 
 .nav-links ul {
-  color: white;
   border-radius: 25px;
   align-self: center;
 }
@@ -119,6 +126,23 @@ section {
     backdrop-filter: blur(5px);
   }
 
+  .logo{
+    gap: 4px;
+    z-index: 99;
+  }
+  .logo svg{
+    width: 24px;
+    height: 24px;
+  }
+  .logo p{
+    font-size: 20px;
+  }
+  .logo .font-bold:first-of-type{
+   font-size: 28px; 
+  }
+  .logo .font-bold:last-child{
+   font-size: 22px; 
+  }
 
   .menu-icons {
     display: flex;
@@ -126,16 +150,15 @@ section {
     align-items: center;
     justify-content: center;
     gap: 7px;
-    width: 38px;
-    height: 38px;
-    background-color: black;
-    border-radius: 24px;
+    width: 30px;
+    height: 27px;
+    border-radius: 7px;
   }
 
   .burger {
     width: 18px;
     height: 1px;
-    border: 1px solid white;
+    border: 1px solid;
     transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
@@ -147,8 +170,7 @@ section {
     transform: rotate(45deg) translate(-3px, -3px);
   }
 
-  .desktop,
-  .nav-theme {
+  .desktop{
     display: none;
   }
 
@@ -160,6 +182,7 @@ section {
     position: fixed;
     left: 0;
     right: 0;
+    /* margin: 0 20px; */
   }
 
   .nav-links ul {
@@ -173,6 +196,7 @@ section {
     justify-content: center;
     align-items: start;
     border-radius: 0;
+
 
     padding: 0;
     gap: 25px;
@@ -196,10 +220,9 @@ section {
 
   .mobile-menu ul {
     z-index: -1;
-    height: 320px;
-    padding: 30px;
+    height: 350px;
+    padding: 20px;
     margin-top: 0;
-    background-color: black;
   }
   .mobile-menu li{
     display: flex;
