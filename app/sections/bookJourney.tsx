@@ -13,18 +13,18 @@ export default function BookJourney() {
 
     const timeline = gsap.timeline();
     timeline
-      .from(".dream-container", { borderLeft: "#2222ff" })
-      .from(".dream-container", { borderTop: "#2222ff" })
-      .from(".dream-container", { borderRight: "#2222ff" })
-      .from(".dream-container", { borderBottom: "#2222ff" })
-      .from(".dream-container", { borderColor: "#2222ff" })
+      .from(".dream-container", { borderLeft: 0 })
+      .from(".dream-container", { borderTop: 0 })
+      .from(".dream-container", { borderRight: 0 })
+      .from(".dream-container", { borderBottom: 0 })
+      .from(".dream-container", { borderColor: "#ccc" })
       .from(".btn.cta", { opacity: 0 })
       .from(".dream-container", { scale: 1 })
     ScrollTrigger.create({
       animation: timeline,
       trigger: ".dream-container",
       start: "top 15%",
-      end: "+=2000",
+      end: "+=2500",
       scrub: true,
       pin: true,
       anticipatePin: 1,
@@ -39,16 +39,16 @@ export default function BookJourney() {
       <section ref={dreamContainer} id="book-journey" className="flex flex-col items-center px-[70px] py-[100px] ">
         <div className="dream-container flex flex-col justify-between border-solid gap-24 py-[100px] ">
           <div className="flex justify-center px-[24%] dream-part1">
-            <h2 className="text-[48px] capitalize text-center "> Unlock 30 Minutes to dream together</h2>
+            <h2 className="text-[48px] capitalize text-center "> Prenons 30 min pour rêver ensemble</h2>
           </div>
           <div className="flex justify-center dream-part2">
             <div className="flex justify-center w-[50%] ">
-              <p className="text-[20px]] " >Join us for a 30-minute conversation where we can explore your ideas, collaborate on possibilities, and shape your vision into reality.</p>
+              <p className="text-[20px]] " >Rejoignez-nous pour une conversation de 30 minutes où nous pouvons explorer vos idées, collaborer sur les possibilités et faire de vos rêves une réalité.</p>
             </div>
             <div className="flex justify-center items-center w-[30%] ">
               <a href="#contact">
                 <button className="btn cta">
-                  <span className="cta-text text-nowrap">book the journey</span>
+                  <span className="cta-text text-nowrap">Réserver le voyage</span>
                   <span className="cta-transition"></span>
                 </button>
               </a>

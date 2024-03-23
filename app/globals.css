@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: #000000;
-  --background-start-rgb: #f8faf9;
+  --background-start-rgb: #e8eae9;
   --background-end-rgb: #FFFFFF;
 }
 
@@ -43,6 +43,9 @@ body {
   color: var(--foreground-rgb);
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
   overflow-x: hidden;
+}
+.lato{
+  /* font-family: "arima"; */
 }
 
 @layer utilities {
@@ -164,6 +167,27 @@ hr {
   transform: scale(1.1);
 }
 
+.skill.blue:hover{
+  color: white;
+  background-color: blue;
+}
+.skill.purple:hover{
+  color: white;
+  background-color: purple;
+}
+.skill.orange:hover{
+  color: white;
+  background-color: orange;
+}
+.skill.black:hover{
+  color: white;
+  background-color: blue;
+}
+.skill.cyan:hover{
+  color: white;
+  background-color: cyan;
+}
+
 .rounded {
   white-space: nowrap;
   padding: 2px 10px;
@@ -173,11 +197,11 @@ hr {
 
 .dream-container {
   position: relative;
-  border: 1px solid var(--foreground-rgb);
+  border: 2px solid #4169E1;
+  box-shadow: 0 0 2px #E6E6FA;
   border-radius: 2.344vw;
   background-position: 100% 0;
   width: 100%;
-  min-height: 78vh;
 }
 
 .dream-container:before,
@@ -195,7 +219,7 @@ hr {
 }
 
 .dream-container:before {
-  background-image: url('../public/svg/dream-wave.svg');
+  background-image: url('../public/svg/dream-wave.svg')!important;
   background-position-y: top;
   background-position-x: right;
   opacity: 1;
@@ -544,4 +568,9 @@ main {
   }
 
   .contact-infos input::placeholder {}
+}
+
+nav, main, .dream-container, #marquee, .footer{
+  max-width: 2500px;
+  margin: 0 auto;
 }

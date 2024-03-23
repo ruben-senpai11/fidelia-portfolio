@@ -5,15 +5,15 @@ import dynamic from 'next/dynamic';
 const Header = dynamic(() => import('./navigation/header'), { ssr: false });
 const OurWorks = dynamic(() => import('./sections/works'), { ssr: false });
 const Principles = dynamic(() => import('./sections/principles'), { ssr: false });
-const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: false });
 const Marquee = dynamic(() => import('./sections/marquee'), { ssr: false });
+const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: false });
 
 /*
 import Header from "./navigation/header";
 import OurWorks from "./sections/works";
 import Principles from "./sections/principles";
-import BookJourney from "./sections/bookJourney";
 import Marquee from "./sections/marquee";
+import BookJourney from "./sections/bookJourney";
 */
 
 import Footer from "./navigation/footer"
@@ -26,24 +26,24 @@ import ContactForm from "./components/contact";
 export default function Page() {
 
   const interests: string[] = ["Web-design", "Web-development", "Branding", "Marketing", "Other"];
-  const budgetEUR: string[] = ["<5K", "5-10K", "10-20K", ">20K", "I don't know yet"];
-  const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "I don't know yet"]
+  const budgetEUR: string[] = ["<1000€", "1-4K", "4-10K", ">10K", "JE NE SAIS PAS ENCORE"];
+  const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "JE NE SAIS PAS ENCORE"]
 
   return (
     <>
       <Header />
       <main className="flex flex-col items-center justify-between ">
         <section id="home" className="">
-          <div className="introduction px-[20%] py-[150px] h-[90vh] flex flex-col justify-center items-center gap-8">
+          <div className="introduction px-[20%] py-[150px] h-[80vh] flex flex-col justify-center items-center gap-8">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
-            <h2 className=" text-center">The agency designed to scale your business +50% within 6 months</h2>
+            <h2 className=" text-center">L'agence pensée pour scaler votre entreprise de +50% en 6 mois</h2>
           </div>
-          <div className="introduction px-[20%] py-[150px] h-[90vh] flex flex-col justify-center items-center gap-6">
-            <h2 className=" text-center leading-snug">We are a ministry of designers & developers, who may not be genies, but grant wishes too</h2>
-            <p className="text-center pt-0 text-[12px] px-[25%]">By connecting deep analysis, strong technical skills and design background with clear communication & responsiveness we’re creating unique projects with a pinch of good vibes</p>
+          <div className="introduction px-[15%] py-[100px] pt-[250px] flex flex-col justify-center items-center gap-6">
+            <h2 className=" text-center leading-snug">Nous sommes un écosystème de designeurs, développeurs <span className="lato">&</span> marketers qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.</h2>
+            <p className="text-center pt-0 text-[12px] px-[25%]">En associant une analyse profonde des besoins, des compétences techniques éprouvées, la communication active & la réactivité, nous crééons des projets uniques avec une bouffée d'ondes positives</p>
             <a href="#about-us">
               <button className="btn cta">
-                <span className="cta-text">Get to know us</span>
+                <span className="cta-text">Apprenez à nous connaître</span>
                 <span className="cta-transition"></span>
               </button>
             </a>
@@ -54,11 +54,11 @@ export default function Page() {
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p> */}
           <div className="flex justify-between min-w-100 gap-32 sides-section">
             <div className="left-side py-0 w-[50%] flex flex-col gap-6">
-              <h2 className="text-[32px]">We bring solutions to make life easier for our customers.</h2>
+              <h2 className="text-[32px]">Nous crééons des solutions pour faciliter la vie de nos clients.</h2>
               <a href="#contact" className="learn-cta ">
                 <button className="btn cta w-max">
                   <span className="cta-text ">
-                    Learn more
+                    En savoir plus
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L9.88889 5M9.88889 5L5.88889 1M9.88889 5L5.88889 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
@@ -69,63 +69,67 @@ export default function Page() {
             </div>
             <div className="right-side py-2 services w-[100%] flex flex-col gap-6">
               <Service
-                label="Brand Development"
-                description="Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus."
-                service1="Brand Copywriting"
-                service2="Website Development"
-                service3="Ecommerce Conversion"
-                service4="No-Code Development"
-                service5="Responsive Development"
-                service6="Shopify Development"
+                index={10}
+                label="Développement web"
+                description="C'est le processus de création et de maintenance de sites et d'applications web. Il implique la maîtrise de plusieurs langages de programmation, de technologies web ou des outils comme les CMS pour concevoir, développer et déployer des solutions web performantes et attractives."
+                service1="Création de site web"
+                service2="Boutique E-commerce"
+                service3="Applications web & PWA"
+                service4="Web mobile (Responsivité)"
+                service5="Expérience utilisateur (UX)"
+                service6="Maintenance & Sécurité"
               />
               <Service
-                label="Digital Marketing"
-                description="Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus."
-                service1="Messaging Strategy"
-                service2="Search Engine Optimization"
-                service3="Marketing Consultancy"
-                service4="Google Ads"
-                service5="Facebook Ads"
-                service6="Social Media"
+                index={2}
+                label="Marketing digital"
+                description="Le marketing digital est l'ensemble des techniques marketing qui utilisent les canaux numériques pour promouvoir une marque, ses produits et ses services, atteindre et engager les clients."
+                service1="Référencement naturel (SEO)"
+                service2="Campagnes de publicités (SEA)"
+                service3="Marketing de contenu"
+                service4="Social Media Marketing"
+                service5="Email marketing"
+                service6="Analyses et suivi de performances"
               />
               <Service
+                index={3}
                 label="Graphic Design"
-                description="Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus."
-                service1="Logo Design"
-                service2="Advertisment"
-                service3="Art Direction"
-                service4="User Interface Design"
-                service5="Business Card Design"
-                service6="Custom Illustration"
+                description="L'art de combiner le texte, les images et les éléments visuels pour créer une communication visuelle efficace. Il s'agit d'un domaine créatif et technique qui vise à transmettre des messages et des idées à un public cible de manière claire, concise et attrayante."
+                service1="Création de logo"
+                service2="Identité visuelle"
+                service3="Direction artistique"
+                service4="Interface utilisateur (UI)"
+                service5="Illustrations"
+                service6="Miniatures & affiches"
               />
               <Service
-                label="UX & Product Design"
-                description="Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus."
-                service1="UX & UI design"
-                service2="User Experience"
-                service3="Mobile Design"
-                service4="Wireframe & Prototyping"
-                service5="Brand Guides"
-                service6="Rebranding"
+                index={1}
+                label="Développement de marque"
+                description="Le développement de marque (brand development) est le processus continu de définition, d'amélioration et de test de la stratégie globale de votre marque. C'est la base de votre approche de mise sur le marché et de votre stratégie de réussite à long terme."
+                service1="Stratégie de marque"
+                service2="Création de l'identité visuelle"
+                service3="Communication Digitale"
+                service4="Content marketing"
+                service5="Relations publiques"
+                service6="Expérience client"
               />
             </div>
           </div>
         </section>
 
-        <OurWorks />
+        <OurWorks title="Nos projets" />
 
         <BookJourney />
 
         <section id="about-us" className="flex flex-col gap-2 py-[150px]">
-          <h2 className=" text-center pb-4">Why choose us?</h2>
+          <h2 className=" text-center pb-4">Pourquoi nous choisir?</h2>
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">03</span><span className="separator"></span><span className="s-label uppercase">Why Choose us</span></p> */}
           <div className="sides-section flex justify-between min-w-100 gap-32">
             <div className="left-side py-0 w-[50%] flex flex-col gap-6">
-              <h2 className="text-[32px]">Your premier option for outstanding value.</h2>
+              <h2 className="text-[32px]">Votre premier choix <br className="desktop" /> pour une valeur exceptionnelle.</h2>
               <a href="#contact" className="learn-cta ">
                 <button className="btn cta w-max">
                   <span className="cta-text">
-                    Learn more
+                    En savoir plus
                     <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L9.88889 5M9.88889 5L5.88889 1M9.88889 5L5.88889 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
@@ -136,26 +140,26 @@ export default function Page() {
             </div>
             <div className="right-side py-2 w-[100%] flex flex-col gap-6">
               <div className="flex flex-col gap-6">
-                <p className="">Deeply embedded within our organization is a profound and unwavering commitment to the perpetual expansion of artistic brilliance. We firmly believe that the quest for creative excellence is an endeavor without limits, and as such, we are embarked on an enduring journey to discover and unlock new dimensions of inspiration and ingenuity.</p>
-                <p className="">We believe in breaking free from established norms, continually seeking fresh perspectives, and embracing the uncharted territories of design possibilities. Our tireless commitment to this cause drives us to redefine and expand the very essence of creativity.</p>
+                <p className="">Au plus profond de notre agence réside une conviction inébranlable : le potentiel illimité de nos clients. Passionés de l'entrepreneuriat, nous sommes convaincus que chaque entreprise détient en elle les graines du succès. Notre mission est simple : nourrir ces graines et les aider à germer, à grandir et à s'épanouir atteindre des sommets insoupçonnés. Nous ne sommes pas une simple agence, nous ne créons pas juste des sites et des stratégies NOUS CRÉONS DES RÉSULTATS. </p>
+                <p className="">Notre approche unique repose sur une compréhension profonde de vos besoins et de vos objectifs. Nous sommes des docteurs au cœeur de serviteurs, et en ce sens ce n'est que quand vous réusissez que nous réussissons. En étroite collaboration avec vous, nous élaborons des stratégies sur-mesure qui s'adaptent à votre rythme et à vos ambitions. Notre objectif est clair : vous propulser vers la réussite et vous aider à réaliser votre plein potentiel.</p>
               </div>
               <div className="arguments-col flex gap-16 pt-8">
-                <Argument icon={1} label="Innovative Thinking" description="Innovative thinking is the key to effectively solving complex problems and driving progress in various fields." />
-                <Argument icon={2} label="Rapid Solutions" description="Proactively prioritizing fast & effective solutions can streamline processes & significantly enhance productivity." />
+                <Argument icon={3} label="Design Innovant" description="En adoptant une approche holistique, nos designers livrent des créations cohérentes et mémorables qui marquent durablement le public." />
+                <Argument icon={1} label="Développement axé utilisateur" description="Nous créons des interfaces fluides, une navigation intuitive, une expérience utilisateur optimale pour le plaisir de vos clients." />
               </div>
               <div className="arguments-col flex gap-16">
-                <Argument icon={3} label="Wholistic Approach" description="Designers using this approach deliver cohesive, memorable designs that resonate with the audience." />
-                <Argument icon={4} label="Affordable Prices" description="Our design agency provides budget friendly, flexible pricing for customized design solutions." />
+                <Argument icon={2} label="Marketing Ciblé" description="Avec la stratégie adaptée, nous touchons les bonnes personnes, avec le bon message sur tous les canaux pour une expérience client cohérente et rentable." />
+                <Argument icon={4} label="Rapport Price-value" description="Nos solutions s'adaptent à votre budget. Nous utilisons les meilleures technologies et produisons du résultat sans casser votre tirelire. " />
               </div>
             </div>
           </div>
         </section>
 
-        <Principles />
+        <Principles title="Nos principes" />
 
       </main>
 
-      <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Web Development", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive", "Ecomerce", "SaaS", "Business2Business", "Website Development"]} />
+      <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Développement Web", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive", "Ecomerce", "Website Development", "SaaS", "Business2Business"]} />
       
       <ContactForm interests={interests} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
       

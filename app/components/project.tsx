@@ -23,7 +23,7 @@ export default function Project({label, image, imageAlt, year, skills}:Props) {
           </div>
           <div className="flex flex-wrap gap-4">
             {skills.map((item, index) => (
-              <div key={index} className="project-skill rounded">{item}</div>
+              <div key={index} className=" skill rounded">{item}</div>
             ))}
           </div>
         </div>

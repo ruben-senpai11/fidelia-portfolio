@@ -11,7 +11,11 @@ import transparency from "../assets/images/transparency.jpeg"
 import teamSpirit from "../assets/images/team-spirit.jpg"
 import excellence from "../assets/images/excellence opérationnelle.webp"
 
-export default function Principles() {
+interface Props{
+  title: string
+}
+
+export default function Principles({title}:Props) {
 
   const [width, setWidth] = useState(window.innerWidth); 
 
@@ -67,11 +71,11 @@ export default function Principles() {
     <>
       <section id="principles" ref={principles} className="px-[50px] py-[150px] max-w-[2000px] ">
         <div className="principles box-border flex flex-col gap-20 h-[100vh] ">
-            <h2 className="text-[48px] text-center">Our principles</h2>
+            <h2 className="text-[48px] text-center">{title}</h2>
           <div className={(width>767 ? "w-[100%] " : "gap-[4px] ") + "flex justify-between relative pb-2"}  >
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[100] mt-0 ") + "principle1 " } image={transparency} imageAlt="Transparency" label="Transparency" description="We keep it real and transparent, no smoke and mirrors." />
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[300] mt-4 ") + "principle2 " } image={excellence} imageAlt="Excellence" label="Excellence" description="We're cool, but we're seriopus about delivering top⁻notch quality" />
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Team Spirit" description="We're all in this together, fostering collaboration and unity." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[100] mt-0 ") + "principle1 " } image={transparency} imageAlt="Transparence" label="Transparence" description="Nous restons vrais et transparent, pas de poudre aux yeux." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[300] mt-4 ") + "principle2 " } image={excellence} imageAlt="Excellence" label="Excellence" description="Nous sommes cool, mais exigeants quant à produire un travail irréprochable." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Esprit d'équipe" description="Nous sommes ensemble dans cette quête, favorisons la collaboration et l'unité." />
           </div>
         </div>
       </section>

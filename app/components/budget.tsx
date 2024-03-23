@@ -6,9 +6,13 @@ interface Props {
   budgetEUR: string[]
 }
 
-export default function Budget({ budgetCFA, budgetEUR }: Props) {
+interface Props{
+  title: string,
+}
 
-  const [currency, setCurrency] = useState("cfa")
+export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
+
+  const [currency, setCurrency] = useState("eur")
 
   const handleChange = () => {
     if (currency == "cfa") {
@@ -28,8 +32,8 @@ export default function Budget({ budgetCFA, budgetEUR }: Props) {
     <>
       <div className="flex flex-col gap-6">
         <div className="flex relative">
-          <h3 className="uppercase flex gap-2 ">
-            Your BUDGET IN
+          <h3 className="uppercase flex gap-2 font-medium ">
+            {title}
             <span className="flex items-center gap-1 currency" onClick={handleChange} >
               <button title="change currency" className="budgetCurrency font-medium">{currency=="eur" ? "EUR" : "CFA"}</button>
               <svg fill="currentColor" width="10px" height="10px" viewBox="0 0 30.727 30.727">

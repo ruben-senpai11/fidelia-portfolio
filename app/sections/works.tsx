@@ -12,7 +12,14 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Works() {
+
+
+interface Props{
+  title: string
+}
+
+
+export default function Works({title}:Props) {
 
 
   const [width, setWidth] = useState(window.innerWidth); 
@@ -41,7 +48,7 @@ export default function Works() {
         trigger: '.project-col2',
         toggleActions: "restart pause reverse pause",
         start: 'top bottom',
-        end: 'center center',
+        end: 'center top',
         scrub: true,
       }
     });
@@ -50,22 +57,22 @@ export default function Works() {
   return (
     <>
       <section ref={container} id="works" className="flex flex-col items-centr gap-20 py-[150px]">
-        <h2 className="text-[48px] text-center">Our works</h2>
+        <h2 className="text-[48px] text-center">{title}</h2>
         {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">Our works</span></p> */}
         <div className="projects border-solid flex gap-24">
           <div className="project-col flex flex-col gap-16">
-            <Project label="FAR IN GAMES Tournament" image={playStation} imageAlt="playstation" year="2022" skills={["Concept", "Creative Direction", "Design", "Development"]} />
-            <Project label="LEMÖNPLET Refonte" image={lemonplet} imageAlt="Lemonplet" year="2023" skills={["Integration", "UIX", "Development"]} />
+            <Project label="FAR IN GAMES " image={playStation} imageAlt="playstation" year="2022" skills={["Conception", "Direction Artistique", "Design", "Dévelopment"]} />
+            <Project label="LEMÖNPLET Refonte" image={lemonplet} imageAlt="Lemonplet" year="2023" skills={["Intégration web", "UX", "Dévelopment"]} />
           </div>
           <div className={ (width>999 ? "project-col2 transform translate-y-[200px] " : "") + "project-col flex flex-col gap-16" } >
-            <Project label="Bunny Management" image={rabbit} imageAlt="Rabbit of Future" year="2023" skills={["Saas", "Concept", "Design", "Development"]} />
-            <Project label="Bandage E-commerce" image={bandage} imageAlt="Bandage E-commerce" year="2024" skills={["Integration", "Concept", "Creative Direction", "Design", "Development"]} />
+            <Project label="Bunny Management" image={rabbit} imageAlt="Rabbit of Future" year="2023" skills={["Saas", "Conception", "Design", "Dévelopment"]} />
+            <Project label="Bandage E-commerce" image={bandage} imageAlt="Bandage E-commerce" year="2024" skills={["Collaboration", "Intégration web", "Dévelopment", "UX"]} />
           </div>
         </div>
         <div className="flex justify-center items-center">
           <a href="#contact">
             <button className="btn cta w-max">
-              <span className="cta-text">Discover all</span>
+              <span className="cta-text">Tout découvrir</span>
               <span className="cta-transition"></span>
             </button>
           </a>
