@@ -41,7 +41,8 @@ html {
 body {
   font-family: "Open sans";
   color: var(--foreground-rgb);
-  background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
+  background: transparent;
+  /* background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb); */
   overflow-x: hidden;
 }
 .lato{
@@ -83,6 +84,13 @@ color: #f8faf9;
 .burger {
   color: var(--background-end-rgb);
   /* color: var(--foreground-rgb); */
+}
+.light-hero {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .separator {

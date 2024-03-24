@@ -35,6 +35,7 @@ export default function Page() {
       <main className="flex flex-col items-center justify-between ">
         <section id="home" className="">
           <div className="introduction px-[20%] py-[150px] h-[80vh] flex flex-col justify-center items-center gap-8">
+          {/* <img src="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png" loading="lazy" srcset="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-500.png 500w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-800.png 800w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-1080.png 1080w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png 1294w" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1279px) 95vw, (max-width: 1376px) 94vw, 1294px" class="light-hero d-flex  " /> */}
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
             <h2 className=" text-center">L'agence pensée pour scaler votre entreprise de +50% en 6 mois</h2>
           </div>
