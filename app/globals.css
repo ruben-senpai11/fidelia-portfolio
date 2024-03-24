@@ -42,11 +42,8 @@ body {
   font-family: "Open sans";
   color: var(--foreground-rgb);
   background: transparent;
-  /* background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb); */
+  background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
   overflow-x: hidden;
-}
-.lato{
-  /* font-family: "arima"; */
 }
 
 @layer utilities {
@@ -85,6 +82,29 @@ color: #f8faf9;
   color: var(--background-end-rgb);
   /* color: var(--foreground-rgb); */
 }
+
+
+.hero-background {
+  position: relative;
+  width: 100%;
+}
+
+.hero-background:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png')!important;
+  background-position: center;
+  /* background-position-x: right; */
+  opacity: 1;
+}
+
 .light-hero {
   z-index: 0;
   position: absolute;
@@ -575,7 +595,6 @@ main {
     width: 100%;
   }
 
-  .contact-infos input::placeholder {}
 }
 
 nav, main, .dream-container, #marquee, .footer{
