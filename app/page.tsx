@@ -23,7 +23,7 @@ import ContactForm from "./components/contact";
 
 
 
-export default function Page() {
+export default function Page({searchParams} : {searchParams: {[key: string]: string | string[] | undefined }}) {
 
   const interests: string[] = ["Web-design", "Web-development", "Branding", "Marketing", "Other"];
   const budgetEUR: string[] = ["<1000€", "1-4K", "4-10K", ">10K", "JE NE SAIS PAS ENCORE"];
@@ -40,7 +40,7 @@ export default function Page() {
               <img src="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png" loading="lazy" srcSet="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-500.png 500w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-800.png 800w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-1080.png 1080w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png 1294w" alt="" sizes="100vw" className="dark-hero d-none" />
             </div> */}
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
-            <h2 className=" text-center">L\'agence pensée pour scaler votre entreprise de +50% en 6 mois</h2>
+            <h2 className=" text-center">L'agence conçue pour scaler votre entreprise de +50% en 6 mois</h2>
           </div>
           <div className="introduction px-[15%] py-[100px] pt-[250px] flex flex-col justify-center items-center gap-6">
             <h2 className=" text-center leading-snug">Nous sommes un écosystème de designeurs, développeurs <span className="lato">&</span> marketers qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.</h2>
@@ -71,7 +71,7 @@ export default function Page() {
                 </button>
               </a>
             </div>
-            <div className="right-side py-2 services w-[100%] flex flex-col gap-6">
+            <div className="right-side py-0 services w-[100%] flex flex-col gap-6">
               <Service
                 index={10}
                 label="Développement web"

@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo/>
-              <h5 className="w-[65%]">Nous sommes l'agence pensée pour scaler. Nous croyons fermement au pouvoir de la croissance</h5>
+              <h5 className="w-[65%]">Nous sommes l'agence conçue pour scaler. Nous croyons fermement au pouvoir de la croissance</h5>
             </div>
             <div className="flex copywright desktop">
               <p className="">© 2024 All Rights Reserved</p>

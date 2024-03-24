@@ -6,9 +6,9 @@
   gap: 5px;
 }
 .logo svg{
-  /* width: 160px; */
   width: 30px;
   height: 30px;
+  /* width: 160px; */
 }
 .logo p{
   font-size: 22px;
