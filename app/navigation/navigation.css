@@ -3,11 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 .logo svg{
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   /* width: 160px; */
 }
 .logo p{
