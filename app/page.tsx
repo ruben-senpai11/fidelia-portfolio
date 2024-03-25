@@ -25,8 +25,8 @@ import ContactForm from "./components/contact";
 
 export default function Page({searchParams} : {searchParams: {[key: string]: string | string[] | undefined }}) {
 
-  const interests: string[] = ["Web-design", "Web-development", "Branding", "Marketing", "Other"];
-  const budgetEUR: string[] = ["<1000€", "1-4K", "4-10K", ">10K", "JE NE SAIS PAS ENCORE"];
+  const interests: string[] = ["Web-design", "Dévelopment web", "Branding", "Marketing", "Autres"];
+  const budgetEUR: string[] = ["<1000", "1K-4K", "4-10K", ">10K", "JE NE SAIS PAS ENCORE"];
   const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "JE NE SAIS PAS ENCORE"]
 
   return (
