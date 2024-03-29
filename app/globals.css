@@ -118,6 +118,13 @@ color: #f8faf9;
   background-color: var(--foreground-rgb);
 }
 
+.hyphen{
+  width: 30px;
+  height: 7px;
+  margin-left: 25px;
+  background-color: var(--foreground-rgb);
+}
+
 hr {
   height: 1.5px;
   border-color: var(--foreground-rgb);
@@ -437,6 +444,12 @@ main {
   .introduction {
     padding: 350px 100px;
   }
+  .gap-24 {
+    gap: 4rem;
+  }
+  .gap-20{
+    gap: 2rem;
+  }
   .gap-16{
     gap: 2.5rem;
   }
@@ -451,7 +464,7 @@ main {
   }
   
   .learn-cta{
-    margin: 20px 0;
+    margin: 15px 0;
   }
 
   .py-\[150px\]{
@@ -500,16 +513,29 @@ main {
     padding: 0 20px;
   }
 
-  .introduction {
-    padding: 320px 10px;
+  .introduction:first-of-type {
+    padding: 250px 10px 10px 10px;
+  }
+  .introduction:last-of-type {
+    padding: 250px 10px 100px 10px;
   }
 
   h2 {
     font-size: 34px;
   }
-
+  .text-\[48px\]{
+    font-size: 42px;
+  }
   .introduction p {
     padding: 0 20%;
+  }
+
+  .service-accordion svg{
+    width: 35px;
+    height: 35px;
+  }
+  .service-accordion .gap-8{
+    gap: 1rem;
   }
 
   .projects {
@@ -549,12 +575,15 @@ main {
   }
 
   #book-journey {
-    padding: 10px;
+    padding: 100px 10px;
   }
-
+  #marquee{
+    padding: 30px 0;
+  }
   .dream-container {
     padding: 5%;
     padding-bottom: 10%;
+    max-height: 96vh;
   }
 
   .dream-part1 {
@@ -581,6 +610,13 @@ main {
 
   .marquee {
     font-size: 48px;
+  }
+
+  .hyphen{
+    width: 15px;
+    height: 5px;
+    margin-left: 20px;
+    background-color: var(--foreground-rgb);
   }
 
   .contact-container{

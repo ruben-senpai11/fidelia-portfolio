@@ -33,8 +33,8 @@ export default function Page({searchParams} : {searchParams: {[key: string]: str
     <>
       <Header />
       <main className="flex flex-col items-center justify-between ">
-        <section id="home" className="">
-          <div className="introduction hero-background px-[20%] py-[150px] h-[80vh] flex flex-col justify-center items-center gap-8">
+        <section id="hero" className="">
+          <div className="introduction hero-background px-[20%] py-[50px] h-[80vh] flex flex-col justify-center items-center gap-8">
             {/* <div className="hero-background">
               <img src="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png" loading="lazy" srcSet="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-500.png 500w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-800.png 800w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-1080.png 1080w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png 1294w" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1279px) 95vw, (max-width: 1376px) 94vw, 1294px" className="light-hero d-flex  " />
               <img src="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png" loading="lazy" srcSet="https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-500.png 500w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-800.png 800w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-1080.png 1080w, https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png 1294w" alt="" sizes="100vw" className="dark-hero d-none" />
@@ -53,7 +53,7 @@ export default function Page({searchParams} : {searchParams: {[key: string]: str
             </a>
           </div>
         </section>
-        <section id="services" className="flex flex-col gap-2 py-[150px]">
+        <section id="services" className="flex flex-col gap-2 py-[50px]">
           <h2 className=" text-start">Services</h2>
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p> */}
           <div className="flex justify-between min-w-100 gap-32 sides-section">
@@ -124,7 +124,7 @@ export default function Page({searchParams} : {searchParams: {[key: string]: str
 
         <BookJourney />
 
-        <section id="about-us" className="flex flex-col gap-2 py-[150px]">
+        <section id="about-us" className="flex flex-col gap-2 py-[50px]">
           <h2 className=" text-center pb-4">Pourquoi nous choisir?</h2>
           {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">03</span><span className="separator"></span><span className="s-label uppercase">Why Choose us</span></p> */}
           <div className="sides-section flex justify-between min-w-100 gap-32">
@@ -163,7 +163,7 @@ export default function Page({searchParams} : {searchParams: {[key: string]: str
 
       </main>
 
-      <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Développement Web", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive", "Ecomerce", "Website Development", "SaaS", "Business2Business"]} />
+      <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Développement Web", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive design", "Ecomerce", "Dévelopment web", "SaaS", "Business2Business"]} />
 
       <ContactForm interests={interests} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
 

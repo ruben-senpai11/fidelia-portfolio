@@ -40,22 +40,6 @@ export default function Marquee({ marquee1Content, marquee2Content }: Props) {
 
   }, {});
 
-  marquee1Content.map((value, index) => {
-    if (index > 0) {
-      return `-${value}`;
-    }
-    return value;
-  })
-    .join('');
-
-  marquee2Content.map((value, index) => {
-    if (index > 0) {
-      return `-${value}`;
-    }
-    return value;
-  })
-    .join('');
-
   return (
     <>
       <section id="marquee" className="flex flex-col gap-16 py-[100px] w-[100%] overflow-hidden">

@@ -23,7 +23,7 @@ export default function BookJourney() {
     ScrollTrigger.create({
       animation: timeline,
       trigger: ".dream-container",
-      start: "top 15%",
+      start: "top 100",
       end: "+=2500",
       scrub: true,
       pin: true,
