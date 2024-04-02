@@ -4,13 +4,13 @@ import Logo from "../components/logo";
 export default function Footer() {
   return (
     <>
-      <div className="footer flex flex-col justify-between items-start px-16 py-8  gap-16">
+      <div className="footer flex flex-col justify-between items-start px-16 py-8 text-[15px]  gap-16">
         <hr />
         <div className="footer-grid flex w-[100%]">
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo/>
-              <h5 className="w-[65%]">Nous sommes l'agence conçue pour scaler. Nous croyons fermement au pouvoir de la croissance</h5>
+              <h3 className="w-[65%] ">Parce que nous ne créons pas des outils, nous créons du résultat</h3>
             </div>
             <div className="flex copywright desktop">
               <p className="">© 2024 All Rights Reserved</p>

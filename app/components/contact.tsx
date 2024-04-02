@@ -63,23 +63,21 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[48px] " dangerouslySetInnerHTML={{ __html: escapedString1 }} ></h2>
             <h3 className="uppercase w-[50%] text-[20px] " dangerouslySetInnerHTML={{ __html: escapedString2 }}></h3>
-            <a href="mailto:albanhonfovou@gmail.com">
-              <button className="btn cta w-max">
+            <a href="mailto:albanhonfovou@gmail.com" className="btn cta w-max">
                 <span className="cta-text">Envoyer plutôt un mail</span>
                 <span className="cta-transition"></span>
-              </button>
             </a>
           </div>
           <div className="right-side py-4 w-[50%]  ">
             <div className="contact-container flex flex-col gap-8 p-6 ">
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">INFOS DE CONTACT *</h3>
                 <div className="contact-infos flex gap-4">
                   <input type="text " placeholder="VOTRE NOM *" />
                   <input type="e-mail" placeholder="VOTRE E-MAIL *" />
                 </div>
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">Vous êtes intéressez par *</h3>
                 <Interest interestsList={interests} />
               </div>

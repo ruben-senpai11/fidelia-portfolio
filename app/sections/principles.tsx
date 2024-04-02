@@ -57,7 +57,7 @@ export default function Principles({title}:Props) {
     ScrollTrigger.create({
       animation: timeline,
       trigger: ".principles",
-      start: "top",
+      start: "top 10%",
       end: "+=3500",
       scrub: true,
       pin: true,
@@ -70,12 +70,13 @@ export default function Principles({title}:Props) {
   return (
     <>
       <section id="principles" ref={principles} className="px-[50px] py-[150px] max-w-[2000px] ">
-        <div className="principles box-border flex flex-col gap-20 h-[100vh] ">
-            <h2 className="text-[48px] text-center">{title}</h2>
+        <div className="principles box-border flex flex-col gap-8 ">
+            {/* <h2 className="text-[48px] text-center">{title}</h2> */}
+            <p className="section-label text-[16px] flex gap-4 items-center"><span className="s-number">04</span><span className="separator"></span><span className="s-label ">{title}</span></p>
           <div className={(width>767 ? "w-[100%] " : "gap-[4px] ") + "flex justify-between relative pb-2"}  >
             <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[100] mt-0 ") + "principle1 " } image={transparency} imageAlt="Transparence" label="Transparence" description="Nous restons vrais et transparent, pas de poudre aux yeux." />
             <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[300] mt-4 ") + "principle2 " } image={excellence} imageAlt="Excellence" label="Excellence" description="Nous sommes cool, mais exigeants quant à produire un travail irréprochable." />
-            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Esprit d'équipe" description="Nous sommes ensemble dans cette quête, favorisons la collaboration et l'unité." />
+            <Principle className={ (width>999 ? " " : "absolute w-[100%] flex justify-center z-[200] mt-2 ") + "principle3 " } image={teamSpirit} imageAlt="Team Spirit" label="Esprit d'équipe" description="Nous sommes ensemble dans cette quête, la collaboration et l'unité sont la clé." />
           </div>
         </div>
       </section>

@@ -30,7 +30,7 @@ export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
 
   return (
     <>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div className="flex relative">
           <h3 className="uppercase flex gap-2 font-medium ">
             {title}

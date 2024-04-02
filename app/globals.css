@@ -4,14 +4,14 @@
 
 :root {
   --foreground-rgb: #000000;
-  --background-start-rgb: #e8eae9;
+  --background-start-rgb: #f8faf9;
   --background-end-rgb: #FFFFFF;
 }
 
 [ data-theme="dark"] {
   --foreground-rgb: #f8faf9;
-  --background-start-rgb: #222222;
-  --background-end-rgb: #000000;
+  --background-start-rgb: #13181b;
+  --background-end-rgb: #000;
 }
 
 @font-face {
@@ -40,6 +40,7 @@ html {
 
 body {
   font-family: "Open sans";
+  font-size: 18px;
   color: var(--foreground-rgb);
   background: transparent;
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
@@ -60,7 +61,7 @@ section {
 
 h1,
 h2 {
-  font-family: "Playfair";
+  font-family: "Lato";
 }
 
 h2 {
@@ -83,35 +84,17 @@ color: #f8faf9;
   /* color: var(--foreground-rgb); */
 }
 
-
-.hero-background {
-  position: relative;
-  width: 100%;
+.font-playfair{
+  font-family: "Playfair";
 }
 
-.hero-background:before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-image: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png')!important;
-  background-position: center;
-  opacity: 1;
+.artisanIllustration{
+  object-fit: cover;
 }
 
-.light-hero {
-  z-index: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.border-solid{
+  border: solid;
 }
-
 .separator {
   width: 40px;
   height: 1px;
@@ -193,7 +176,7 @@ hr {
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease-in-out;
-  filter: grayscale(80%);
+  filter: grayscale(60%);
 }
 
 .project-image img:hover {
@@ -288,12 +271,10 @@ hr {
   font-family: "Lato";
 }
 
-
 .s-label {
-  font-family: "Playfair";
+  font-family: Open sans;
   font-weight: 500;
-  /* letter-spacing: 2px; */
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .contact-container {
@@ -347,9 +328,16 @@ li {
 
 
 main {
-  padding: 0 64px;
+  padding: 0 0px;
 }
 
+section{
+  padding: 100px 64px!important;
+}
+section#hero{
+  padding-top: 20px!important;
+  padding-bottom: 20px!important;
+}
 
 .btn.cta {
   padding: 16px 12px;
@@ -411,9 +399,58 @@ main {
   color: var(--background-end-rgb);
 }
 
+.desktop{
+  display: flex;
+}
+.desktop-n-tab{
+  display: flex;
+}
+.mobile{
+  display: none;
+}
 
+@media screen and (max-width: 1200px) {
+  
+  main {
+    padding: 0;
+  }
+
+  section{
+    padding: 100px 20px!important;
+  }
+
+  .arguments-col {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .argument {
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .arg-content {
+    gap: .2rem;
+  }
+
+  .service-row {
+    width: 100%;
+  }
+
+  .services li {
+    width: 48%;
+  }
+}
 
 @media screen and (max-width: 999px) {
+
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
 
   .nav-links ul {
     color: var(--foreground-rgb);
@@ -422,8 +459,10 @@ main {
   }
 
   main {
-    padding: 0 40px;
     font-size: 15px;
+  }
+  section{
+    padding: 70px 40px!important;
   }
 
   h2 {
@@ -441,8 +480,12 @@ main {
     font-size: 18px;
   }
 
-  .introduction {
-    padding: 350px 100px;
+  #hero {
+    padding-top: 100px;
+  }
+
+  .gap-32{
+    gap: 4rem ;
   }
   .gap-24 {
     gap: 4rem;
@@ -470,6 +513,10 @@ main {
   .py-\[150px\]{
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .artisans .right-side{
+    height: 300px;
   }
 
   .sides-section {
@@ -509,15 +556,70 @@ main {
 }
 
 @media screen and (max-width: 767px) {
-  main {
-    padding: 0 20px;
+
+  .desktop-n-tab{
+    display: none;
   }
 
+
+  main {
+    padding: 0;
+  }
+
+  section{
+    padding: 50px 20px!important;
+  }
+
+  
+  .introduction{
+    padding-bottom: 0;
+  }
   .introduction:first-of-type {
-    padding: 250px 10px 10px 10px;
+    padding: 150px 10px 10px 10px;
   }
   .introduction:last-of-type {
-    padding: 250px 10px 100px 10px;
+    padding: 50px 10px 100px 10px;
+  }
+
+  .introduction h2{
+    font-size: 34px;
+    padding-top: 12px;
+  }
+  .artisans{
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .artisans .left-side h2{
+    text-align: left;
+    font-size: 22px;
+  }
+  .artisan-role{
+    font-size: 24px;
+  }
+
+  .artisans .right-side{
+    height: 400px;
+    max-height: 400px;
+  }
+  .artisans .right-side img{
+    /* max-width: 90%; */
+    margin: 0 auto;
+    width: 80vw;
+  }
+  .artisans .right-side img{
+    object-fit: scale-down;
+  }
+
+  .hero-lead{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .hero-lead p, .hero-cta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   h2 {
@@ -527,7 +629,7 @@ main {
     font-size: 42px;
   }
   .introduction p {
-    padding: 0 20%;
+    padding: 0 5%;
   }
 
   .service-accordion svg{
@@ -552,27 +654,6 @@ main {
     gap: 24px;
   }
 
-  .arguments-col {
-    flex-direction: column;
-  }
-
-  .argument {
-    width: 100%;
-    max-width: 100%;
-    gap: 1rem;
-  }
-
-  .arg-content {
-    gap: .2rem;
-  }
-
-  .service-row {
-    width: 100%;
-  }
-
-  .services li {
-    width: 48%;
-  }
 
   #book-journey {
     padding: 100px 10px;
@@ -609,7 +690,7 @@ main {
   }
 
   .marquee {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .hyphen{

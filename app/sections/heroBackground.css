@@ -1,0 +1,46 @@
+:root {
+  --background-image-lg: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light.png');
+  --background-image-md: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-1080.png');
+  --background-image-sm: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-800.png');
+  --background-image-xs: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659fe7546a6e7ae239987ba7_bg-light-p-500.png');
+}
+
+[ data-theme="dark"] {
+  --background-image-lg: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png');
+  --background-image-md: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-1080.png');
+  --background-image-sm: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-800.png');
+  --background-image-xs: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark-p-500.png');
+}
+
+#hero {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  /* background-position-y: -100px; */
+  background-image: var(--background-image-lg);
+  background-size: cover;
+}
+
+
+@media screen and (max-width:1279px) {
+  #hero {
+    background-image: var(--background-image-lg);
+  }
+}
+
+@media screen and (max-width:991px) {
+  #hero {
+    background-image: var(--background-image-md);
+  }
+}
+
+@media screen and (max-width:767px) {
+  #hero {
+    background-image: var(--background-image-sm);
+  }
+}
+
+@media screen and (max-width:479px) {
+  #hero {
+    background-image: var(--background-image-xs);
+  }
+}

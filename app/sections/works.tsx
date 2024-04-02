@@ -56,10 +56,10 @@ export default function Works({title}:Props) {
 
   return (
     <>
-      <section ref={container} id="works" className="flex flex-col items-centr gap-20 py-[150px]">
-        <h2 className="text-[48px] text-center">{title}</h2>
-        {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">Our works</span></p> */}
-        <div className="projects border-solid flex gap-24">
+      <section ref={container} id="works" className="flex flex-col items-centr gap-8 py-[100px] pb-0">
+        {/* <h2 className="text-[48px] pb-8 text-center">{title}</h2> */}
+        <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">{title}</span></p>
+        <div className="projects border-solidd flex gap-24">
           <div className="project-col flex flex-col gap-16">
             <Project label="FAR IN GAMES " link="#" image={playStation} imageAlt="playstation" year="2022" skills={["Conception", "Direction Artistique", "Design", "Dévelopment"]} />
             <Project label="LEMÖNPLET Refonte" link="https://lemonplet.fr/" image={lemonplet} imageAlt="Lemonplet" year="2023" skills={["Intégration web", "UX", "Dévelopment"]} />
@@ -70,12 +70,10 @@ export default function Works({title}:Props) {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <a href="#contact">
-            <button className="btn cta w-max">
+            <a href="#contact" className="btn cta w-max">
               <span className="cta-text">Tout découvrir</span>
               <span className="cta-transition"></span>
-            </button>
-          </a>
+            </a>
         </div>
       </section >
     </>
