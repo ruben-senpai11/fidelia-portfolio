@@ -109,7 +109,7 @@ export default function Header() {
         <a href="#hero"><Logo /></a>
         <div className={(mobileNav == true ? 'mobile-menu ' : 'desktop-menu ') + "flex items-center gap-4 "}>
           <div className="nav-links items-center justify-center relative ">
-            <ul className={(width > 1000 && isScrolled ? "opacity-95 hover:opacity-100 bg-zinc-600 " : "opacity-100 bg-zinc-700 ") + "flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
+            <ul className={(width > 1000 && isScrolled ? "opacity-95 hover:opacity-90 bg-zinc-700 " : "opacity-100 bg-neutral-800 ") + "flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
               <li onClick={() => smoothScrollTo('home')} className={ (activeLink === 'hero' ? 'active ' : '') + (isScrolled ? "hover:text-slate-500  " : "hover:text-slate-800 ") + "uppercase hover:bg-slate-50 "}>
                 <a className="desktop">
                   <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
