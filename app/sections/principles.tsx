@@ -31,14 +31,14 @@ export default function Principles({title}:Props) {
 
   function getTriggetTop(){
 
-    if(width>999){
-      let triggerTop = "top top"
+    if(width<452){
+      let triggerTop = "top 15%"
       return triggerTop;
-    }else if (width>452){
-      let triggerTop = "top -72px"
+    }else if (width<999){
+      let triggerTop = "top 10%"
       return triggerTop;
     }else{
-      let triggerTop = "top -144px"
+      let triggerTop = "top 10%"
       return triggerTop;
     }
     
@@ -69,8 +69,8 @@ export default function Principles({title}:Props) {
 
   return (
     <>
-      <section id="principles" ref={principles} className="px-[50px] py-[150px] max-w-[2000px] ">
-        <div className="principles box-border flex flex-col gap-8 ">
+      <section id="principles" ref={principles} className="max-w-[2000px] ">
+        <div className="principles box-border flex flex-col gap-8 h-[80vh] ">
             {/* <h2 className="text-[48px] text-center">{title}</h2> */}
             <p className="section-label text-[16px] flex gap-4 items-center"><span className="s-number">04</span><span className="separator"></span><span className="s-label ">{title}</span></p>
           <div className={(width>767 ? "w-[100%] " : "gap-[4px] ") + "flex justify-between relative pb-2"}  >

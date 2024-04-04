@@ -69,7 +69,7 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
             </a>
           </div>
           <div className="right-side py-4 w-[50%]  ">
-            <div className="contact-container flex flex-col gap-8 p-6 ">
+            <div className="contact-container flex flex-col gap-10 p-6 ">
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">INFOS DE CONTACT *</h3>
                 <div className="contact-infos flex gap-4">

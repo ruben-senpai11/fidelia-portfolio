@@ -79,7 +79,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
           <div className="flex justify-between min-w-100 gap-16 sides-section">
             <div className="left-side py-0 w-[30%] flex flex-col gap-6">
               <p className="text-[32px]">Nous crééons des solutions pour faciliter la vie de nos clients.</p>
-              <a href="#contact" className="learn-cta btn cta w-max desktop">
+              <a href="#contact" className="learn-cta btn cta w-max ">
                 <span className="cta-text ">
                   En savoir plus
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,7 +147,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               />
             </div>
 
-            <a href="#contact" className="learn-cta btn cta w-max mobile ">
+            <a href="#contact" className="learn-cta btn cta w-max d-none ">
               <span className="cta-text ">
                 En savoir plus
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             </div>
             <div className="right-side py-2 w-[100%] flex flex-col gap-6">
               <div className="flex flex-col gap-6">
-                <p className="text-[18px] ">
+                <p className=" ">
                   Au lieu de vous parler un français fastidieux, nous irons en termes simples. Nous sommes une équipe dynamique de 4 artisans qui ont fait leur preuves et s'unissent à présent pour donner de l'impact. Nous sommes, un designer, un developpeur, un expert en génération de leads et un expert en référencement et social media marketing.
                   {/* Nous avons foi en quelque chose : le potentiel illimité de nos clients. Passionés de l'entrepreneuriat, nous sommes convaincus que chaque entreprise détient en elle les graines du succès. Notre mission est simple : nourrir ces graines et les aider à germer, à grandir et à s'épanouir atteindre des sommets insoupçonnés. Nous ne sommes pas une simple agence, nous ne créons pas juste des sites et des stratégies NOUS CRÉONS DES RÉSULTATS.  */}
                 </p>

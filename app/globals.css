@@ -236,7 +236,7 @@ hr {
 }
 
 .dream-container:before {
-  background-image: url('../public/svg/dream-wave.svg')!important;
+  background-image: url('../public/svg/dream-wave.svg');
   background-position-y: top;
   background-position-x: right;
   opacity: 1;
@@ -335,8 +335,8 @@ section{
   padding: 100px 64px!important;
 }
 section#hero{
-  padding-top: 20px!important;
-  padding-bottom: 20px!important;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .btn.cta {
@@ -416,7 +416,7 @@ section#hero{
   }
 
   section{
-    padding: 100px 20px!important;
+    padding: 100px 64px!important;
   }
 
   .arguments-col {
@@ -537,10 +537,10 @@ section#hero{
     width: 100%;
     max-width: 100%;
   }
-
+/* 
   .principle {
     width: 280px;
-  }
+  } */
 
   .principle1 {
     order: 1;
@@ -557,10 +557,14 @@ section#hero{
 
 @media screen and (max-width: 767px) {
 
+
+  body {
+    /* font-size: 16px; */
+  }
+
   .desktop-n-tab{
     display: none;
   }
-
 
   main {
     padding: 0;
@@ -570,21 +574,37 @@ section#hero{
     padding: 50px 20px!important;
   }
 
+  .section-label{
+    gap: 10px;
+    font-size: 16px;
+  }
+  .s-label{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .separator{
+    width: 25px;
+  }
   
   .introduction{
     padding-bottom: 0;
   }
   .introduction:first-of-type {
-    padding: 150px 10px 10px 10px;
+    padding: 150px 0px 10px 0px;
   }
   .introduction:last-of-type {
-    padding: 50px 10px 100px 10px;
+    padding: 50px 0px 100px 0px;
   }
 
   .introduction h2{
     font-size: 34px;
     padding-top: 12px;
   }
+
+  .learn-cta{
+    margin: 0;
+  }
+
   .artisans{
     flex-direction: column;
     gap: 22px;
@@ -605,7 +625,7 @@ section#hero{
   .artisans .right-side img{
     /* max-width: 90%; */
     margin: 0 auto;
-    width: 80vw;
+    width: 100%;
   }
   .artisans .right-side img{
     object-fit: scale-down;
@@ -711,6 +731,14 @@ section#hero{
     width: 100%;
   }
 
+}
+
+@media screen and (max-width:450px) {
+  
+  .artisans .right-side{
+    height: 250px;
+    max-height: 250px;
+  }
 }
 
 nav, main, .dream-container, #marquee, .footer{

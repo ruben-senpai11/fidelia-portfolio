@@ -42,7 +42,7 @@ export default function Marquee({ marquee1Content, marquee2Content }: Props) {
 
   return (
     <>
-      <section id="marquee" className="flex flex-col gap-8 py-[50px] w-[100%] overflow-hidden">
+      <section id="marquee" className="flex flex-col gap-8 pt-[150px] py-[50px] w-[100%] overflow-hidden">
         <div className="marquee1 flex flex-nowrap gap-8 ">
           {marquee1Content.map((item, index) => (
             <span className="marquee text-nowrap whitespace-nowrap flex items-center " key={index} >
