@@ -159,7 +159,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
           </div>
         </section>
 
-        <OurWorks title="Nos projets" />
+        <OurWorks title="Projets récents" />
 
         {/* <BookJourney /> */}
 
