@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "White Devs Agency",
-  description: "Scale your business +50% NOW",
+  description: "Nous créons du résultat",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       {/* <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> */}
       <body className={inter.className}>{children}</body>
     </html>
