@@ -24,7 +24,7 @@ import Footer from "./navigation/footer"
 import Argument from "./components/argument";
 import ContactForm from "./components/contact";
 import Image from "next/image";
-import Carousel from "./components/wordsCarousel";
+import WordCarousel from "./components/wordsCarousel";
 import ImageCarousel from "./components/imagesCarousel";
 
 
@@ -51,9 +51,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
                 <h2 className=" text-right text-[3.5vw] leading-snug ">
                   Nous sommes des <br className="desktop-n-tab" />
-                  <Carousel initialWord="designers" delay={2500} />
+                  <WordCarousel initialWord="designers" delay={2500} /> 
                   <br className="mobile" />
-                  qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.
+                  &nbsp;qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">

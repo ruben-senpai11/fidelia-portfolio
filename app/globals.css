@@ -456,7 +456,6 @@ section#hero{
     color: var(--foreground-rgb);
     background-color: var(--menu-background-rgb);
     box-shadow: 0px 2px 2px #ffffff33 ;
-    /* background-color: unset; */
   }
 
   main {

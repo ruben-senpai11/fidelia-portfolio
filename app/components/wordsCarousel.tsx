@@ -7,7 +7,7 @@ interface Props {
 }
 
 
-const Carousel = ({ initialWord, delay }: Props) => {
+const WordCarousel = ({ initialWord, delay }: Props) => {
 
   const [index, setIndex] = useState(0);
   const words:string[] = ["designers", "développeurs", "leads experts", "marketers" ] 
@@ -28,4 +28,4 @@ const Carousel = ({ initialWord, delay }: Props) => {
   );
 };
 
-export default Carousel;
+export default WordCarousel;
