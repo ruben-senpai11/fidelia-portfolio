@@ -455,6 +455,7 @@ section#hero{
   .nav-links ul {
     color: var(--foreground-rgb);
     background-color: var(--menu-background-rgb);
+    box-shadow: 0px 2px 2px #ffffff33 ;
     /* background-color: unset; */
   }
 
@@ -537,10 +538,6 @@ section#hero{
     width: 100%;
     max-width: 100%;
   }
-/* 
-  .principle {
-    width: 280px;
-  } */
 
   .principle1 {
     order: 1;
@@ -615,7 +612,7 @@ section#hero{
     font-size: 22px;
   }
   .artisan-role{
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .artisans .right-side{
