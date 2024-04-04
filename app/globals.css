@@ -716,6 +716,10 @@ section#hero{
     background-color: var(--foreground-rgb);
   }
 
+  #contact h3{
+    width: 80%;
+  }
+
   .contact-container{
     padding: 1rem;
   }
