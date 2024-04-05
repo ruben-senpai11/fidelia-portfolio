@@ -51,8 +51,8 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
     }
   };
 
-  const escapedString1 = "Let&#39s connect"
-  const escapedString2 = "IL EST TEMPS DE FAIRE CONNAÎTRE VOTRE ENTREPRISE AU MONDE ENTIER"
+  const escapedString1 = ""
+  const escapedString2 = ""
 
 
   return (
@@ -61,8 +61,8 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
         <section id="contact" className="sides-section flex gap-2 py-[50px]">
           <div className="left-side flex flex-col w-[50%] gap-6 ">
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
-            <h2 className="text-[48px] " dangerouslySetInnerHTML={{ __html: escapedString1 }} ></h2>
-            <h3 className="uppercase w-[50%] text-[20px] " dangerouslySetInnerHTML={{ __html: escapedString2 }}></h3>
+            <h2 className="text-[48px] "  >Let&#39;s connect</h2>
+            <h3 className="uppercase w-[50%] text-[18px] " >IL EST TEMPS DE FAIRE CONNAÎTRE VOTRE ENTREPRISE AU MONDE ENTIER</h3>
             <a href="mailto:albanhonfovou@gmail.com" className="btn cta w-max">
                 <span className="cta-text">Envoyer plutôt un mail</span>
                 <span className="cta-transition"></span>

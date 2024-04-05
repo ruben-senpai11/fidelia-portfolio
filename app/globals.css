@@ -6,12 +6,14 @@
   --foreground-rgb: #000000;
   --background-start-rgb: #f8faf9;
   --background-end-rgb: #FFFFFF;
+  --header-background: #ffffff13;
 }
 
 [ data-theme="dark"] {
   --foreground-rgb: #f8faf9;
   --background-start-rgb: #13181b;
   --background-end-rgb: #000;
+  --header-background: #03010113;
 }
 
 @font-face {
@@ -40,7 +42,7 @@ html {
 
 body {
   font-family: "Open sans";
-  font-size: 18px;
+  font-size: 17px;
   color: var(--foreground-rgb);
   background: transparent;
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
@@ -67,6 +69,11 @@ h2 {
 h2 {
   font-size: 48px;
 }
+
+nav{
+  background-color: var(--header-background);
+}
+
 .nav-links li {
 color: #f8faf9;
 }
@@ -586,7 +593,7 @@ section#hero{
     padding-bottom: 0;
   }
   .introduction:first-of-type {
-    padding: 150px 0px 10px 0px;
+    padding: 100px 0px 10px 0px;
   }
   .introduction:last-of-type {
     padding: 50px 0px 100px 0px;
@@ -615,8 +622,8 @@ section#hero{
   }
 
   .artisans .right-side{
-    height: 400px;
-    max-height: 400px;
+    height: 420px;
+    max-height: 420px;
   }
   .artisans .right-side img{
     /* max-width: 90%; */
@@ -674,9 +681,6 @@ section#hero{
   #book-journey {
     padding: 100px 10px;
   }
-  #marquee{
-    padding: 30px 0;
-  }
   .dream-container {
     padding: 5%;
     padding-bottom: 10%;
@@ -705,14 +709,20 @@ section#hero{
     gap: 30px;
   }
 
+  #marquee{
+    padding: 30px 0;
+  }
+  .marquee1, .marquee2{
+    gap: 15px;
+  }
   .marquee {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   .hyphen{
     width: 15px;
-    height: 5px;
-    margin-left: 20px;
+    height: 4px;
+    margin-left: 15px;
     background-color: var(--foreground-rgb);
   }
 
@@ -733,11 +743,18 @@ section#hero{
 
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:460px) {
   
   .artisans .right-side{
-    height: 250px;
-    max-height: 250px;
+    height: 300px;
+    max-height: 300px;
+  }
+}
+@media screen and (max-width:350px) {
+  
+  .artisans .right-side{
+    height: 270px;
+    max-height: 270px;
   }
 }
 

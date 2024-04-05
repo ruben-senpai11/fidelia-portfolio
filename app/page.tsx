@@ -40,9 +40,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
       <Header />
       <main className="flex flex-col items-center justify-between ">
         <section id="hero" className="">
-          <div className="introduction hero-background px-[0%] py-[10%] flex flex-col justify-center items-center gap-12">
+          <div className="introduction hero-background px-[0%] pt-[5%] pb-[10%] flex flex-col justify-center items-center gap-12">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
-            <h2 className="text-[5vw] leading-[120%] text-start">
+            <h2 className="text-[5vw] leading-[120%] text-center">
               Nous scalons votre business  de +40% en 6 mois avec un site web et du marketing
             </h2>
           </div>
