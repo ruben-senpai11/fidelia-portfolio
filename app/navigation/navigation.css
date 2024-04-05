@@ -176,7 +176,8 @@ section {
     position: fixed;
     left: 0;
     right: 0;
-    /* margin: 0 20px; */
+    width: calc(100% - 40px);
+    margin: 0 auto;
   }
 
   .nav-links ul {
@@ -215,8 +216,8 @@ section {
 
   .mobile-menu ul {
     z-index: -1;
-    height: 300px;
-    padding: 20px;
+    height: 275px;
+    padding: 18px;
   }
   .mobile-menu li{
     display: flex;
