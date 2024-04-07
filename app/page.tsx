@@ -57,7 +57,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">
-                <ImageCarousel initialImage={designer} delay={2500} />
+                <ImageCarousel initialImage="Designer" delay={2500} />
               </div>
             </div>
             <div className="hero-lead flex justify-between w-[80%] px-[0%] py-4 gap-8 ">

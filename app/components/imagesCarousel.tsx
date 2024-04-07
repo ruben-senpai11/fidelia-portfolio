@@ -6,10 +6,10 @@ import designer from "../assets/Illustrations/designer.png"
 import developer from "../assets/Illustrations/dev.png"
 import leads from "../assets/Illustrations/leads.png"
 import marketer from "../assets/Illustrations/marketers.png"
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface Props {
-  initialImage: StaticImageData,
+  initialImage: string,
   delay: number
 }
 
