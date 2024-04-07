@@ -40,11 +40,10 @@ function ThemeMode(){
             <path d="M5.99953 3.00028C6.58736 3.00024 7.16225 3.1729 7.65279 3.4968C8.14334 3.8207 8.52792 4.28157 8.75878 4.82217C8.98964 5.36277 9.0566 5.95928 8.95134 6.53762C8.84608 7.11595 8.57325 7.65061 8.16672 8.07521C7.76019 8.49981 7.23788 8.79562 6.66467 8.92591C6.09146 9.0562 5.49261 9.01523 4.94248 8.80809C4.39236 8.60094 3.91521 8.23675 3.5703 7.76074C3.22538 7.28473 3.02791 6.71789 3.0024 6.13061L2.9994 6.00041L3.0024 5.8702C3.03595 5.09782 3.36638 4.3682 3.92477 3.83351C4.48316 3.29881 5.22642 3.00032 5.99953 3.00028Z" fill="currentColor"></path>
           </svg>
         </span>
-        <span className="theme-switch">
-          <label htmlFor="theme-switcher" ></label>
-          <input id="theme-switcher" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
+        <label htmlFor="theme-swicth" className="theme-switch">
+          <input id="theme-swicth" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
           <span className="theme-slider round"></span>
-        </span>
+        </label>
         <span>
         <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.72672 0.0133169C4.07098 -0.0818763 4.28957 0.354053 4.10512 0.659916C3.75879 1.23418 3.55954 1.90715 3.55954 2.62665C3.55954 4.73294 5.26706 6.44046 7.37334 6.44046C8.09284 6.44046 8.76579 6.24122 9.34005 5.8949C9.64592 5.71044 10.0819 5.92904 9.98666 6.2733C9.39246 8.42219 7.42304 10 5.08506 10C2.27666 10 0 7.72331 0 4.91494C0 2.57697 1.57781 0.607523 3.72672 0.0133169Z" fill="currentColor"></path>
