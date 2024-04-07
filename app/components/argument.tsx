@@ -23,8 +23,8 @@ export default function Argument({icon, label, description}:Props) {
           </svg>
         </div>
         <div className="flex flex-col gap-4 arg-content ">
-          <h5 className="text-[24px]">{label}</h5>
-          <h6>{description}</h6>
+          <h3 className="text-[24px]">{label}</h3>
+          <p>{description}</p>
         </div>
       </div>
     </>

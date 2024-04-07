@@ -8,7 +8,7 @@ const Principles = dynamic(() => import('./sections/principles'), { ssr: false }
 const Marquee = dynamic(() => import('./sections/marquee'), { ssr: false });
 const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: false });
 
-import magicDesigner from "./assets/Illustrations/designer.png"
+import designer from "./assets/Illustrations/designer.png"
 
 /*
 import Header from "./navigation/header";
@@ -57,7 +57,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">
-                <ImageCarousel initialImage="Designer" delay={2500} />
+                <ImageCarousel initialImage={designer} delay={2500} />
               </div>
             </div>
             <div className="hero-lead flex justify-between w-[80%] px-[0%] py-4 gap-8 ">
@@ -181,7 +181,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             </div>
             <div className="right-side py-2 w-[100%] flex flex-col gap-6">
               <div className="flex flex-col gap-6">
-                <p className=" ">
+                <p className="">
                   Au lieu de vous parler un français fastidieux, nous irons en termes simples. Nous sommes une équipe dynamique de 4 artisans qui ont fait leur preuves et s'unissent à présent pour donner de l'impact. Nous sommes, un designer, un developpeur, un expert en génération de leads et un expert en référencement et social media marketing.
                   {/* Nous avons foi en quelque chose : le potentiel illimité de nos clients. Passionés de l'entrepreneuriat, nous sommes convaincus que chaque entreprise détient en elle les graines du succès. Notre mission est simple : nourrir ces graines et les aider à germer, à grandir et à s'épanouir atteindre des sommets insoupçonnés. Nous ne sommes pas une simple agence, nous ne créons pas juste des sites et des stratégies NOUS CRÉONS DES RÉSULTATS.  */}
                 </p>

@@ -41,6 +41,7 @@ function ThemeMode(){
           </svg>
         </span>
         <label className="theme-switch">
+          <label className="theme-switch d-none"></label>
           <input type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
           <span className="theme-slider round"></span>
         </label>
