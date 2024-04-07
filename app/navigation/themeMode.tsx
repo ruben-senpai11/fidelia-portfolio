@@ -40,8 +40,9 @@ function ThemeMode(){
             <path d="M5.99953 3.00028C6.58736 3.00024 7.16225 3.1729 7.65279 3.4968C8.14334 3.8207 8.52792 4.28157 8.75878 4.82217C8.98964 5.36277 9.0566 5.95928 8.95134 6.53762C8.84608 7.11595 8.57325 7.65061 8.16672 8.07521C7.76019 8.49981 7.23788 8.79562 6.66467 8.92591C6.09146 9.0562 5.49261 9.01523 4.94248 8.80809C4.39236 8.60094 3.91521 8.23675 3.5703 7.76074C3.22538 7.28473 3.02791 6.71789 3.0024 6.13061L2.9994 6.00041L3.0024 5.8702C3.03595 5.09782 3.36638 4.3682 3.92477 3.83351C4.48316 3.29881 5.22642 3.00032 5.99953 3.00028Z" fill="currentColor"></path>
           </svg>
         </span>
-        <label htmlFor="theme-swicth" className="theme-switch">
-          <input id="theme-swicth" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
+        <label className="theme-switch">
+          <label htmlFor="theme-swith"></label>
+          <input id="theme-swith" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
           <span className="theme-slider round"></span>
         </label>
         <span>
