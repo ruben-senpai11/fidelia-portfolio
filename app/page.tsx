@@ -50,9 +50,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             <div className="artisans flex flex-row justify-between gap-2 ">
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
                 <h2 className=" text-right text-[3.5vw] leading-snug ">
-                  Nous sommes des <br className="desktop-n-tab" />
+                  Nous sommes des <br className="desktop-n-tab mobile-sm" />
                   <WordCarousel initialWord="designers" delay={2500} /> 
-                  <br className="mobile" />
+                  <br className="mobile-md" />
                   &nbsp;qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.
                 </h2>
               </div>

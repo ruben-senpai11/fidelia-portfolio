@@ -749,6 +749,10 @@ section#hero{
     height: 300px;
     max-height: 300px;
   }
+  .mobile-md{}
+  .mobile-sm{
+    display: flex;
+  }
 }
 @media screen and (max-width:350px) {
   
