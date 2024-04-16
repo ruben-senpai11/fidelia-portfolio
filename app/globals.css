@@ -6,7 +6,7 @@
   --foreground-rgb: #000000;
   --background-start-rgb: #f8faf9;
   --background-end-rgb: #FFFFFF;
-  --header-background: #ffffff13;
+  --header-background: #ffffff45;
 }
 
 [ data-theme="dark"] {
@@ -559,11 +559,7 @@ section#hero{
 }
 
 @media screen and (max-width: 767px) {
-
-
-  body {
-    /* font-size: 16px; */
-  }
+  
 
   .desktop-n-tab{
     display: none;
@@ -749,7 +745,6 @@ section#hero{
     height: 300px;
     max-height: 300px;
   }
-  .mobile-md{}
   .mobile-sm{
     display: flex;
   }
