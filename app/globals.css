@@ -545,6 +545,12 @@ section#hero{
     max-width: 100%;
   }
 
+  .project-image,
+  .project-image img {
+    height: 600px;
+    border-radius: 2.344vw;
+  }
+  
   .principle1 {
     order: 1;
   }
@@ -669,6 +675,12 @@ section#hero{
     max-width: 100%;
   }
 
+  .project-image,
+  .project-image img {
+    height: 400px;
+    border-radius: 2.344vw;
+  }
+  
   .sides-section {
     gap: 24px;
   }
