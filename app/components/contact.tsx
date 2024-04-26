@@ -61,7 +61,7 @@ function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
     console.log(formData)
     
     try {
-      const response = await fetch('/api/', {
+      const response = await fetch('/api/mailer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

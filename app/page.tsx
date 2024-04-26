@@ -42,13 +42,13 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
                 <h2 className=" text-right text-[3.5vw] leading-snug ">
                   Nous sommes des <br className="desktop-n-tab mobile-sm" />
-                  <WordCarousel initialWord="designers" delay={2500} /> 
+                  <WordCarousel initialWord="designers" delay={2000} /> 
                   <br className="mobile-md" />
                   &nbsp;qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">
-                <ImageCarousel initialImage="Designer" delay={2500} />
+                <ImageCarousel initialImage="Designer" delay={2000} />
               </div>
             </div>
             <div className="hero-lead flex justify-between w-[80%] px-[0%] py-4 gap-8 ">
