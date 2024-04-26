@@ -8,15 +8,6 @@ const Principles = dynamic(() => import('./sections/principles'), { ssr: false }
 const Marquee = dynamic(() => import('./sections/marquee'), { ssr: false });
 const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: false });
 
-import designer from "./assets/Illustrations/designer.png"
-
-/*
-import Header from "./navigation/header";
-import OurWorks from "./sections/works";
-import Principles from "./sections/principles";
-import Marquee from "./sections/marquee";
-import BookJourney from "./sections/bookJourney";
-*/
 
 import './sections/heroBackground.css'
 import Footer from "./navigation/footer"

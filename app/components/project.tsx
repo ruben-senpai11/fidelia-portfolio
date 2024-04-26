@@ -25,6 +25,9 @@ export default function Project({ label, link, image, imageAlt, year, skills }: 
             <p className="text-[20px]  ">{label}</p>
             <p className="">{year}</p>
           </div>
+          <div className="description">
+            <p className=""></p>
+          </div>
           <div className="flex flex-wrap gap-4">
             {skills.map((item, index) => (
               <div key={index} className=" skill rounded">{item}</div>
