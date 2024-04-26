@@ -4,7 +4,7 @@ import Budget from "./budget"
 import Interest from "./interest"
 
 interface Props{
-  interests: string[],
+  interestsList: string[],
   budgetEUR: string[],
   budgetCFA: string[]
 }
@@ -16,7 +16,33 @@ interface FormData {
   budget: string
 }
 
-function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
+
+function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
+
+  const [clickedInterests, setClickedInterests] = useState<string[]>([]);
+
+  const handleInterestClick = (value: string) => {
+
+    const isClicked = clickedInterests.includes(value);
+  
+    const newClickedInterests = isClicked ? clickedInterests.filter((item) => item !== value) : [...clickedInterests, value]; 
+  
+    setClickedInterests(newClickedInterests);
+  
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      interests: newClickedInterests.join(", "), 
+    }));
+  };
+  
+    
+  const [budget, setBudget] = useState("");
+
+  const handleBudgetClick = (value:any) => {
+    setBudget(value);
+    setFormData({ ...formData, budget: value });
+  };
+
   
 
   const [formData, setFormData] = useState<FormData>({
@@ -25,15 +51,17 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
     interests: "",
     budget: "",
   })
-
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
-
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(formData)
+    
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch('/api/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +70,7 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
       });
       if (response.ok) {
         alert('Message sent successfully!');
-        setFormData({ name: '', email: '', interests: "", budget: "" });
+        setFormData({ name: '', email: '', interests: '', budget: '' });
       } else {
         alert('Failed to send message. Please try again later.');
       }
@@ -51,11 +79,8 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
     }
   };
 
-  const escapedString1 = ""
-  const escapedString2 = ""
-
-
   return (
+    
     <>
       <main className="flex flex-col items-center justify-between ">
         <section id="contact" className="sides-section flex gap-2 py-[50px]">
@@ -63,30 +88,30 @@ function ContactForm({interests, budgetEUR, budgetCFA}:Props) {
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[48px] "  >Let&#39;s connect</h2>
             <h3 className="uppercase w-[50%] text-[18px] " >IL EST TEMPS DE FAIRE CONNAÎTRE VOTRE ENTREPRISE AU MONDE ENTIER</h3>
-            <a href="mailto:albanhonfovou@gmail.com" className="btn cta w-max">
+            <a href="mailto:contact@whitedevs.agency" className="btn cta w-max">
                 <span className="cta-text">Envoyer plutôt un mail</span>
                 <span className="cta-transition"></span>
             </a>
           </div>
           <div className="right-side py-4 w-[50%]  ">
-            <div className="contact-container flex flex-col gap-10 p-6 ">
+            <form onSubmit={handleSubmit} className="contact-container flex flex-col gap-10 p-6 ">
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">INFOS DE CONTACT *</h3>
                 <div className="contact-infos flex gap-4">
-                  <input type="text " placeholder="VOTRE NOM *" />
-                  <input type="e-mail" placeholder="VOTRE E-MAIL *" />
+                  <input type="text " name="name" placeholder="VOTRE NOM *" onChange={handleChange} value={formData.name} />
+                  <input name="email" type="e-mail" placeholder="VOTRE E-MAIL *" onChange={handleChange} value={formData.email} />
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">Vous êtes intéressez par *</h3>
-                <Interest interestsList={interests} />
+                <Interest interestsList={interestsList} handleInterestClick={handleInterestClick} clickedInterests={clickedInterests} />
               </div>
-              <Budget title="Votre budget en" budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
-              <button className="btn cta w-max">
+              <Budget title="Votre budget en" budgetCFA={budgetCFA} budgetEUR={budgetEUR} budget={budget} handleBudgetClick={handleBudgetClick} />
+              <button type="submit" className="btn cta w-max">
                 <span className="cta-text font-medium">Commencer l'aventure</span>
                 <span className="cta-bottom-transition"></span>
               </button>
-            </div>
+            </form>
           </div>
         </section>
       </main>

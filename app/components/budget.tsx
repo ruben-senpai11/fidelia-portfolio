@@ -2,15 +2,14 @@
 import { useState } from "react"
 
 interface Props {
-  budgetCFA: string[],
-  budgetEUR: string[]
-}
-
-interface Props{
   title: string,
+  budgetCFA: string[],
+  budgetEUR: string[],
+  budget: string,
+  handleBudgetClick: (item:string) => void;
 }
 
-export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
+export default function Budget({ title, budgetCFA, budgetEUR, budget, handleBudgetClick }: Props) {
 
   const [currency, setCurrency] = useState("eur")
 
@@ -21,12 +20,6 @@ export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
       setCurrency("cfa")
     }
   }
-
-  const [clickedButton, setClickedButton] = useState(null);
-
-  const handleClick = (value:any) => {
-    setClickedButton(value);
-  };
 
   return (
     <>
@@ -44,7 +37,7 @@ export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
         </div>
         <div className={currency=="eur" ? "d-none" : "cfa-budget flex flex-wrap gap-4"} >
           {budgetCFA.map((item, index) => (
-            <div key={index} onClick={() => handleClick(index)} className={ (clickedButton===index ? "clientBudget " : "") + "rounded uppercase" }>
+            <div key={index} onClick={() => handleBudgetClick(item)} className={ (budget===item ? "clientBudget " : "") + "rounded uppercase cursor-pointer " }>
               {item}
             </div>
           ))}
@@ -52,7 +45,7 @@ export default function Budget({ title, budgetCFA, budgetEUR }: Props) {
         </div>
         <div className={currency=="cfa" ? "d-none" : "euro-budget flex flex-wrap gap-4"} >
           {budgetEUR.map((item, index) => (
-            <div key={index} onClick={() => handleClick(index)} className={ (clickedButton===index ? "clientBudget " : "") + "rounded uppercase" }>
+            <div key={index} onClick={() => handleBudgetClick(item)} className={ (budget===item ? "clientBudget " : "") + "rounded uppercase cursor-pointer " }>
               {item}
             </div>
           ))}

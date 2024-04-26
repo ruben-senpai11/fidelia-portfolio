@@ -31,7 +31,7 @@ import ImageCarousel from "./components/imagesCarousel";
 
 export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
 
-  const interests: string[] = ["Croissance +40%", "Graphic design", "Dévelopment web", "Branding", "Marketing", "Autres"];
+  const interestsList: string[] = ["Croissance +40%", "Graphic design", "Dévelopment web", "Branding", "Marketing", "Autres"];
   const budgetEUR: string[] = ["<2k", "2-5K", "5-10K", ">10K", "JE NE SAIS PAS ENCORE"];
   const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "JE NE SAIS PAS ENCORE"]
 
@@ -208,7 +208,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
 
       <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Développement Web", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive design", "Ecomerce", "Dévelopment web", "SaaS", "Business2Business"]} />
 
-      <ContactForm interests={interests} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
+      <ContactForm interestsList={interestsList} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
 
       <Footer />
     </>
