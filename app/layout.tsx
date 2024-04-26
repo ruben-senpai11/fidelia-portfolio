@@ -30,6 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <meta name="google-site-verification" content="MwtyOjEuk62KDPzYPycf-g9oLQP5Wo6kYR95tCEQPUo" />
       {/* <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> */}
       <body className={inter.className}>{children}</body>
     </html>
