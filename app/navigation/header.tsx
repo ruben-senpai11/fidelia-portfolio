@@ -11,17 +11,6 @@ import TagManager from 'react-gtm-module';
 
 export default function Header() {
 
-  useEffect(() => {
-    const tagManagerArgs = {
-      gtmId: 'YOUR_GTM_ID',
-      dataLayer: {
-        // Optional dataLayer object
-      }
-    };
-
-    TagManager.initialize(tagManagerArgs);
-  }, []);
-
   //  Links autot hover
   const router = useRouter();
   const [activeLink, setActiveLink] = useState('');

@@ -191,26 +191,43 @@ hr {
   transform: scale(1.1);
 }
 
-.skill.blue:hover{
+.skill{
+  /* cursor: pointer; */
+}
+
+.skill:hover{  
   color: white;
-  background-color: blue;
+  background-color: var(--foreground-rgb);
+}
+
+.skill.blue:hover{
+  background-color: #23A6F0;
+  border-color: #23A6F0;
 }
 .skill.purple:hover{
-  color: white;
   background-color: purple;
+  border-color: purple;
 }
 .skill.orange:hover{
-  color: white;
-  background-color: orange;
-}
-.skill.black:hover{
-  color: white;
-  background-color: blue;
+  background-color: rgb(253, 160, 20);
+  border-color: rgb(238, 167, 35);
 }
 .skill.cyan:hover{
-  color: white;
-  background-color: cyan;
+  background-color: rgb(13, 245, 195);
+  border-color: cyan;
 }
+.skill.green:hover{
+  background-color: rgb(3, 184, 3);
+  border-color: rgb(3, 184, 3);
+}
+
+.skill.dark:hover{
+  color: #f8faf9;
+  background-color: rgb(63 63 70 );
+  border-color: rgb(63 63 70 );
+}
+
+
 
 .rounded {
   white-space: nowrap;
@@ -284,11 +301,29 @@ hr {
   font-size: 18px;
 }
 
+.contact-form{
+  height: fit-content;
+  transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
 .contact-container {
   border: 1px solid var(--foreground-rgb);
   border-radius: 1.563vw;
   /* padding: 1.234vw; */
 }
+
+.formSent{
+  /* background-color: #f8fafc; */
+  font-size: 16px;
+}
+.emoji{
+  background-color: var(--foreground-rgb);
+  color: var(--background-start-rgb);
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+
 
 .currency {
   cursor: pointer;
@@ -759,6 +794,9 @@ section#hero{
   }
   .mobile-sm{
     display: flex;
+  }
+  .description p{
+    font-size: 14px;
   }
 }
 @media screen and (max-width:350px) {

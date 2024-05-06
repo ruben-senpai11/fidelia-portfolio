@@ -2,8 +2,9 @@
 import { useState } from "react"
 import Budget from "./budget"
 import Interest from "./interest"
+import { Console } from "console"
 
-interface Props{
+interface Props {
   interestsList: string[],
   budgetEUR: string[],
   budgetCFA: string[]
@@ -17,33 +18,33 @@ interface FormData {
 }
 
 
-function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
+function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
 
   const [clickedInterests, setClickedInterests] = useState<string[]>([]);
 
   const handleInterestClick = (value: string) => {
 
     const isClicked = clickedInterests.includes(value);
-  
-    const newClickedInterests = isClicked ? clickedInterests.filter((item) => item !== value) : [...clickedInterests, value]; 
-  
+
+    const newClickedInterests = isClicked ? clickedInterests.filter((item) => item !== value) : [...clickedInterests, value];
+
     setClickedInterests(newClickedInterests);
-  
+
     setFormData((prevFormData) => ({
       ...prevFormData,
-      interests: newClickedInterests.join(", "), 
+      interests: newClickedInterests.join(", "),
     }));
   };
-  
-    
+
+
   const [budget, setBudget] = useState("");
 
-  const handleBudgetClick = (value:any) => {
+  const handleBudgetClick = (value: any) => {
     setBudget(value);
     setFormData({ ...formData, budget: value });
   };
 
-  
+
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -51,15 +52,15 @@ function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
     interests: "",
     budget: "",
   })
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData)
-    
+
     try {
       const response = await fetch('/api/mailer', {
         method: 'POST',
@@ -68,33 +69,71 @@ function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
         },
         body: JSON.stringify(formData),
       });
+
+      setFormSent(true)
       if (response.ok) {
-        alert('Message sent successfully!');
+        console.log('Message sent successfully!');
         setFormData({ name: '', email: '', interests: '', budget: '' });
       } else {
-        alert('Failed to send message. Please try again later.');
+        console.log('Failed to send message. Please try again later.');
       }
     } catch (error) {
       console.error('Error sending message:', error);
     }
   };
 
+  const [formSent, setFormSent] = useState(false)
+
+  const setFormFalse = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData)
+
+    try {
+      const response = await fetch('/api/mailer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setFormSent(false)
+      if (response.ok) {
+        console.log('Message sent successfully!');
+        setFormData({ name: '', email: '', interests: '', budget: '' });
+      } else {
+        console.log('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+    }
+  }
+
   return (
-    
+
     <>
       <main className="flex flex-col items-center justify-between ">
         <section id="contact" className="sides-section flex gap-2 py-[50px]">
           <div className="left-side flex flex-col w-[50%] gap-6 ">
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[48px] "  >Let&#39;s connect</h2>
-            <h3 className="uppercase w-[50%] text-[18px] " >IL EST TEMPS DE FAIRE CONNAÎTRE VOTRE ENTREPRISE AU MONDE ENTIER</h3>
+            {/* {!formSent && */}
+              <h3 className={(formSent ? " " : "uppercase") + " w-[50%] text-[18px] "} >Il est temps de faire connaître votre entreprise au monde entier {formSent && "!"} </h3>
+            {/* } */}
             <a href="mailto:contact@whitedevs.agency" className="btn cta w-max">
-                <span className="cta-text">Envoyer plutôt un mail</span>
-                <span className="cta-transition"></span>
+              <span className="cta-text">Envoyer plutôt un mail</span>
+              <span className="cta-transition"></span>
             </a>
           </div>
-          <div className="right-side py-4 w-[50%]  ">
-            <form onSubmit={handleSubmit} className="contact-container flex flex-col gap-10 p-6 ">
+          <div className="right-side contact-form py-4 w-[50%] flex flex-col gap-2 ">
+            {/* <div className="flex gap-4">
+              <form onSubmit={setFormFalse}>
+                <button type="submit" className="cta">
+                  {formSent ? "setFalse" : ""}
+                </button>
+              </form>
+            </div> */}
+            <form onSubmit={handleSubmit} className={(formSent == false ? "flex" : "d-none") + " contact-container flex-col gap-10 p-6 "}>
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">INFOS DE CONTACT *</h3>
                 <div className="contact-infos flex gap-4">
@@ -112,6 +151,13 @@ function ContactForm({interestsList, budgetEUR, budgetCFA}:Props) {
                 <span className="cta-bottom-transition"></span>
               </button>
             </form>
+            <div className={(formSent == true ? "flex" : "d-none") + " formSent contact-container flex-col items-center gap-4 p-6 "}>
+              <p className="text-[20px] ">Votre formulaire a ete reçu </p>
+              <div className="flex justify-center items-center w-[100%] ">
+                <span className="emoji flex flex-col justify-center items-center text-[34px] ">🗸</span>
+              </div>
+              <p>Notre equipe vous contactera dans les plus brefs delais. Au plaisir !</p>
+            </div>
           </div>
         </section>
       </main>

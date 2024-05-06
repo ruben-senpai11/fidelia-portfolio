@@ -4,6 +4,7 @@ import Link from "next/link";
 
 interface Props {
   label: string,
+  description: string;    
   link: string,
   image: StaticImageData,
   imageAlt: string,
@@ -11,7 +12,11 @@ interface Props {
   skills: string[]
 }
 
-export default function Project({ label, link, image, imageAlt, year, skills }: Props) {
+export default function Project({ label, description, link, image, imageAlt, year, skills }: Props) {
+
+
+  const colors = ["blue", "yellow", "orange", "red", "dark", "purple", "cyan", "green", ""]
+
   return (
     <>
       <div className="project">
@@ -26,11 +31,11 @@ export default function Project({ label, link, image, imageAlt, year, skills }: 
             <p className="">{year}</p>
           </div>
           <div className="description">
-            <p className=""></p>
+            <p className="text-[15px]">{description} </p>
           </div>
           <div className="flex flex-wrap gap-4">
             {skills.map((item, index) => (
-              <div key={index} className=" skill rounded">{item}</div>
+              <div key={index} className={ (colors) + " skill rounded light "}>{item}</div>
             ))}
           </div>
         </div>
