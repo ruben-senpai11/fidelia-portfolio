@@ -5,9 +5,10 @@ interface Props {
   interestsList: string[],
   clickedInterests: string[],
   handleInterestClick: (item: string) => void;
+  errorMessage? : string
 }
 
-export default function Interest({interestsList, clickedInterests, handleInterestClick}:Props) {
+export default function Interest({interestsList, clickedInterests, handleInterestClick, errorMessage}:Props) {
 
 
 
@@ -18,6 +19,7 @@ export default function Interest({interestsList, clickedInterests, handleInteres
           <div key={index}  onClick={() => handleInterestClick(item)} className={ (clickedInterests.includes(item as never) ? "clientBudget " : "") + "rounded uppercase cursor-pointer "}>{item}</div>
         ))}
       </div>
+      {/* {errorMessage && <span className="error">{errorMessage}</span>} */}
     </>
   )
 }

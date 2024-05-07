@@ -18,16 +18,20 @@ interface FormData {
 }
 
 
+interface Errors {
+  name?: string,
+  email?: string,
+  interests? : string,
+}
+
+
 function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
 
   const [clickedInterests, setClickedInterests] = useState<string[]>([]);
 
   const handleInterestClick = (value: string) => {
-
     const isClicked = clickedInterests.includes(value);
-
     const newClickedInterests = isClicked ? clickedInterests.filter((item) => item !== value) : [...clickedInterests, value];
-
     setClickedInterests(newClickedInterests);
 
     setFormData((prevFormData) => ({
@@ -44,8 +48,6 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
     setFormData({ ...formData, budget: value });
   };
 
-
-
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -57,10 +59,35 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const [errors, setErrors] = useState<Errors>({});
+
+  const validate = (): Errors => {
+    const errors: Errors = {};
+
+    if (formData.name.trim() === '') {
+      errors.name = 'Veuillez renseigner votre nom ';
+    }
+    if (formData.email.trim() === '') {
+      errors.email = 'Veuillez renseigner votre adresse ';
+    } else
+    if (!formData.email.includes('@')) {
+      errors.email = "Cette adresse mail est invalide !";
+    } 
+    return errors;
+  };
+
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
     console.log(formData)
 
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    const isClean = Object.keys(validationErrors).length === 0;
+    if(isClean) setFormSent(true)
+    
     try {
       const response = await fetch('/api/mailer', {
         method: 'POST',
@@ -69,8 +96,9 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
         },
         body: JSON.stringify(formData),
       });
+      
 
-      setFormSent(true)
+      //  setFormSent(true)
       if (response.ok) {
         console.log('Message sent successfully!');
         setFormData({ name: '', email: '', interests: '', budget: '' });
@@ -84,30 +112,6 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
 
   const [formSent, setFormSent] = useState(false)
 
-  const setFormFalse = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData)
-
-    try {
-      const response = await fetch('/api/mailer', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      setFormSent(false)
-      if (response.ok) {
-        console.log('Message sent successfully!');
-        setFormData({ name: '', email: '', interests: '', budget: '' });
-      } else {
-        console.log('Failed to send message. Please try again later.');
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-    }
-  }
 
   return (
 
@@ -118,7 +122,7 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[48px] "  >Let&#39;s connect</h2>
             {/* {!formSent && */}
-              <h3 className={(formSent ? " " : "uppercase") + " w-[50%] text-[18px] "} >Il est temps de faire connaître votre entreprise au monde entier {formSent && "!"} </h3>
+            <h3 className={(formSent ? " " : "uppercase") + " w-[50%] text-[18px] "} >Il est temps de faire connaître votre entreprise au monde entier {formSent && "!"} </h3>
             {/* } */}
             <a href="mailto:contact@whitedevs.agency" className="btn cta w-max">
               <span className="cta-text">Envoyer plutôt un mail</span>
@@ -137,26 +141,32 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">INFOS DE CONTACT *</h3>
                 <div className="contact-infos flex gap-4">
-                  <input type="text " name="name" placeholder="VOTRE NOM *" onChange={handleChange} value={formData.name} />
-                  <input name="email" type="e-mail" placeholder="VOTRE E-MAIL *" onChange={handleChange} value={formData.email} />
+                  <div className="flex flex-col gap-2 m-0 p-0 w-[100%]">
+                    <input type="text " name="name" placeholder="VOTRE NOM *" onChange={handleChange} value={formData.name} />
+                    {errors.name && <span className="error">{errors.name}</span>}
+                  </div>
+                  <div className="flex flex-col gap-2 m-0 p-0 w-[100%]">
+                    <input name="email" type="e-mail" placeholder="VOTRE E-MAIL *" onChange={handleChange} value={formData.email} />
+                    {errors.email && <span className="error">{errors.email}</span>}
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="uppercase font-medium ">Vous êtes intéressez par *</h3>
-                <Interest interestsList={interestsList} handleInterestClick={handleInterestClick} clickedInterests={clickedInterests} />
+                <Interest interestsList={interestsList} handleInterestClick={handleInterestClick} clickedInterests={clickedInterests} errorMessage={errors.interests} />
               </div>
               <Budget title="Votre budget en" budgetCFA={budgetCFA} budgetEUR={budgetEUR} budget={budget} handleBudgetClick={handleBudgetClick} />
               <button type="submit" className="btn cta w-max">
                 <span className="cta-text font-medium">Commencer l'aventure</span>
                 <span className="cta-bottom-transition"></span>
               </button>
-            </form>
+          </form>
             <div className={(formSent == true ? "flex" : "d-none") + " formSent contact-container flex-col items-center gap-4 p-6 "}>
-              <p className="text-[20px] ">Votre formulaire a ete reçu </p>
+              <p className="text-[20px] ">Votre formulaire a été reçu </p>
               <div className="flex justify-center items-center w-[100%] ">
                 <span className="emoji flex flex-col justify-center items-center text-[34px] ">🗸</span>
               </div>
-              <p>Notre equipe vous contactera dans les plus brefs delais. Au plaisir !</p>
+              <p>Notre équipe vous contactera dans les plus brefs délais. Au plaisir !</p>
             </div>
           </div>
         </section>

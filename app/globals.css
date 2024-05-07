@@ -191,9 +191,6 @@ hr {
   transform: scale(1.1);
 }
 
-.skill{
-  /* cursor: pointer; */
-}
 
 .skill:hover{  
   color: white;
@@ -342,8 +339,17 @@ hr {
   border: 1px solid var(--foreground-rgb);
 }
 
-.contact-infos input {
+
+.error{
+  font-size: 14px;
+  color: rgb(230, 11, 11);
+}
+
+
+.contact-infos div {
   width: 50%;
+}
+.contact-infos input {
   padding: 5px 15px;
   border: 1px solid var(--foreground-rgb);
   border-radius: .7vw;
@@ -780,7 +786,7 @@ section#hero{
     flex-direction: column;
   }
   
-  .contact-infos input {
+  .contact-infos div {
     width: 100%;
   }
 
