@@ -4,6 +4,16 @@ import Budget from "./budget"
 import Interest from "./interest"
 import { Console } from "console"
 
+
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://mtwammsrqnqlhxvmybcd.supabase.co'
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY 
+if (!supabaseKey) {
+  throw new Error('SUPABASE_KEY is not defined in environment variables');
+}
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+
 interface Props {
   interestsList: string[],
   budgetEUR: string[],
@@ -21,11 +31,14 @@ interface FormData {
 interface Errors {
   name?: string,
   email?: string,
-  interests? : string,
+  interests?: string,
 }
 
 
 function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
+
+
+
 
   const [clickedInterests, setClickedInterests] = useState<string[]>([]);
 
@@ -36,7 +49,7 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      interests: newClickedInterests.join(", "),
+     interests: newClickedInterests.join(", "),
     }));
   };
 
@@ -70,9 +83,9 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
     if (formData.email.trim() === '') {
       errors.email = 'Veuillez renseigner votre adresse ';
     } else
-    if (!formData.email.includes('@')) {
-      errors.email = "Cette adresse mail est invalide !";
-    } 
+      if (!formData.email.includes('@')) {
+        errors.email = "Cette adresse mail est invalide !";
+      }
     return errors;
   };
 
@@ -80,34 +93,40 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     e.preventDefault();
-    console.log(formData)
 
     const validationErrors = validate();
     setErrors(validationErrors);
 
-    const isClean = Object.keys(validationErrors).length === 0;
-    if(isClean) setFormSent(true)
-    
-    try {
-      const response = await fetch('/api/mailer', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      
+    const formIsClean = Object.keys(validationErrors).length === 0;
 
-      //  setFormSent(true)
-      if (response.ok) {
-        console.log('Message sent successfully!');
-        setFormData({ name: '', email: '', interests: '', budget: '' });
-      } else {
-        console.log('Failed to send message. Please try again later.');
+    if (formIsClean) {
+
+      try {
+
+        const { data, error } = await supabase
+          .from('users')
+          .insert([
+            { 
+              name: formData.name, 
+              email: formData.email,
+              interests: formData.interests,
+              budget: formData.budget
+            },
+          ])
+          .select()
+
+        if (error) {
+          console.error('Supabase insert error:', error);
+          throw new Error(`Supabase insert failed: ${error.message}`);
+        }
+
+        setFormSent(true)
+
+      } catch (error) {
+        console.error('Error sending message:', error);
       }
-    } catch (error) {
-      console.error('Error sending message:', error);
     }
+
   };
 
   const [formSent, setFormSent] = useState(false)
@@ -160,7 +179,7 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
                 <span className="cta-text font-medium">Commencer l'aventure</span>
                 <span className="cta-bottom-transition"></span>
               </button>
-          </form>
+            </form>
             <div className={(formSent == true ? "flex" : "d-none") + " formSent contact-container flex-col items-center gap-4 p-6 "}>
               <p className="text-[20px] ">Votre formulaire a été reçu </p>
               <div className="flex justify-center items-center w-[100%] ">

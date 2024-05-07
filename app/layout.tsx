@@ -19,8 +19,8 @@ if (typeof window !== 'undefined') {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "White Devs Agency",
-  description: "Nous créons du résultat",
+  title: "White devs Agency",
+  description: "Nous ne créons pas des outils, créons du résultat",
 };
 
 export default function RootLayout({
