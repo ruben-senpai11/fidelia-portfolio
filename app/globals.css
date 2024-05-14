@@ -221,10 +221,6 @@ hr {
   text-wrap: nowrap;
   cursor: pointer;
 }
-.see-more.visible{
-  width: 100%;
-  text-align: right;
-}
 
 .skill:hover{  
   color: white;
@@ -837,6 +833,10 @@ section#hero{
   }
   .description p{
     font-size: 14px;
+  }
+  .see-more.visible{
+    width: 100%;
+    text-align: right;
   }
 }
 @media screen and (max-width:350px) {
