@@ -161,6 +161,7 @@ hr {
 
 .project-col {
   width: 50%;
+  max-width: 50%;
 }
 
 .project-image,
@@ -169,10 +170,6 @@ hr {
   border-radius: 2.344vw;
 }
 
-.project-col {
-  width: 50%;
-  max-width: 50%;
-}
 
 .project-image {
   background-color: white;
@@ -190,7 +187,44 @@ hr {
   filter: grayscale(0);
   transform: scale(1.1);
 }
-
+.description{
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: flex-end;
+  position: relative;
+}
+.description-text{
+  line-height: 22px;
+}
+.description-text.more{
+  width: calc(100% - 73.41px);
+  text-wrap: nowrap;
+  max-height: 22px;
+  overflow: hidden;
+  text-overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+.description-text.less{
+  width: 100%;
+  text-wrap: wrap;
+  overflow: unset;
+  text-overflow: unset;
+  max-height: unset;
+  position: relative;
+}
+.see-more{
+  font-size: 15px;
+  font-weight: 500;
+  text-overflow: hidden;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+.see-more.visible{
+  width: 100%;
+  text-align: right;
+}
 
 .skill:hover{  
   color: white;

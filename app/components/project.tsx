@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 interface Props {
   label: string,
@@ -14,6 +15,10 @@ interface Props {
 
 export default function Project({ label, description, link, image, imageAlt, year, skills }: Props) {
 
+  const [hidden, setHidden] = useState(true)
+  const handleHidden = () =>{
+    setHidden(!hidden)
+  }
 
   const colors = ["blue", "yellow", "orange", "red", "dark", "purple", "cyan", "green", ""]
 
@@ -30,8 +35,9 @@ export default function Project({ label, description, link, image, imageAlt, yea
             <p className="text-[20px]  ">{label}</p>
             <p className="">{year}</p>
           </div>
-          <div className="description">
-            <p className="text-[15px]">{description} </p>
+          <div className={(hidden ? "flex justify-end" : "justify-center") + " description"}>
+            <p className={(hidden ? "more" : "less") + " text-[15px] description-text"}>{description} </p>
+            <p onClick={handleHidden} className={(hidden? "" : "visible ") + " see-more"}> {hidden ? "...voir plus" : "Voir moins" } </p>
           </div>
           <div className="flex flex-wrap gap-4">
             {skills.map((item, index) => (
