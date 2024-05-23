@@ -34,7 +34,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
           <div className="introduction hero-background px-[0%] pt-[5%] pb-[10%] flex flex-col justify-center items-center gap-12">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
             <h2 className="text-[5vw] leading-[120%] text-center">
-              Nous scalons votre business  de +40% en 6 mois avec un site web et du marketing
+              Bienvenue chez les artisans de l'Interface et Expérience Utilisateur. Vous le pensez, nous le créons
             </h2>
           </div>
           <div className="introduction px-[1%] py-[0px] pb-16 flex flex-col justify-center items-center gap-6  ">
@@ -48,6 +48,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">
+                
                 <ImageCarousel initialImage="Designer" delay={2500} />
               </div>
             </div>
@@ -125,7 +126,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 service5="Création de Contenu Digital"
                 service6="Identité Visuelle"
               />
-              <Service
+              {/* <Service
                 index={1}
                 label="Développement de marque"
                 description="Le développement de marque englobe l'identité & l'image de marque, mais aussi la stratégie marketing, la communication, et tout ce qui façonne l'image de votre entreprise et la positionne efficacement sur le marché."
@@ -135,7 +136,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 service4="Content marketing"
                 service5="Relations publiques"
                 service6="Expérience client"
-              />
+              /> */}
             </div>
 
             <a href="#contact" className="learn-cta btn cta w-max d-none ">
@@ -173,12 +174,12 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             <div className="right-side py-2 w-[100%] flex flex-col gap-6">
               <div className="flex flex-col gap-6">
                 <p className="">
-                  Au lieu de vous parler un français fastidieux, nous irons en termes simples. Nous sommes une équipe dynamique de 4 artisans qui ont fait leur preuves et s'unissent à présent pour donner de l'impact. Nous sommes, un designer, un developpeur, un expert en génération de leads et un expert en référencement et social media marketing.
+                  Au lieu de vous parler un français fastidieux, nous irons en termes simples. Nous sommes une équipe dynamique de 3 artisans qui ont fait leur preuves et s'unissent à présent pour donner de l'impact. Nous sommes, un designer, un developpeur et un expert en marketing.
                   {/* Nous avons foi en quelque chose : le potentiel illimité de nos clients. Passionés de l'entrepreneuriat, nous sommes convaincus que chaque entreprise détient en elle les graines du succès. Notre mission est simple : nourrir ces graines et les aider à germer, à grandir et à s'épanouir atteindre des sommets insoupçonnés. Nous ne sommes pas une simple agence, nous ne créons pas juste des sites et des stratégies NOUS CRÉONS DES RÉSULTATS.  */}
                 </p>
                 <p className="">
                   Nous n'avons foi qu'en une chose, le potentiel de votre marque. Du moment que vous apportez de la valeur à vos clients, à coup sûr nous exploiterons la puissance d'internet pour vous faire grandir.
-                  Nous sommes des docteurs au cœur de serviteurs, nous faisons concert de nos expertises pour vous garantir du résultat. Tout ce que vous avez à faire, c'est d'exprimer vos souhaits pour que nous les réalisions.
+                  Nous faisons concert de nos expertises pour vous garantir du résultat. Tout ce que vous avez à faire, c'est d'exprimer vos souhaits pour que nous les réalisions.
                 </p>
               </div>
               <div className="arguments-col flex gap-16 pt-8">

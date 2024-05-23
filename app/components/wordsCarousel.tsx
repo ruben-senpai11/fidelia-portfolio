@@ -10,7 +10,7 @@ interface Props {
 const WordCarousel = ({ initialWord, delay }: Props) => {
 
   const [index, setIndex] = useState(0);
-  const words:string[] = ["designers", "développeurs", "leads experts", "marketers" ] 
+  const words:string[] = ["designers", "développeurs", "marketers" ] 
 
   useEffect(() => {
     const interval = setInterval(() => {
