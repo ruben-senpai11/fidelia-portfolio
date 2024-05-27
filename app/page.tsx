@@ -35,7 +35,8 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
             <h2 className="text-[5vw] leading-[120%] text-center">
               {/* Bienvenue chez les artisans de l'interface et expérience utilisateur. <br /> Vous le pensez, nous le créons */}
-              Nous créons des images qui marques les esprits. Vous l'imaginez, nous le créons
+              Nous créons des images qui marquent les esprits. 
+              <span className="desktop-n-tab">Vous le pensez, nous le créons</span> 
             </h2>
           </div>
           <div className="introduction px-[1%] py-[0px] pb-16 flex flex-col justify-center items-center gap-6  ">

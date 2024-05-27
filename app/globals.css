@@ -485,7 +485,7 @@ section#hero{
   display: flex;
 }
 .desktop-n-tab{
-  display: flex;
+  display: block;
 }
 .mobile{
   display: none;
