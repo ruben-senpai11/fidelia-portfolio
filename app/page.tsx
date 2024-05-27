@@ -34,7 +34,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
           <div className="introduction hero-background px-[0%] pt-[5%] pb-[10%] flex flex-col justify-center items-center gap-12">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
             <h2 className="text-[5vw] leading-[120%] text-center">
-              Nous créons les images qui marquent les esprits
+              Bienvenue chez les artisans de l'interface et expérience utilisateur. <br /> Vous le pensez, nous le créons
             </h2>
           </div>
           <div className="introduction px-[1%] py-[0px] pb-16 flex flex-col justify-center items-center gap-6  ">
