@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">Nous sommes ici</h4>
               <div className="flex flex-col gap-2 ">
-                <a href="mailto:contact@whitedevs.agency">contact@white-devs.com</a>
+                <a href="mailto:contact@whitedevs.agency">contact@whitedevs.agency</a>
                 <a href="tel:+337808550">+33 7 80 95 85 50</a>
               </div>
             </div>
