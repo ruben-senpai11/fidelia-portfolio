@@ -5,14 +5,11 @@ import "./navigation.css"
 import ThemeMode from "./themeMode"
 import Language from "../components/language"
 import Logo from "../components/logo"
-import { useRouter } from "next/navigation"
-import TagManager from 'react-gtm-module';
 
 
 export default function Header() {
 
   //  Links autot hover
-  const router = useRouter();
   const [activeLink, setActiveLink] = useState('');
 
   useEffect(() => {

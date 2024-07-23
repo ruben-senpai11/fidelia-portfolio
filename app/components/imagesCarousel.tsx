@@ -29,8 +29,8 @@ const ImageCarousel = ({ initialImage, delay }: Props) => {
 
   return (
     <>
-      <Image src={designer} alt="White Devs Artisans" className='artisanIllustration' />
-      {/* <Image src={images[index]} alt="White Devs Artisans" className='artisanIllustration' /> */}
+      {/* <Image src={designer} alt="White Devs Artisans" className='artisanIllustration' /> */}
+      <Image src={images[index]} alt="White Devs Artisans" className='artisanIllustration' />
     </>
   );
 };

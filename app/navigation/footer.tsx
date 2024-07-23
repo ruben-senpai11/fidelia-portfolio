@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="footer-col flex flex-col gap-8">
               <h4 className="font-medium uppercase">Suivez-nous</h4>
               <div className="flex flex-col gap-2 ">
-                <a href="https://wa.me/+22996404757">Whatsapp</a>
+                <a href="https://wa.me/+33780958550">Whatsapp</a>
                 <a href="https://www.facebook.com/alban.honfovou/">Facebook</a>
                 <a href="https://www.linkedin.com/in/alban-honfovou/">Linkedin</a>
                 {/* <a href="">X</a> */}
