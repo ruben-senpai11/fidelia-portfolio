@@ -14,11 +14,15 @@ export default function Budget({ title, budgetCFA, budgetEUR, budget, handleBudg
   const [currency, setCurrency] = useState("eur")
 
   const handleChange = () => {
+
+
+    /*
     if (currency == "cfa") {
       setCurrency("eur")
     } else {
       setCurrency("cfa")
     }
+    */
   }
 
   return (

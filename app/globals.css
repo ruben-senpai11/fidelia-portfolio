@@ -610,6 +610,21 @@ section#hero{
     width: 100%;
   }
 
+  .introduction{
+    padding-bottom: 0;
+  }
+  .introduction:first-of-type {
+    padding: 100px 0px 40px 0px;
+  }
+  .introduction:last-of-type {
+    padding: 50px 0px 40px 0px;
+  }
+
+  .introduction h2{
+    /* font-size: 42px;
+    padding-top: 12px; */
+  }
+
   .projects {
     flex-direction: column;
     gap: 4rem;
@@ -651,7 +666,7 @@ section#hero{
   }
 
   section{
-    padding: 50px 20px!important;
+    padding: 50px 15px!important;
   }
 
   .section-label{
@@ -797,7 +812,7 @@ section#hero{
   }
   .marquee1, .marquee2{
     gap: 15px;
-  }
+  }intro
   .marquee {
     font-size: 34px;
   }
@@ -848,6 +863,6 @@ section#hero{
 }
 
 nav, main, .dream-container, #marquee, .footer{
-  max-width: 2500px;
+  max-width: 1500px;
   margin: 0 auto;
 }

@@ -22,7 +22,7 @@ import ImageCarousel from "./components/imagesCarousel";
 
 export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
 
-  const interestsList: string[] = ["Croissance +40%", "Graphic design", "Dévelopment web", "Branding", "Marketing", "Autres"];
+  const interestsList: string[] = ["Web design", "Dévelopment web", "Branding", "Marketing", "Autres"];
   const budgetEUR: string[] = ["<2k", "2-5K", "5-10K", ">10K", "JE NE SAIS PAS ENCORE"];
   const budgetCFA: string[] = ["<500.000", "500.000-2M", "2M-10M", ">10M", "JE NE SAIS PAS ENCORE"]
 
@@ -31,18 +31,18 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
       <Header />
       <main className="flex flex-col items-center justify-between ">
         <section id="hero" className="">
-          <div className="introduction hero-background px-[0%] pt-[5%] pb-[10%] flex flex-col justify-center items-center gap-12">
+          <div className="introduction hero-background px-[0%] pt-[2%] pb-[10%] flex flex-col justify-center items-center gap-12">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
-            <h2 className="text-[5vw] leading-[120%] text-center">
+            <h2 className="text-[80px] leading-[120%] text-center">
               {/* Bienvenue chez les artisans de l'interface et expérience utilisateur. <br /> Vous le pensez, nous le créons */}
-              Nous créons des images qui marquent les esprits. 
-              <span className="desktop-n-tab">Vous le pensez, nous le créons</span> 
+              Nous créons des images qui marquent les esprits
+              {/* <span className="desktop-n-tab">Mais nous exauçons les vœux aussi</span>  */}
             </h2>
           </div>
           <div className="introduction px-[1%] py-[0px] pb-16 flex flex-col justify-center items-center gap-6  ">
             <div className="artisans flex flex-row justify-between gap-2 ">
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
-                <h2 className=" text-right text-[3.5vw] leading-snug ">
+                <h2 className=" text-right text-[45px] leading-snug ">
                   Nous sommes des <br className="desktop-n-tab mobile-sm" />
                   <WordCarousel initialWord="designers" delay={2500} /> 
                   <br className="mobile-md" />

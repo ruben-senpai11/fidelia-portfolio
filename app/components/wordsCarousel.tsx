@@ -21,7 +21,7 @@ const WordCarousel = ({ initialWord, delay }: Props) => {
 
   return (
     <>
-      <span className={ (index===0 ? "bg-blue-400 " : index===1 ? "bg-orange-300 text-slate-900 " : index===2 ? "bg-green-300 " : index===3 ? "bg-purple-400 " : "bg-blue-400 ") + "artisan-role font-playfair italic px-4 text-[5vw] text-black " } >
+      <span className={ (index===0 ? "bg-blue-400 " : index===1 ? "bg-orange-300 text-slate-900 " : index===2 ? "bg-green-300 " : index===3 ? "bg-purple-400 " : "bg-blue-400 ") + "artisan-role font-playfair italic px-4 text-[72px] text-black " } >
         {words[index]}
       </span>
     </>
