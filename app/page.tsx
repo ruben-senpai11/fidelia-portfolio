@@ -31,15 +31,15 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
       <Header />
       <main className="flex flex-col items-center justify-between ">
         <section id="hero" className="">
-          <div className="introduction hero-background px-[0%] pt-[2%] pb-[10%] flex flex-col justify-center items-center gap-12">
+          <div className="introduction hero-background px-[0%] pt-[2%] pb-[15%] flex flex-col justify-center items-center gap-12">
             <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
             <h2 className="text-[80px] leading-[120%] text-center">
-              {/* Bienvenue chez les artisans de l'interface et expérience utilisateur. <br /> Vous le pensez, nous le créons */}
-              Nous créons des images qui marquent les esprits
+              Ils concernent le web? Alors nous pouvons exaucer vos vœux
+              {/* Nous créons des images qui marquent les esprits */}
               {/* <span className="desktop-n-tab">Mais nous exauçons les vœux aussi</span>  */}
             </h2>
           </div>
-          <div className="introduction px-[1%] py-[0px] pb-16 flex flex-col justify-center items-center gap-6  ">
+          <div className="introduction px-[1%] py-[0px] pb-0 flex flex-col justify-center items-center gap-6  ">
             <div className="artisans flex flex-row justify-between gap-2 ">
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
                 <h2 className=" text-right text-[45px] leading-snug ">
@@ -67,12 +67,12 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             </div>
           </div>
         </section>
-        <section id="services" className="flex flex-col gap-2 pt-[100px] pb-[100px]">
+        <section id="services" className="flex flex-col gap-2 px-[50px]">
           {/* <h2 className=" text-start">Services</h2> */}
           <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p>
-          <div className="flex justify-between min-w-100 gap-16 sides-section">
+          <div className="flex justify-between min-w-100 gap-8 sides-section">
             <div className="left-side py-0 w-[30%] flex flex-col gap-6">
-              <p className="text-[32px]">Nous crééons des solutions pour faciliter la vie de nos clients.</p>
+              <p className="text-[32px]">Nous crééons des sites web, mais pas que ; nous creons un ecocystème pour faciliter la vie de nos clients.</p>
               <a href="#contact" className="learn-cta btn cta w-max ">
                 <span className="cta-text ">
                   En savoir plus
@@ -151,9 +151,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               <span className="cta-transition"></span>
             </a>
           </div>
-        </section>
+        </section>                                                                                                                           
 
-        <OurWorks title="Projets récents" />
+        <OurWorks title="Projets récents" />                                                                                                                                                                                                                                                                                                                                                
 
         {/* <BookJourney /> */}
 

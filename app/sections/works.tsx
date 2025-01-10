@@ -5,6 +5,7 @@ import Project from "../components/project";
 import rabbit from "../assets/images/future-rabbit.png"
 import bandage from "../assets/images/shopping.jpg"
 import lemonplet from "../assets/images/lemonplet2.webp"
+import playStation from "../assets/images/joystick.png"
 import white_developer from "../assets/images/White developer.png"
 
 import { useEffect, useRef, useState } from "react";
@@ -61,9 +62,9 @@ export default function Works({ title }: Props) {
         <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">02</span><span className="separator"></span><span className="s-label uppercase">{title}</span></p>
         <div className="projects border-solidd flex gap-24">
           <div className="project-col flex flex-col gap-16">
-            <Project label="White Developer's Portfolio "
-              description=""
-              link="https://whitedev.vercel.app/" image={white_developer} imageAlt="white_developer" year="2024"
+            <Project label="FAR IN GAMES "
+              description="Le but de cette Startup est simple : Révolutionner l'univers du gaming beninois. Dans cette quête, nous leur avons conçu un site à la mesure de leurs objectifs"
+              link="#" image={playStation} imageAlt="playstation" year="2022"
               skills={["Conception", "Direction Artistique", "Design", "Dévelopment"]}
             />
             <Project label="LEMÖNPLET Refonte"
@@ -79,7 +80,7 @@ export default function Works({ title }: Props) {
               skills={["Saas", "Conception", "Design", "Dévelopment"]}
             />
             <Project label="Bandage E-commerce"
-              description="Intégrer une maquette Figma à un projet React, c'etait le but et nous l'avons fait. Ce faisant, nous avons veillé à assurer l'expérience utilisateur, comme d'habitude d'ailleurs" 
+              description="Intégrer une maquette Figma à un projet React, c'etait le but et nous l'avons fait. Ce faisant, nous avons veillé à assurer l'expérience utilisateur, comme d'habitude d'ailleurs"
               link="https://bandage-ecommerce-ui.vercel.app/"
               image={bandage} imageAlt="Bandage E-commerce" year="2024"
               skills={["Intégration web", "UX"]}
