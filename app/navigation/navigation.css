@@ -1,22 +1,16 @@
-.logo {
-  font-family: "Playfair";
+
+.logo-wrapper{
+  width: 200px;
+  height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 6px;
+  /* border: 1px solid; */
+  border-radius: 8px;
+  box-shadow: 0 0 5px #5a5aF555;
 }
-.logo svg{
-  width: 27px;
-  height: 27px;
-}
-.logo p{
-  font-size: 22px;
-}
-.logo .font-bold:first-of-type{
- font-size: 30px; 
-}
-.logo .font-bold:last-child{
- font-size: 24px; 
+.logo-L{
+  fill: var(--background-start-rgb);
 }
 
 .nav-links {

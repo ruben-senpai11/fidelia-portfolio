@@ -35,10 +35,13 @@ export default function Project({ label, description, link, image, imageAlt, yea
             <p className="text-[20px]  ">{label}</p>
             <p className="">{year}</p>
           </div>
-          <div className={(hidden ? "flex justify-end" : "justify-center") + " description"}>
+          <div className=" description">
+            <p >{description} </p>
+          </div>
+          {/* <div className={(hidden ? "flex justify-end" : "justify-center") + " description"}>
             <p className={(hidden ? "more" : "less") + " text-[15px] description-text"}>{description} </p>
             <p onClick={handleHidden} className={(hidden? "" : "visible ") + " see-more"}> {hidden ? "...voir plus" : "Voir moins" } </p>
-          </div>
+          </div> */}
           <div className="flex flex-wrap gap-4">
             {skills.map((item, index) => (
               <div key={index} className={ (colors) + " skill rounded light "}>{item}</div>

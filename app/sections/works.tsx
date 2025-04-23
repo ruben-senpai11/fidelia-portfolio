@@ -65,7 +65,7 @@ export default function Works({ title }: Props) {
             <Project label="FAR IN GAMES "
               description="Le but de cette Startup est simple : Révolutionner l'univers du gaming beninois. Dans cette quête, nous leur avons conçu un site à la mesure de leurs objectifs"
               link="#" image={playStation} imageAlt="playstation" year="2022"
-              skills={["Conception", "Direction Artistique", "Design", "Dévelopment"]}
+              skills={["Conception", "Direction Artistique", "Design", "Développement"]}
             />
             <Project label="LEMÖNPLET Refonte"
               description="La marque asiatique a redonné à sa boutique Shopify un design au goût du jour. C'est le lieu d'intégrer une maquette à un thème Shopify et d'implémenter de nouvelles fonctionnalités"
@@ -77,7 +77,7 @@ export default function Works({ title }: Props) {
             <Project label="Bunny Management"
               description="La cuniculture est rentable mais délicate. Ma ferme en ligne est le Saas qui résoud ce paradigme, épaule et guide les éleveurs au quotidien"
               link="https://mes-lapins.com/" image={rabbit} imageAlt="Rabbit of Future" year="2023"
-              skills={["Saas", "Conception", "Design", "Dévelopment"]}
+              skills={["Saas", "Conception", "Design", "Développement"]}
             />
             <Project label="Bandage E-commerce"
               description="Intégrer une maquette Figma à un projet React, c'etait le but et nous l'avons fait. Ce faisant, nous avons veillé à assurer l'expérience utilisateur, comme d'habitude d'ailleurs"

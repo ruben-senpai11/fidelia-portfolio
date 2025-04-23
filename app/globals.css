@@ -41,12 +41,16 @@ html {
 }
 
 body {
-  font-family: "Open sans";
+  font-family: "Open sans"!important;
   font-size: 17px;
   color: var(--foreground-rgb);
   background: transparent;
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb)) var(--background-start-rgb);
   overflow-x: hidden;
+}
+
+h3, h4{
+  font-family: "Playfair";
 }
 
 @layer utilities {
@@ -180,7 +184,7 @@ hr {
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease-in-out;
-  filter: grayscale(60%);
+  /* filter: grayscale(30%); */
 }
 
 .project-image img:hover {
@@ -422,7 +426,7 @@ section#hero{
 }
 
 .btn.cta {
-  padding: 16px 12px;
+  padding: 16px 16px;
   font-family: "Open sans";
   position: relative;
   overflow: hidden;

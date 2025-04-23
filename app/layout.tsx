@@ -3,24 +3,25 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import TagManager from 'react-gtm-module';
+import Header from "./navigation/header";
+import Footer from "./navigation/footer";
 
 if (typeof window !== 'undefined') {
-    const tagManagerArgs = {
-        gtmId: '5VRHGB65',
-        dataLayer: {
-            // Optional dataLayer object
-        }
-    };
-    
-    TagManager.initialize(tagManagerArgs);
+  const tagManagerArgs = {
+    gtmId: '5VRHGB65',
+    dataLayer: {
+    }
+  };
+
+  TagManager.initialize(tagManagerArgs);
 }
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "White devs Agency",
-  description: "Nous ne créons pas des outils, créons du résultat",
+  title: "Legendary Harmony",
+  description: "Accélérez votre croissance avec le combo ultime : Refonte web + SEO + Automatisation + IA",
 };
 
 export default function RootLayout({
@@ -31,8 +32,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <meta name="google-site-verification" content="MwtyOjEuk62KDPzYPycf-g9oLQP5Wo6kYR95tCEQPUo" />
-      {/* <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> */}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+          {children}
+        <Footer />
+      </body>
     </html>
   );
 }

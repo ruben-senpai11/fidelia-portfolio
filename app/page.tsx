@@ -18,6 +18,7 @@ import Image from "next/image";
 import WordCarousel from "./components/wordsCarousel";
 import ImageCarousel from "./components/imagesCarousel";
 
+import developer from "./assets/Illustrations/designer.png"
 
 
 export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
@@ -28,15 +29,12 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
 
   return (
     <>
-      <Header />
       <main className="flex flex-col items-center justify-between ">
         <section id="hero" className="">
           <div className="introduction hero-background px-[0%] pt-[2%] pb-[15%] flex flex-col justify-center items-center gap-12">
-            <h1 className="text-[18px] -mt-5">WHITE DEVS AGENCY</h1>
+            <h1 className="text-[18px] uppercase -mt-5">Legendary Harmony</h1>
             <h2 className="text-[80px] leading-[120%] text-center">
-              Ils concernent le web? Alors nous pouvons exaucer vos vœux
-              {/* Nous créons des images qui marquent les esprits */}
-              {/* <span className="desktop-n-tab">Mais nous exauçons les vœux aussi</span>  */}
+              Plus que du web, nous peauffinons des détails qui marquent les esprits.
             </h2>
           </div>
           <div className="introduction px-[1%] py-[0px] pb-0 flex flex-col justify-center items-center gap-6  ">
@@ -44,18 +42,23 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               <div className="left-side border-solidd flex justify-center w-[50%] items-center gap-6">
                 <h2 className=" text-right text-[45px] leading-snug ">
                   Nous sommes des <br className="desktop-n-tab mobile-sm" />
-                  <WordCarousel initialWord="designers" delay={2500} /> 
+                  <span className="bg-green-300 artisan-role font-playfair italic px-4 text-[72px] text-black " >
+                    développeurs
+                  </span>
                   <br className="mobile-md" />
                   &nbsp;qui ne sont peut-être pas des génies, mais exaucent aussi les vœux.
                 </h2>
               </div>
               <div className="right-side border-solidd w-[50%] h-[400px] max-h-[400px] flex justify-center items-center ">
-                
-                <ImageCarousel initialImage="Designer" delay={2500} />
+                <Image src={developer} alt="A white developer" />
               </div>
             </div>
             <div className="hero-lead flex justify-between w-[80%] px-[0%] py-4 gap-8 ">
-              <p className="text-center pt-0 text-[14px] w-[56%] ">En associant une analyse profonde des besoins, des compétences techniques éprouvées, la communication active & la proactivité, nous crééons des projets uniques, des résultats et une bouffée d'air frais</p>
+              <p className="text-center pt-0 text-[14px] w-[56%] ">
+                {/* Au delà de créer de belles pages web avec des fonctionnalités poussées, nous marquons une identité dans les esprits. */}
+                En peauffinant chacun des détails de votre marque et en créant une harmonie qui va au delà du perceptible,
+                nous faisons de vos personnas cibles vos partenaires, comme vous, êtes les nôtres.
+                </p>
               <div className="hero-cta w-[50%]">
                 <a href="#about-us ">
                   <button className="btn cta w-max ">
@@ -72,7 +75,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
           <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">01</span><span className="separator"></span><span className="s-label ">SERVICES</span></p>
           <div className="flex justify-between min-w-100 gap-8 sides-section">
             <div className="left-side py-0 w-[30%] flex flex-col gap-6">
-              <p className="text-[32px]">Nous crééons des sites web, mais pas que ; nous creons un ecocystème pour faciliter la vie de nos clients.</p>
+              <p className="text-[32px]">Pas de sites classiques chez nous ! Nous créons un écosystème unique harmonieux</p>
               <a href="#contact" className="learn-cta btn cta w-max ">
                 <span className="cta-text ">
                   En savoir plus
@@ -86,7 +89,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
             <div className="right-side py-0 services w-[60%] flex flex-col gap-6">
               <Service
                 index={7}
-                label="Graphic design"
+                label="Design graphique"
                 description="L'art de combiner le texte, les images et les éléments visuels pour créer une communication visuelle efficace. C'est un domaine créatif et technique qui a pour but de transmettre des messages et des idées à un public cible de manière claire, concise et attrayante."
                 service1="Création de logo"
                 service2="Identité visuelle"
@@ -128,7 +131,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 service5="Création de Contenu Digital"
                 service6="Identité Visuelle"
               />
-              {/* <Service
+              <Service
                 index={1}
                 label="Développement de marque"
                 description="Le développement de marque englobe l'identité & l'image de marque, mais aussi la stratégie marketing, la communication, et tout ce qui façonne l'image de votre entreprise et la positionne efficacement sur le marché."
@@ -138,7 +141,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
                 service4="Content marketing"
                 service5="Relations publiques"
                 service6="Expérience client"
-              /> */}
+              />
             </div>
 
             <a href="#contact" className="learn-cta btn cta w-max d-none ">
@@ -151,9 +154,9 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
               <span className="cta-transition"></span>
             </a>
           </div>
-        </section>                                                                                                                           
+        </section>
 
-        <OurWorks title="Projets récents" />                                                                                                                                                                                                                                                                                                                                                
+        <OurWorks title="Projets récents" />
 
         {/* <BookJourney /> */}
 
@@ -204,7 +207,6 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
 
       <ContactForm interestsList={interestsList} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
 
-      <Footer />
     </>
   )
 }

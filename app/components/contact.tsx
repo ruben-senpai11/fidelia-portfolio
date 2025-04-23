@@ -141,10 +141,10 @@ function ContactForm({ interestsList, budgetEUR, budgetCFA }: Props) {
             {/* <p className="section-label text-[18px] flex gap-4 items-center"><span className="s-number">05</span><span className="separator"></span><span className="s-label uppercase">Contact</span></p> */}
             <h2 className="text-[48px] "  >Let&#39;s connect</h2>
             {/* {!formSent && */}
-            <h3 className={(formSent ? " " : "uppercase") + " w-[50%] text-[18px] "} >Il est temps de faire connaître votre entreprise au monde entier {formSent && "!"} </h3>
+            <h3 className={(formSent ? " " : "uppercase") + " w-[50%] text-[18px] "} >Il est temps de changer le standing de votre entreprise  {formSent && "!"} </h3>
             {/* } */}
             <a href="mailto:contact@whitedevs.agency" className="btn cta w-max">
-              <span className="cta-text">Envoyer plutôt un mail</span>
+              <span className="cta-text">Envoyer un mail</span>
               <span className="cta-transition"></span>
             </a>
           </div>
