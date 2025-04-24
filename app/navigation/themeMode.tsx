@@ -6,7 +6,7 @@ import "./themeMode.css"
 function ThemeMode(){
   
   const [themeMode, setThemeMode] = useState(
-    localStorage.getItem("theme") as string || "light"
+    localStorage.getItem("LHarmonyTheme") as string || "light"
   );
 
   const handleToggle = ()=>{  
@@ -19,8 +19,8 @@ function ThemeMode(){
     console.log(themeMode)
   }
   useEffect(()=>{
-    localStorage.setItem("theme", themeMode);
-    const userTheme:string = localStorage.getItem("theme") as string;
+    localStorage.setItem("LHarmonyTheme", themeMode);
+    const userTheme:string = localStorage.getItem("LHarmonyTheme") as string;
     document.querySelector('html')?.setAttribute('data-theme', userTheme)
   }, [themeMode])
 

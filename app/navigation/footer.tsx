@@ -1,19 +1,17 @@
 import Logo from "../components/logo";
+import ThemeMode from "./themeMode";
 
 
 export default function Footer() {
   return (
     <>
-      <div className="footer flex flex-col justify-between items-start px-16 py-8 text-[15px]  gap-16">
+      <div className="footer flex flex-col justify-between items-start px-16 py-8 text-[15px] gap-2 ">
         <hr />
-        <div className="footer-grid flex w-[100%]">
+        <div className="footer-grid pt-16 flex w-[100%]">
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo/>
               <h3 className="w-[65%] ">Parce que nous ne créons pas des outils, nous créons du résultat</h3>
-            </div>
-            <div className="flex copywright desktop">
-              <p className="">© 2024 All Rights Reserved</p>
             </div>
           </div>
           <div className="footer-right flex justify-between gap-8 w-[50%] ">
@@ -45,9 +43,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex copywright mobile">
-          <p className="">© 2024 All Rights Reserved</p>
-        </div>
+        <div className="flex justify-between w-full copywright pt-4 md:pt-0">
+              <p className="">© 2025 All Rights Reserved</p>
+              <ThemeMode />
+            </div>
       </div>
     </>
   )

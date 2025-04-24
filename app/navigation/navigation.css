@@ -1,39 +1,34 @@
-
-.logo-wrapper{
-  width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  /* border: 1px solid; */
-  border-radius: 8px;
-  box-shadow: 0 0 5px #5a5aF555;
+nav{
+  width: 100%;
+  /* margin: 0 4rem; */
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  transition: .5s;
+  background-color: #fafafa22;
+  backdrop-filter: blur(120px);
 }
-.logo-L{
-  fill: var(--background-start-rgb);
+.logo svg{
+  width: 170px;
+  height: 40px;
 }
 
 .nav-links {
-  position: fixed;
-  margin: 0;
-  left: 1%;
-  right: auto;
-  z-index: 999;
-  transition: .4s;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  color: var(--foreground);
+  transition: .4s;
 }
 
 .nav-links ul {
-  border-radius: 25px;
   align-self: center;
 }
 
 .nav-links li {
   width: max-content;
   padding: 4px 10px;
-  border-radius: 25px;
   font-family: "Lato";
   cursor: pointer;
 }

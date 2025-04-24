@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
-import Budget from "./budget"
-import Interest from "./interest"
+import Budget from "../components/budget"
+import Interest from "../components/interest"
 import { Console } from "console"
 
 
