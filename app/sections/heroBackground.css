@@ -12,7 +12,7 @@
   --background-image-xs: url('../../public/images/bg-dark_xm.png');
 }
 
-#hero {
+main {
   background-repeat: no-repeat;
   background-position-x: center;
   background-image: var(--background-image-lg);
@@ -21,25 +21,25 @@
 
 
 @media screen and (max-width:1279px) {
-  #hero {
+  main {
     background-image: var(--background-image-lg);
   }
 }
 
 @media screen and (max-width:991px) {
-  #hero {
+  main {
     background-image: var(--background-image-md);
   }
 }
 
 @media screen and (max-width:767px) {
-  #hero {
+  main {
     background-image: var(--background-image-sm);
   }
 }
 
 @media screen and (max-width:479px) {
-  #hero {
+  main {
     background-image: var(--background-image-xs);
   }
 }

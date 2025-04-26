@@ -15,7 +15,7 @@ No navigation
 
 Hero Section
       Clear headline saying what benefit or result I offer, talking to emotional
-      subheadline saying how I do, the methods, talking to rational
+      subheadline saying how I do it, the methods, talking to rational
       For the image, use a photo or illustration of person or people using what you're offering or actually enjoying the end of result of it
 
 Benefits section (features, not benefits)

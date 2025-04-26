@@ -68,10 +68,7 @@ h2 {
 }
 
 h3, h4{
-  font-family: "Sora";
-}
-h2 {
-  font-size: 48px;
+  /* font-family: "Sora"; */
 }
 
 .inverted-svg{
@@ -105,9 +102,34 @@ nav{
   object-fit: cover;
 }
 
-.border-solid{
-  border: solid;
+.trusted-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 3px solid #f8faf9;
+  box-shadow: 0 0 2px black;
 }
+.trusted-image img, .trusted-image span{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: khaki;
+  object-fit: cover;
+  overflow: hidden;
+}
+.trusted-image span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #13181b;
+  background-color: bisque;
+}
+.trusted-image.max{
+  transform: rotateY('180°');
+}
+
 .separator {
   width: 40px;
   height: 1px;
