@@ -1,26 +1,5 @@
-import Service from "./components/service";
-import dynamic from 'next/dynamic';
-
-
-const OurWorks = dynamic(() => import('./sections/works'), { ssr: true });
-const Principles = dynamic(() => import('./sections/principles'), { ssr: true });
-const Marquee = dynamic(() => import('./sections/marquee'), { ssr: true });
-const BookJourney = dynamic(() => import('./sections/bookJourney'), { ssr: true });
-
-
 import './sections/heroBackground.css'
-import Footer from "./navigation/footer"
-
-import Argument from "./components/argument";
-import ContactForm from "./sections/contact";
-import Image from "next/image";
-import WordCarousel from "./components/wordsCarousel";
-import ImageCarousel from "./components/imagesCarousel";
-
-import developer from "./assets/Illustrations/designer.png"
 import Hero from "./sections/hero";
-import Services from "./sections/services";
-import About from "./sections/about";
 
 
 export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
@@ -41,7 +20,7 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
 
       {/* <Marquee marquee1Content={["Business2Business", "Ecomerce", "SaaS", "Développement Web", "Busniness2Consumers", "CMS", "No-code", "Responsive", "Ecomerce", "SaaS"]} marquee2Content={["CMS", "No-code", "Responsive design", "Ecomerce", "Dévelopment web", "SaaS", "Business2Business"]} /> */}
 
-      <ContactForm interestsList={interestsList} budgetCFA={budgetCFA} budgetEUR={budgetEUR} />
+      {/* <ContactForm interestsList={interestsList} budgetCFA={budgetCFA} budgetEUR={budgetEUR} /> */}
 
     </>
   )

@@ -2,29 +2,13 @@
 
 import { useEffect, useState } from 'react';
 import "./themeMode.css"
+import useTheme from '../hooks/useTheme';
 
-function ThemeMode(){
-  
-  const [themeMode, setThemeMode] = useState(
-    localStorage.getItem("LHarmonyTheme") as string || "light"
-  );
+function ThemeMode() {
 
-  const handleToggle = ()=>{  
-    if(themeMode==='light'){
-      setThemeMode('dark')
-    }else{
-      setThemeMode('light')
-    }
+  const {themeMode, handleToggle} = useTheme()
 
-    console.log(themeMode)
-  }
-  useEffect(()=>{
-    localStorage.setItem("LHarmonyTheme", themeMode);
-    const userTheme:string = localStorage.getItem("LHarmonyTheme") as string;
-    document.querySelector('html')?.setAttribute('data-theme', userTheme)
-  }, [themeMode])
-
-  return(
+  return (
     <>
       <div className="theme flex gap-2">
         <span className="">
@@ -42,13 +26,13 @@ function ThemeMode(){
         </span>
         <label className="theme-switch">
           <label htmlFor="theme-swith"></label>
-          <input id="theme-swith" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false}/>
+          <input id="theme-swith" type="checkbox" value={themeMode} onChange={handleToggle} defaultChecked={themeMode === "dark" ? true : false} />
           <span className="theme-slider round"></span>
         </label>
         <span>
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.72672 0.0133169C4.07098 -0.0818763 4.28957 0.354053 4.10512 0.659916C3.75879 1.23418 3.55954 1.90715 3.55954 2.62665C3.55954 4.73294 5.26706 6.44046 7.37334 6.44046C8.09284 6.44046 8.76579 6.24122 9.34005 5.8949C9.64592 5.71044 10.0819 5.92904 9.98666 6.2733C9.39246 8.42219 7.42304 10 5.08506 10C2.27666 10 0 7.72331 0 4.91494C0 2.57697 1.57781 0.607523 3.72672 0.0133169Z" fill="currentColor"></path>
-        </svg>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.72672 0.0133169C4.07098 -0.0818763 4.28957 0.354053 4.10512 0.659916C3.75879 1.23418 3.55954 1.90715 3.55954 2.62665C3.55954 4.73294 5.26706 6.44046 7.37334 6.44046C8.09284 6.44046 8.76579 6.24122 9.34005 5.8949C9.64592 5.71044 10.0819 5.92904 9.98666 6.2733C9.39246 8.42219 7.42304 10 5.08506 10C2.27666 10 0 7.72331 0 4.91494C0 2.57697 1.57781 0.607523 3.72672 0.0133169Z" fill="currentColor"></path>
+          </svg>
         </span>
       </div>
     </>
