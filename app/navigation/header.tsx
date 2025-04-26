@@ -9,53 +9,29 @@ import Logo from "../components/logo"
 
 export default function Header() {
 
-  //  Links autot hover
-  const [activeLink, setActiveLink] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sectionOffsets = Array.from(document.querySelectorAll('section')).map(section => ({
-        id: section.id,
-        offsetTop: section.offsetTop,
-        offsetBottom: section.offsetTop + section.clientHeight,
-      }));
-
-      const currentPosition = window.scrollY + window.innerHeight / 2;
-
-      const currentSection = sectionOffsets.find(section => currentPosition >= section.offsetTop && currentPosition < section.offsetBottom);
-
-      if (currentSection) {
-        setActiveLink(currentSection.id);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
 
   //  Scroll Trigger
   const [isScrolled, setIsScrolled] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 5) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
+  if (typeof window !== undefined) {
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 5) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
       }
-    }
 
-    window.addEventListener('scroll', handleScroll)
+      window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }, [])
 
+  }
 
   //Mobile Nav
   const [mobileNav, setmobileNav] = useState(false);
@@ -86,20 +62,6 @@ export default function Header() {
     }
   }
 
-  //Retrieve device's width
-
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
 
   return (
     <>
@@ -109,7 +71,7 @@ export default function Header() {
         </a>
         <div className={(mobileNav == true ? 'mobile-menu ' : 'desktop-menu ') + " flex items-center justify-end gap-4 w-full  "}>
           <div className="nav-links">
-            <ul className={(width > 1000 && isScrolled ? "opacity-90 hover:opacity-100" : "opacity-100") + " flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
+            <ul className={(isScrolled ? "opacity-90 hover:opacity-100" : "opacity-100") + " flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
               <li onClick={() => smoothScrollTo('home')}>
                 <p className="desktop">Accueil</p>
                 <a href="#hero" className="mobile" >Accueil</a>
@@ -132,10 +94,10 @@ export default function Header() {
               <span className="cta-transition"></span>
             </button>
           </div>
-          {/* <div className={(mobileNav === true ? "opened " : "") + "menu-icons relative"} onClick={toogleMenu}>
+          <div className={(mobileNav === true ? "opened " : "") + "menu-icons relative"} onClick={toogleMenu}>
             <div className="burger"></div>
             <div className="burger"></div>
-          </div> */}
+          </div>
         </div>
       </nav>
     </>
