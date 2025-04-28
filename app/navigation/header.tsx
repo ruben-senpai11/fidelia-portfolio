@@ -66,15 +66,14 @@ export default function Header() {
   return (
     <>
       <nav id="home" className={(isScrolled ? "py-2" : "py-6") + " header flex justify-between items-center px-12 "}  >
-        <a href="#hero">
+        <span  onClick={() => smoothScrollTo('home')} className="cursor-pointer">
           <Logo />
-        </a>
+        </span>
         <div className={(mobileNav == true ? 'mobile-menu ' : 'desktop-menu ') + " flex items-center justify-end gap-4 w-full  "}>
           <div className="nav-links">
-            <ul className={(isScrolled ? "opacity-90 hover:opacity-100" : "opacity-100") + " flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
+            <ul className={( mobileNav == false && isScrolled ? "opacity-90 hover:opacity-100" : "opacity-100") + " flex items-center justify-between gap-6 max-w-100 px-4 py-[6px] text-[15px] font-medium transition-all "}>
               <li onClick={() => smoothScrollTo('home')}>
-                <p className="desktop">Accueil</p>
-                <a href="#hero" className="mobile" >Accueil</a>
+                <p className="">Accueil</p>
               </li>
               <li onClick={() => smoothScrollTo('services')}>
                 Services
@@ -89,7 +88,7 @@ export default function Header() {
                 Contact
               </li>
             </ul>
-            <button type="submit" className="btn cta">
+            <button type="submit" className={ (mobileNav ? "mobile " : "desktop ") + " btn cta header-cta"}>
               <span className="cta-text">Je demande une analyse</span>
               <span className="cta-transition"></span>
             </button>

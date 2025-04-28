@@ -4,7 +4,7 @@ nav{
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 9;
+  z-index: 99;
   transition: .5s;
   background-color: #fafafa22;
   backdrop-filter: blur(120px);
@@ -98,6 +98,10 @@ section {
 
 @media screen and (max-width: 999px) {
 
+  nav#home, footer.footer {
+    padding: 26px 24px;
+  }
+
   .header {
     margin: 0;
     gap: 5px;
@@ -109,22 +113,9 @@ section {
     backdrop-filter: blur(5px);
   }
 
-  .logo{
-    gap: 4px;
-    z-index: 99;
-  }
   .logo svg{
-    width: 24px;
-    height: 24px;
-  }
-  .logo p{
-    font-size: 22px;
-  }
-  .logo .font-bold:first-of-type{
-   font-size: 28px; 
-  }
-  .logo .font-bold:last-child{
-   font-size: 22px; 
+    width: 160px;
+    height: 35px;
   }
 
   .menu-icons {
@@ -163,28 +154,28 @@ section {
 
   .nav-links {
     position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
     left: 0;
     right: 0;
     /* width: calc(100% - 40px); */
     margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20 px;
   }
 
   .nav-links ul {
     width: 100%;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    height: 0px;
+    padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    gap: 20 px;
     border-radius: 0;
 
-    color: white;
-    background-color: black ;
-    padding: 0;
-    gap: 20 px;
     z-index: -1;
     transition: all .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
@@ -199,13 +190,13 @@ section {
   .nav-links li a {
     opacity: 0;
     font-size: 15px;
-    animation: endTransition 0.5s ease-in-out forwards;
+    animation: transition 0.5s ease-in-out ;
     z-index: -11;
   }
 
   .mobile-menu ul {
     z-index: -1;
-    height: 275px;
+    height: 285px;
     padding: 18px;
   }
   .mobile-menu li{
@@ -218,8 +209,8 @@ section {
     z-index: -1;
   }
 
-  .footer {
-    padding: 40px;
+  .header-cta{
+    margin: 0 auto 35px auto;
   }
 
   .footer-left {
@@ -268,7 +259,7 @@ section {
 
   .footer-right {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 24px;
   }
 
   .footer-col {

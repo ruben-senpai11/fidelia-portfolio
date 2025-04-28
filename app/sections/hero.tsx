@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <>
       <section id="hero" className="w-full overflow-hidde ">
-        <div className="flex justify-between w-full pt-20 ">
+        <div className="hero-container flex justify-between w-full pt-20 ">
           <div className="flex flex-col w-[50%] gap-8">
             <h1 className="text-5xl">Boostez votre entreprise de +230% en 3 semaines</h1>
             <h2 className="text-2xl">avec une refonte web, du SEO, des automatisations et l'IA</h2>
