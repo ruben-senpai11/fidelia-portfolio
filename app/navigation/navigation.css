@@ -225,6 +225,7 @@ section {
   .footer-right {
     width: 60%;
     max-width: 60%;
+    padding-top: 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -259,7 +260,7 @@ section {
 
   .footer-right {
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 12px;
   }
 
   .footer-col {

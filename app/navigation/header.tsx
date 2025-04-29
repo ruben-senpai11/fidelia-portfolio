@@ -5,6 +5,7 @@ import "./navigation.css"
 import ThemeMode from "./themeMode"
 import Language from "../components/language"
 import Logo from "../components/logo"
+import Link from "next/link"
 
 
 export default function Header() {
@@ -88,10 +89,10 @@ export default function Header() {
                 Contact
               </li>
             </ul>
-            <button type="submit" className={ (mobileNav ? "mobile " : "desktop ") + " btn cta header-cta"}>
+            <Link href="https://tally.so/r/mOryj7" className={ (mobileNav ? "mobile " : "desktop ") + " btn cta header-cta"}>
               <span className="cta-text">Je demande une analyse</span>
               <span className="cta-transition"></span>
-            </button>
+            </Link>
           </div>
           <div className={(mobileNav === true ? "opened " : "") + "menu-icons relative"} onClick={toogleMenu}>
             <div className="burger"></div>

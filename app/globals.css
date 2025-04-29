@@ -103,6 +103,7 @@ nav{
 }
 
 .trusted-image{
+  max-width: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +128,7 @@ nav{
   background-color: bisque;
 }
 .trusted-image.max{
-  transform: rotateY('180°');
+  /* transform: rotateY('180°'); */
 }
 
 .separator {
@@ -692,7 +693,7 @@ section#hero{
   }
 
   main {
-    padding: 0;
+    padding: 0 30px;
   }
 
   section{
@@ -713,6 +714,18 @@ section#hero{
   
   .hero-container{
     flex-direction: column;  
+    /* gap: 100px; */
+  }
+  .w-\[50\%\]{
+    width: 100%;
+  }
+
+  .hero-image{
+    height: 100%;
+    max-height: unset;
+  }
+  .hero-image img{
+    margin: 0;
   }
 
   .learn-cta{
