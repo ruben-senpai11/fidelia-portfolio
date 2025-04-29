@@ -18,12 +18,12 @@ export default function Hero() {
           <div className="flex flex-col w-[50%] gap-8">
             <h1 className="text-5xl">Boostez votre entreprise de +230% en 3 semaines</h1>
             <h2 className="text-2xl">avec une refonte web, du SEO, des automatisations et l'IA</h2>
-            <Link href="https://tally.so/r/mOryj7" className="btn cta mt-4 " >
+            <animate href="https://tally.so/r/mOryj7" className="btn cta mt-4 " >
               <span className="cta-text">
                 Je veux savoir combien je peux gagner
               </span>
               <span className="cta-transition"></span>
-            </Link>
+            </animate>
             <div className="inline-flex justify-start items-center flex-wrap gap-2 pt-8">
               <div className="trust flex">
                 <div className="trusted-image">

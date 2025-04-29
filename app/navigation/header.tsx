@@ -89,10 +89,10 @@ export default function Header() {
                 Contact
               </li>
             </ul>
-            <Link href="https://tally.so/r/mOryj7" className={ (mobileNav ? "mobile " : "desktop ") + " btn cta header-cta"}>
+            <a href="https://tally.so/r/mOryj7" className={ (mobileNav ? "mobile " : "desktop ") + " btn cta header-cta"}>
               <span className="cta-text">Je demande une analyse</span>
               <span className="cta-transition"></span>
-            </Link>
+            </a>
           </div>
           <div className={(mobileNav === true ? "opened " : "") + "menu-icons relative"} onClick={toogleMenu}>
             <div className="burger"></div>
