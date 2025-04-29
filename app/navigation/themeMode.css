@@ -62,7 +62,7 @@ input:checked+.theme-slider {
 }
 
 input:focus+.theme-slider {
-  box-shadow: 0 0 1px var(--dark-orange);
+  box-shadow: 0 0 1px #4F46E5;
 }
 
 /* Rounded theme-sliders */
