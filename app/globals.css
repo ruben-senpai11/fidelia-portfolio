@@ -6,14 +6,14 @@
   --foreground: #0a0a0a;
   --background-start: #f8faf9;
   --background-end: #FFFFFF;
-  --header-background: #ffffff45;
+  --header-background: #fafafa22;
 }
 
 [ data-theme="dark"] {
   --foreground: #f8faf9;
   --background-start: #13181b;
   --background-end: #0a0a0a;
-  --header-background: #03010113;
+  --header-background: #0f0f0f44;
 }
 
 @font-face {
@@ -126,9 +126,6 @@ nav{
   font-size: 50px;
   color: #13181b;
   background-color: bisque;
-}
-.trusted-image.max{
-  /* transform: rotateY('180°'); */
 }
 
 .separator {
@@ -471,7 +468,6 @@ section#hero{
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  line-height: normal;
   height: max-content;
   position: relative;
   display: flex;
@@ -701,6 +697,10 @@ section#hero{
 
   .btn.cta {
     padding: 10px 16px;
+  }
+
+  .cta-text {
+    line-height: 150%;
   }
 
   section{

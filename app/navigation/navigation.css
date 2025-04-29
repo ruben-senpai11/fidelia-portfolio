@@ -6,8 +6,8 @@ nav{
   right: 0;
   z-index: 99;
   transition: .5s;
-  background-color: #fafafa22;
-  backdrop-filter: blur(120px);
+  background-color: var(--header-background);
+  backdrop-filter: blur(200px);
 }
 .logo svg{
   width: 170px;
@@ -29,8 +29,9 @@ nav{
 .nav-links li {
   width: max-content;
   padding: 4px 10px;
-  font-family: "Lato";
+  font-family: "Inter";
   cursor: pointer;
+  display: none!important ;
 }
 
 .nav-links li:first-child {
@@ -196,7 +197,7 @@ section {
 
   .mobile-menu ul {
     z-index: -1;
-    height: 285px;
+    height: 45px;
     padding: 18px;
   }
   .mobile-menu li{
@@ -258,7 +259,8 @@ section {
     min-height: unset;
     max-height: unset;
     height: max-content;
-    margin: 0 0 35px 0;
+    /* margin: 0 0 35px 0; */
+    margin: 15PX 0 0 0;
   }
 
 

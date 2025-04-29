@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "../components/logo";
 import ThemeMode from "./themeMode";
 
@@ -11,33 +12,33 @@ export default function Footer() {
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo />
-              <h3 className="w-[65%] ">Ton accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
+              <h3 className="w-[65%] ">L'accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
             </div>
           </div>
           <div className="footer-right flex justify-between gap-8 w-[50%] pt-3 ">
             <div className="footer-col flex flex-col gap-6">
-              <h4 className="font-medium uppercase">Nous sommes ici</h4>
+              <h4 className="font-medium uppercase">Je suis prêt à faire le pas</h4>
+              <Link href="" >Demander mon analyse sur mesure </Link>
+              {/* <h4 className="font-medium uppercase">Nous sommes ici</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="mailto:rubenwhite22@gmail.com">rubenwhite22@gmail.com</a>
                 <a href="tel:+2290196404757">+229 01 96 40 47 57</a>
-              </div>
+              </div> */}
             </div>
             <div className="footer-col flex flex-col gap-6">
-              <h4 className="font-medium uppercase">Suivez-nous</h4>
+              <h4 className="font-medium uppercase">Nous suivre</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="https://wa.me/+22996404757">Whatsapp</a>
-                <a href="https://www.linkedin.com/in/ruben-white22/">Linkedin</a>
-                {/* <a href="">X</a> */}
+                <a href="https://www.linkedin.com/in/ruben-white22/">LinkedIn</a>
+                <a href="https://x.com/rubenwhite22">X</a>
               </div>
             </div>
             <div className="footer-col flex flex-col gap-6">
               <h4 className="font-medium uppercase">Menu</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="#home">Accueil</a>
-                <a href="#services">Services</a>
                 <a href="#works">Projets</a>
                 <a href="#about-us">À propos</a>
-                {/* <a href="#contact">Contact</a> */}
               </div>
             </div>
           </div>
