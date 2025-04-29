@@ -12,13 +12,13 @@ export default function Footer() {
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo />
-              <h3 className="w-[65%] ">L'accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
+              <h3 className="w-[85%] ">L'accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
             </div>
           </div>
-          <div className="footer-right flex justify-between gap-8 w-[50%] pt-3 ">
+          <div className="footer-right flex justify-end gap-8 w-[50%] pt-3 ">
             <div className="footer-col flex flex-col gap-6">
               <h4 className="font-medium uppercase">Je suis prêt à faire le pas</h4>
-              <Link href="" >Demander mon analyse sur mesure </Link>
+              <Link href="https://tally.so/r/mOryj7" >Demander mon analyse sur mesure </Link>
               {/* <h4 className="font-medium uppercase">Nous sommes ici</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="mailto:rubenwhite22@gmail.com">rubenwhite22@gmail.com</a>
@@ -33,14 +33,14 @@ export default function Footer() {
                 <a href="https://x.com/rubenwhite22">X</a>
               </div>
             </div>
-            <div className="footer-col flex flex-col gap-6">
+            {/* <div className="footer-col flex flex-col gap-6">
               <h4 className="font-medium uppercase">Menu</h4>
               <div className="flex flex-col gap-2 ">
                 <a href="#home">Accueil</a>
                 <a href="#works">Projets</a>
                 <a href="#about-us">À propos</a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="copywright flex justify-between w-full pt-4 md:pt-0">
