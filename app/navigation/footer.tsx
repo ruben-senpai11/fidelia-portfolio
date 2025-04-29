@@ -15,7 +15,7 @@ export default function Footer() {
               <h3 className="w-[85%] ">L'accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
             </div>
           </div>
-          <div className="footer-right flex justify-end gap-8 w-[50%] pt-3 ">
+          <div className="footer-right flex justify-between md:justify-end gap-8 w-[50%] pt-3 ">
             <div className="footer-col flex flex-col gap-6">
               <h4 className="font-medium uppercase">Je suis prêt à faire le pas</h4>
               <a href="https://tally.so/r/mOryj7" >Demander mon analyse sur mesure </a>
