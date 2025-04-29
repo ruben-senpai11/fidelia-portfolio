@@ -99,7 +99,7 @@ section {
 @media screen and (max-width: 999px) {
 
   nav#home, footer.footer {
-    padding: 26px 24px;
+    padding: 30px 24px;
   }
 
   .header {
@@ -239,12 +239,13 @@ section {
 
   .header,
   .footer {
-    padding: 15px;
+    padding: 25px 0;
   }
 
   .footer-grid {
     flex-direction: column;
     gap: 2rem;
+    padding-top: 35px!important;
   }
 
   .footer-left,
@@ -254,13 +255,20 @@ section {
   }
 
   .footer-left {
-    min-height: 100px;
+    min-height: unset;
+    max-height: unset;
+    height: max-content;
+    margin: 0 0 35px 0;
   }
 
 
   .footer-right {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 24px;
+  }
+
+  footer .w-\[65\%\]{
+    width: 100%;
   }
 
   .footer-col {
@@ -276,4 +284,7 @@ section {
     font-weight: 600;
   }
 
+  .copywright{
+    margin-top: 35px;
+  }
 }

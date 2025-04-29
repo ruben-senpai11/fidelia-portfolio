@@ -24,7 +24,7 @@ export default function Hero() {
               </span>
               <span className="cta-transition"></span>
             </Link>
-            <div className="inline-flex justify-start items-center gap-2 pt-8">
+            <div className="inline-flex justify-start items-center flex-wrap gap-2 pt-8">
               <div className="trust flex">
                 <div className="trusted-image">
                   <Image src={Customer} alt="Ruben : 1er partnaire" />

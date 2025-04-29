@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
               <Logo />
-              <h3 className="w-[65%] ">Parce que nous ne créons pas des outils, nous créons du résultat</h3>
+              <h3 className="w-[65%] ">Ton accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
             </div>
           </div>
           <div className="footer-right flex justify-between gap-8 w-[50%] pt-3 ">
@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between w-full copywright pt-4 md:pt-0">
+        <div className="copywright flex justify-between w-full pt-4 md:pt-0">
           <p className="">© 2025 All Rights Reserved</p>
           <ThemeMode />
         </div>
