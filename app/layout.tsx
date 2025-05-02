@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/next';
 import TagManager from 'react-gtm-module';
 import Header from "./navigation/header";
 import Footer from "./navigation/footer";
@@ -36,6 +36,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
           {children}
+          <Analytics />
         <Footer />
       </body>
     </html>
