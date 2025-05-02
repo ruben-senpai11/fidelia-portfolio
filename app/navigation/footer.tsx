@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-grid pt-16 flex w-[100%]">
           <div className="footer-left w-[50%] h-[100%] ">
             <div className="flex flex-col gap-5 items-start ">
-              <Logo />
+              <Logo /> 
               <h3 className="w-[85%] ">L'accélarateur de croissance basé sur le WEB + SEO + AUTOMATISATIONS + IA</h3>
             </div>
           </div>
@@ -45,6 +45,7 @@ export default function Footer() {
         </div>
         <div className="copywright flex justify-between w-full pt-4 md:pt-0">
           <p className="">© 2025 All Rights Reserved</p>
+          {/* <p className="flex gap-2 items-center">L Harmony formally White devs Agency</p> */}
           <ThemeMode />
         </div>
       </footer>
