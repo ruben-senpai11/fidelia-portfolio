@@ -1,0 +1,45 @@
+:root {
+  --background-image-lg: url('../../public/images/bg-light_lg.png');
+  --background-image-md: url('../../public/images/bg-light_md.png');
+  --background-image-sm: url('../../public/images/bg-light_sm.png');
+  --background-image-xs: url('../../public/images/bg-light_xm.png');
+}
+
+[ data-theme="dark"] {
+  --background-image-lg: url('../../public/images/bg-dark_lg.png');
+  --background-image-md: url('../../public/images/bg-dark_md.png');
+  --background-image-sm: url('../../public/images/bg-dark_sm.png');
+  --background-image-xs: url('../../public/images/bg-dark_xm.png');
+}
+
+main {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-image: var(--background-image-lg);
+  background-size: cover;
+}
+
+
+@media screen and (max-width:1279px) {
+  main {
+    background-image: var(--background-image-lg);
+  }
+}
+
+@media screen and (max-width:991px) {
+  main {
+    background-image: var(--background-image-md);
+  }
+}
+
+@media screen and (max-width:767px) {
+  main {
+    background-image: var(--background-image-sm);
+  }
+}
+
+@media screen and (max-width:479px) {
+  main {
+    background-image: var(--background-image-xs);
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Hand Drawing Animation</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        svg {
+            width: 600px;
+            height: auto;
+        }
+
+        /* Drawing animation */
+        .draw {
+            fill: none;
+            stroke: #111;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawLine 2.6s ease-in-out infinite;
+        }
+
+        /* Red dress */
+        .dress {
+            fill: none;
+            stroke: #c4162a;
+            stroke-width: 3;
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            animation: drawDress 2.6s ease-in-out infinite;
+        }
+
+        /* Hand movement */
+        .hand {
+            animation: handMove 2.6s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        /* Erase phase */
+        @keyframes drawLine {
+            0% {
+                stroke-dashoffset: 1000;
+                opacity: 1;
+            }
+
+            40% {
+                stroke-dashoffset: 0;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 1000;
+                opacity: 1;
+            }
+        }
+
+        @keyframes drawDress {
+            0% {
+                stroke-dashoffset: 800;
+                opacity: 1;
+            }
+
+            40% {
+                stroke-dashoffset: 0;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 800;
+                opacity: 1;
+            }
+        }
+
+        @keyframes handMove {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            40% {
+                transform: translate(0, 0);
+            }
+
+            70% {
+                transform: translate(-10px, 8px);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <svg viewBox="0 0 600 400">
+
+            <!-- Colored pencils (static) -->
+            <rect x="60" y="330" width="60" height="6" fill="#e63946" />
+            <rect x="130" y="332" width="60" height="6" fill="#457b9d" />
+            <rect x="200" y="330" width="60" height="6" fill="#f4a261" />
+            <rect x="270" y="332" width="60" height="6" fill="#2a9d8f" />
+            <rect x="340" y="330" width="60" height="6" fill="#e9c46a" />
+
+            <!-- Lady outline -->
+            <path class="draw" d="
+    M300 110
+    C290 125, 285 145, 290 165
+    C295 190, 285 230, 260 270
+    M300 110
+    C310 125, 315 145, 310 165
+    C305 190, 315 230, 340 270
+  " />
+
+            <!-- Red dress -->
+            <path class="dress" d="
+    M260 270
+    C280 300, 320 300, 340 270
+    C350 320, 250 320, 260 270
+  " />
+
+            <!-- Woman's hand -->
+            <g class="hand">
+                <path fill="#f2c9ac" d="
+      M420 180
+      C460 170, 480 190, 470 210
+      C455 230, 430 230, 415 215
+      C405 205, 405 190, 420 180
+    " />
+                <!-- Pencil tip -->
+                <polygon points="410,215 390,225 392,230 415,220" fill="#333" />
+            </g>
+
+        </svg>
+
+    </body>
+</body>
+
+</html>

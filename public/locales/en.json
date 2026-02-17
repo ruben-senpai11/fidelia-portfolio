@@ -1,0 +1,64 @@
+{
+  "hero":{
+    "introductionH1": "WHITE DEVS AGENCY",
+    "introductionH2a": "The agency designed to scale your business +50% within 6 months",
+    "introductionH2b": "We are a ministry of designers & developers, who may not be genies, but grant wishes too",
+    "introductionP": "By connecting deep analysis, strong technical skills and design background with clear communication & responsiveness we’re creating unique projects with a pinch of good vibes",
+    "introductionCTA": "Get to know us"
+  },
+  "services":{
+    "servicesH2": "Services",
+    "servicesH3": "We bring solutions to make life easier for our customers.",
+    "servicesCTA": "Learn more",
+    "service1":{
+      "title": "Brand Development",
+      "description": "Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus.",
+      "skill1": "Brand Copywriting",
+      "skill2": "Ecommerce Conversion",
+      "skill3": "Responsive Development",
+      "skill4": "Website Development",
+      "skill5": "No-Code Development",
+      "skill6": "Shopify Development"
+    },
+    "service2":{
+      "title": "Digital Marketing",
+      "description": "Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus.",
+      "skill1": "Messaging Strategy",
+      "skill2": "Marketing Consultancy",
+      "skill3": "Facebook Ads",
+      "skill4": "Search Engine Optimization",
+      "skill5": "Google Ads",
+      "skill6": "Social Media"
+    },
+    "service3":{
+      "title": "Graphic Design",
+      "description": "Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus.",
+      "skill1": "Logo Design",
+      "skill2": "Art Direction",
+      "skill3": "Business Card Design",
+      "skill4": "Advertisment",
+      "skill5": "User Interface Design",
+      "skill6": "Custom Illustration"
+    },
+    "service4":{
+      "title": "UX & Product Design",
+      "description": "Aenean tortor libero, condimentum ac laoreet vitae, varius tempor nisi. Duis non arcu vel lectus urna mollis ornare vel leo varius blandit sit amet non magna eget risus.",
+      "skill5": "UX & UI design",
+      "skill1": "Mobile Design",
+      "skill2": "Brand Guides",
+      "skill3": "User Experience",
+      "skill4": "Wireframe & Prototyping",
+      "skill6": "Rebranding"
+    },
+    "service5":{
+      "title": "",
+      "description": "",
+      "skill1": "",
+      "skill2": "",
+      "skill3": "",
+      "skill4": "",
+      "skill5": "",
+      "skill6": ""
+    }
+  }
+}

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="dressGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e4002b"/>
+      <stop offset="100%" stop-color="#c3001e"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="clipArea">
+      <rect x="0" y="0" width="300" height="300" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <!-- Centering group: character at (150,150) -->
+  <g id="character" transform="translate(150,150)">
+    <!-- Layer 1: legs (background) -->
+    <g id="legs" data-layer="1" transform="translate(0,22)" clip-path="url(#clipArea)">
+      <!-- left leg -->
+      <g id="leftLeg" transform="translate(-24,0)">
+        <path d="M-6,0 C-6,16 -2,28 0,34 C2,28 6,16 6,0" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-4,1 C-4,12 0,22 0,26" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <!-- leg motion -->
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="2;-4;2" dur="1.4s" repeatCount="indefinite" additive="sum"/>
+      </g>
+      <!-- right leg -->
+      <g id="rightLeg" transform="translate(24,0)">
+        <path d="M-6,0 C-6,16 -2,28 0,34 C2,28 6,16 6,0" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <path d="M-4,1 C-4,12 0,22 0,26" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+        <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-2;4;-2" dur="1.4s" begin="0.15s" repeatCount="indefinite" additive="sum"/>
+      </g>
+    </g>
+
+    <!-- Layer 2: torso (below head/arms) -->
+    <g id="torso" data-layer="2" transform="translate(0,0)">
+      <!-- simple torso outline as elegant dress silhouette -->
+      <path d="M-28,-6 C-28,-6  -20,-20 0,-28 C20,-20 28,-6 28,-6 C28,12 18,38 0,42 C-18,38 -28,12 -28,-6 Z" fill="#000" opacity="0.0"/>
+      <!-- visible outline of dress body -->
+      <path d="M-18,-6 C-18,-6  -12,-18 0,-24 C12,-18 18,-6 18,-6 C18,8 12,24 0,28 C-12,24 -18,8 -18,-6 Z" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <animate attributeName="d" dur="1.6s" repeatCount="indefinite" values="           M-18,-6 C-18,-6  -12,-18 0,-24 C12,-18 18,-6 18,-6 C18,8 12,24 0,28 C-12,24 -18,8 -18,-6 Z;           M-18,-6 C-18,-6  -14,-20 0,-26 C14,-20 18,-6 18,-6 C18,6 14,22 0,26 C-14,22 -18,6 -18,-6 Z;           M-18,-6 C-18,-6  -12,-18 0,-24 C12,-18 18,-6 18,-6 C18,8 12,24 0,28 C-12,24 -18,8 -18,-6 Z"/>
+      </path>
+      <!-- subtle waist highlight -->
+      <ellipse cx="0" cy="6" rx="6" ry="2" fill="url(#dressGrad)" fill-opacity="0.25" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="0.25;0.40;0.25" dur="1.6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Layer 3: head and arms (above torso) -->
+    <g id="head" data-layer="3" transform="translate(0,-44)">
+      <!-- head circle -->
+      <circle cx="0" cy="0" r="12" fill="#000"/>
+      <!-- subtle head bob -->
+      <animateTransform attributeName="transform" type="translate" values="0,-44;0,-46;0,-44" dur="1.6s" begin="0s" repeatCount="indefinite" additive="sum"/>
+      <!-- face dot (simple) -->
+      <circle cx="-4" cy="-2" r="1.5" fill="#fff"/>
+      <circle cx="4" cy="-2" r="1.5" fill="#fff"/>
+    </g>
+
+    <g id="leftArm" data-layer="3" transform="translate(-28,-24)">
+      <!-- upper arm line (pencil grip visual) -->
+      <path d="M0,0 C-20,8 -26,22 -28,34" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+      <!-- hand (stylized small circle) -->
+      <circle cx="-28" cy="34" r="4" fill="#000"/>
+      <!-- pencil as thin line -->
+      <path d="M-28,34 L-40,42" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+      <!-- arm swing -->
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="-8;8;-8" dur="1.2s" begin="0s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <g id="rightArm" data-layer="3" transform="translate(28,-24)">
+      <path d="M0,0 C20,8 26,22 28,34" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="28" cy="34" r="4" fill="#000"/>
+      <path d="M28,34 L40,42" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="8;-8;8" dur="1.2s" begin="0.15s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- Layer 4: gentle prop animation and wipe effect (overlay) -->
+    <!-- Wipe/erase motion: a translucent white(erasing) sweep moving across the dress -->
+    <g id="wipe" opacity="0.0">
+      <rect x="-60" y="-60" width="120" height="120" fill="#fff" opacity="0.0"/>
+      <rect x="-60" y="-60" width="120" height="120" fill="#fff" opacity="0.0">
+        <animate attributeName="opacity" values="0;0.25;0" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -60,0; 0,0" dur="2s" repeatCount="indefinite"/>
+    </g>
+
+  </g>
+
+  <!-- Global stroke for crisp vector feel (outline) -->
+  <style>
+    /* Ensure edges stay crisp on modern browsers */
+    path, circle, rect, ellipse { vector-effect: non-scaling-stroke; }
+  </style>
+
+  <!-- Real drawing motion: sequential stroke-like path reveal for the dress outline -->
+  <path d="M120,170 C120,120 180,110 180,90 C180,60 140,40 120,20" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.0s" fill="freeze"/>
+    <animate attributeName="d" dur="1.6s" values="       M-18,-6 C-18,-6  -12,-18 0,-24 C12,-18 18,-6 18,-6 C18,8 12,24 0,28 C-12,24 -18,8 -18,-6 Z;       M-14,-6 C-14,-6  -12,-14 0,-22 C12,-16 16,-6 16,-6 C16,4 12,20 0,24 C-12,20 -14,4 -14,-6 Z;       M-12,-6 C-12,-6  -12,-14 0,-22 C10,-16 14,-6 14,-6 C14,4 12,18 0,20 C-10,16 -12,4 -12,-6 Z"/>
+  </path>
+
+  <!-- Composite drawing stroke animation: draw the outline of the dress and figure lines progressively -->
+  <path d="M60,165 C60,140 90,120 120,110 C150,110 180,120 180,90" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.6s" begin="0.1s" fill="freeze"/>
+    <animate attributeName="d" dur="1.6s" values="       M60,165 C60,140 90,120 120,110 C150,110 180,120 180,90;       M60,165 C60,145 92,120 120,110;       M60,165 C60,140 90,120 120,110"/>
+  </path>
+
+  <!-- Ensure the z-ordering: legs (layer1) below torso (layer2) below head/arms (layer3) above stays implicit by group order -->
+</svg>
