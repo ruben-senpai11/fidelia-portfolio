@@ -82,7 +82,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/parcours" >
+                <Link href="#" >
                   Mon parcours
                 </Link>
               </li>
