@@ -24,7 +24,6 @@ import dress21 from "../assets/images/Dessin 21.png"
 import Crea from "./components/creationPresentation";
 
 
-
 export default function Page() {
 
   return (

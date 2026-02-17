@@ -20,9 +20,11 @@ if (typeof window !== 'undefined') {
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
-  title: "Legendary Harmony",
-  description: "Accélérez votre croissance avec le combo ultime : Refonte web + SEO + Automatisation + IA",
+  title: "Illustratrice de mode | Fidelia HOUNGBEDJI",
+  description: "",
 };
 
 export default function RootLayout({

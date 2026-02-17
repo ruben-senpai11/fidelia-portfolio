@@ -4,7 +4,7 @@ import Style from "./sections/style";
 import Vision from "./sections/vision";
 
 
-export default function Page({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+export default function Page() {
 
 
   return (
